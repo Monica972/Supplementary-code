@@ -1,0 +1,85 @@
+#load packages
+library(rgdal)
+library(tidyverse)
+library(gridExtra)
+library(maps)
+library(tmap)
+library(fBasics)
+library(plyr)
+library(dplyr)
+library(spdep)
+library(lubridate)
+library(grid)
+library(gtable)
+library(plotly)
+library(ggplot2)
+
+#set working directory
+setwd("~/Documents/Honours")
+getwd()
+
+#read in data
+use.data<- read.csv("./DATA/AnalysisData.csv")
+threatscore <- read.csv("./DATA/iucnThreatScore-2.csv")
+
+#remove any duplicates
+use_clean <- use.data[!duplicated(use.data),]
+use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
+threat_clean <- threatscore[!duplicated(threatscore),]
+
+#filter to medicinal use species
+med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+obsnum <- nrow(med)
+
+#join by id column
+
+threatmed <- merge(use_clean,threat_clean,by="X")
+threatmed <- threatmed[which(threatmed$useTradeId..30 =="TRUE"),]
+threatobsnum <- nrow(threatmed)
+
+##------------------------------------------------------------------------------
+
+              ## Species with a threat of human exploitation
+
+##------------------------------------------------------------------------------
+
+#Human exploitation threats
+Human <- med[which(med$hasHumanExploitationThreat == "TRUE"),]
+Humannum <- nrow(Human)
+Humanper <- round((Humannum/Mednum * 100), digits = 2)
+
+NonHuman <- med[which(med$hasHumanExploitationThreat == "FALSE"),]
+NonHumannum <- nrow(NonHuman)
+NonHumanper <- round((NonHumannum/Mednum * 100), digits = 2)
+
+#Med only human exploitation threat
+Medonly <- med[which(med$useTradeId..19 =="FALSE" & med$useTradeId..23 == "FALSE" & med$useTradeId..23 == "FALSE" & med$useTradeId..27 == "FALSE" & med$useTradeId..20 =="FALSE" & med$useTradeId..32 =="FALSE" & med$useTradeId..24 =="FALSE" & med$useTradeId..29 =="FALSE" & med$useTradeId..33 =="FALSE" & med$useTradeId..25 =="FALSE" & med$useTradeId..28 =="FALSE" & med$useTradeId..22 =="FALSE" & med$useTradeId..21 =="FALSE" & med$useTradeId..35 =="FALSE" & med$useTradeId..36 =="FALSE" & med$useTradeId..34 =="FALSE" & med$useTradeId..31 =="FALSE"),]
+Medonly <- Medonly[!duplicated(Medonly$scientific_name),]
+Medonlynum <- nrow(Medonly)
+Medonlyper <-round((Medonlynum/obsnum * 100), digits = 2)
+
+MedHuman <- Medonly[which(Medonly$hasHumanExploitationThreat == "TRUE"),]
+MedHumannum <- nrow(MedHuman)
+MedHumanper <- round((MedHumannum/Medonlynum * 100), digits = 2)
+
+#Mixed use human exploitation threat
+Mixed <- med[which(med$useTradeId..19 =="TRUE" | med$useTradeId..23 == "TRUE" | med$useTradeId..23 == "TRUE" | med$useTradeId..27 == "TRUE" | med$useTradeId..20 =="TRUE" | med$useTradeId..32 =="TRUE" | med$useTradeId..24 =="TRUE" | med$useTradeId..29 =="TRUE" | med$useTradeId..33 =="TRUE" | med$useTradeId..25 =="TRUE" | med$useTradeId..28 =="TRUE" | med$useTradeId..22 =="TRUE" | med$useTradeId..21 =="TRUE" | med$useTradeId..35 =="TRUE" | med$useTradeId..36 =="TRUE" | med$useTradeId..34 =="TRUE" | med$useTradeId..31 =="TRUE"),]
+Mixednum <- nrow(Mixed)
+Mixedper <- round((Mixednum/obsnum * 100), digits = 2)
+
+MixHuman <- Mixed[which(Mixed$hasHumanExploitationThreat == "TRUE"),]
+MixHumannum <- nrow(MixHuman)
+MixHumanper <- round((MixHumannum/Mixednum * 100), digits = 2)
+
+#At-risk species wiht threat of human exploitation
+Endanger <- use_clean[which(use_clean$redListCategoryTitle =="Endangered" | use_clean$redListCategoryTitle =="Critically Endangered" | use_clean$redListCategoryTitle =="Vulnerable"),]
+
+MedEnd <- Endanger[which(Endanger$useTradeId..30 =="TRUE"),]
+MedEndnum <- nrow(MedEnd)
+Mednum <- nrow(med)
+MedEndPer <-round((MedEndnum/Mednum * 100), digits = 2)
+
+MedEndHuman <- MedEnd[which(MedEnd$hasHumanExploitationThreat == "TRUE"),]
+MedEndHumannum <- nrow(MedEndHuman)
+MedEndHumanper <- round((MedEndHumannum/MedEndnum * 100), digits = 2)
+
