@@ -297,5 +297,3 @@ p4 <-
 
 # Combine plots for Figure 1
 grid.arrange(p3, p4, ncol = 2, nrow = 1) 
-
-
