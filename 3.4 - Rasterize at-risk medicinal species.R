@@ -23,7 +23,7 @@ gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 ## ------------------------------------------------------------------------------
 
 ## Rasterize each animal group of at risk species - sf files created from 
-#subsetting spatial data to at-risk medicinal species (supplementart code 4)
+#subsetting spatial data to at-risk medicinal species (supplementart code 3.2)
 
 ## ------------------------------------------------------------------------------
 
