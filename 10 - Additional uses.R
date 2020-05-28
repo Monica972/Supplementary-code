@@ -1,28 +1,6 @@
-## ------------------------------------------------------------------------------
-
-## Set working directory, define data
-
-## ------------------------------------------------------------------------------
-
 # Set working directory
 setwd("~/Documents/Honours")
 getwd()
-
-# load required packages
-library(rgdal)
-library(tidyverse)
-library(gridExtra)
-library(maps)
-library(tmap)
-library(fBasics)
-library(plyr)
-library(dplyr)
-library(spdep)
-library(lubridate)
-library(grid)
-library(gtable)
-library(plotly)
-library(ggplot2)
 
 # Read in data
 use.data<- read.csv("./DATA/AnalysisData.csv")
