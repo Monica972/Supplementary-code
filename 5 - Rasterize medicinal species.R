@@ -1,19 +1,16 @@
-
-## ------------------------------------------------------------------------------
-
-## Set working directory, define data
-
-## ------------------------------------------------------------------------------
-
 #Install packages
 install.packages("fasterize")
+install.packages("raster")
+install.packages("tidyverse")
+install.packages("sf")
+install.packages("sp")
+install.packages("rdgal")
 
 #Load packages
 library(tidyverse)
 library(sf)
 library(sp)
 library(rgdal)
-library(maptools)
 library(raster)
 library(fasterize)
 
@@ -25,7 +22,8 @@ gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 
 ## ------------------------------------------------------------------------------
 
-## Rasterize each medicinal animal group
+## Rasterize each medicinal animal group - sf files created from subsetting 
+#the spatial data to medicinal species (supplementary code 3)
 
 ## ------------------------------------------------------------------------------
 
