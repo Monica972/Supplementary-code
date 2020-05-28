@@ -1,9 +1,3 @@
-## ------------------------------------------------------------------------------
-                 
-                     ## Set working directory, define data
-
-## ------------------------------------------------------------------------------
-
 # Set working directory
 
 setwd("~/Documents/Honours")
@@ -65,30 +59,6 @@ medwo <- med[which(med$Circ.Resp == "FALSE" & med$Mental.behav == "FALSE" & med$
 # Create data subset of medicinal use species with specific use data
 medw <- med[which(med$Circ.Resp == "TRUE" | med$Mental.behav == "TRUE" | med$Cancer == "TRUE" | med$External.Cause == "TRUE" | med$Symptoms == "TRUE" | med$Reprod == "TRUE" | med$Visual.system == "TRUE" | med$Renal.Urin == "TRUE" | med$Nervous == "TRUE" | med$Musc.Skel == "TRUE" | med$Immune.Lymph == "TRUE" | med$Integum.Exoc == "TRUE" | med$Endocrine == "TRUE" | med$Digest.Excre == "TRUE" | med$Spiritual == "TRUE"),]
 wobs <- nrow(medw)
-
-
-##------------------------------------------------------------------------------
-
-                ## Medicinal species by Habitat
-
-##------------------------------------------------------------------------------
-
-#Habitat type
-#Terrestrial
-TR <- med[which(med$Terrestrial == "TRUE"),]
-TRnum <- nrow(TR)
-TRper <-round((TRnum/obsnum * 100), dig=2)
-
-#Freshwater
-FW <- med[which(med$Freshwater == "TRUE"),]
-FWnum <- nrow(FW)
-FWper <-round((FWnum/obsnum * 100), dig=2)
-
-#Marine
-MA <- med[which(med$Marine == "TRUE"),]
-MAnum <- nrow(MA)
-MAper <-round((MAnum/obsnum * 100), dig=2)
-
 
 ##------------------------------------------------------------------------------
 
