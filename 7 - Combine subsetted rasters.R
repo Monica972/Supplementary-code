@@ -6,7 +6,6 @@ library(tidyverse)
 library(sf)
 library(sp)
 library(rgdal)
-library(maptools)
 library(raster)
 ## ---------------------------------------------------------------------
 
