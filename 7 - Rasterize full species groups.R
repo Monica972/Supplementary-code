@@ -1,9 +1,3 @@
-## ------------------------------------------------------------------------------
-
-                  ## Set working directory, define data
-
-## ------------------------------------------------------------------------------
-
 # Set working directory
 
 setwd("~/Documents/Honours")
@@ -13,25 +7,17 @@ getwd()
 install.packages("tidyverse", dependencies = TRUE)
 install.packages("sf", dependencies = TRUE)
 install.packages("rgdal", dependencies = TRUE)
-install.packages("RColorBrewer")
-install.packages("colorRamps")
 install.packages("sp")
-install.packages("maptools")
 install.packages("raster")
 install.packages("fasterize")
-install.packages("gridExtra")
 
 #load packages
 library(tidyverse)
 library(sf)
 library(sp)
 library(rgdal)
-library(maptools)
 library(raster)
 library(fasterize)
-library(RColorBrewer)
-library(colorRamps)
-library(gridExtra)
 
 #create a global 1 degree raster
 gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
@@ -45,7 +31,7 @@ iucn <- iucn %>% plyr::rename(c("scientific_name" = "SciName", "kingdom_name" = 
 
 ## ------------------------------------------------------------------------------
 
-## Rasterize each animal group
+## Rasterize each animal group - full species file - includes all species, medicinal or otherwise
 
 ## ------------------------------------------------------------------------------
 #change working directory
@@ -346,66 +332,3 @@ combinelayers15 <- merge(combinelayers14, birds)
 combinelayers16 <- merge(combinelayers15, lobs)
 plot(combinelayers16)
 writeRaster(combinelayers16, "CombinedRastALL", format = "GTiff")
-
-#Proportion 
-combine <- combinelayers16
-combine <- raster("CombinedRastALL.tif")
-plot(combine)
-
-setwd("~/Documents/Honours/SpatialData/Subs")
-med <- raster("CombinedRastAD.tif")
-plot(med)
-med_df <- as.data.frame(med, xy = TRUE)
-str(med_df)
-
-setwd("~/Documents/Honours/SpatialData/Ends")
-end <- raster("CombinedEndADRast.tif")
-summary(end)
-end_df <- as.data.frame(end, xy = TRUE)
-str(end_df)
-
-propmed <- med / combine 
-plot(propmed)
-summary(propmed)
-propmed_df <- as.data.frame(propmed, xy = TRUE)
-propmed_df[is.na(propmed_df)] <- 0
-str(propmed_df)
-
-propendmed <- end / med
-plot(propendmed)
-summary(propendmed)
-propendmed_df <- as.data.frame(propendmed, xy = TRUE)
-propendmed_df[is.na(propendmed_df)] <- 0
-str(propendmed_df)
-
-#PLOT MAPS
-#medicinal species distributions
-p <- ggplot() +
-  geom_raster(data = med_df, aes(x = x, y = y, fill = CombinedRastAD)) +
-  scale_fill_distiller(palette = "RdYlBu", direction = -1, name = "Number of Species  ") +
-  coord_map() +
-  labs(title = "A", x = "", y = "") +
-  theme_bw(base_size = 12) +
-  theme(plot.margin = unit(c(0,0,0,0), "cm"))
-p
-#Proporti on of species used for med
-p1 <- ggplot() +
-  geom_raster(data = propmed_df, aes(x = x, y = y, fill = layer)) +
-  scale_fill_distiller(palette = "RdYlBu", direction = -1, name = "Proportion of Species", limits = c(0, 1)) +
-  coord_map() +
-  labs(title = "B", x = "", y = "") +
-  theme_bw(base_size = 12)+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"))
-p1
-#Proportion of med speceis that are endangered
-p2 <- ggplot() +
-  geom_raster(data = propendmed_df, aes(x = x, y = y, fill = layer)) +
-  scale_fill_distiller(palette = "RdYlBu", direction = -1, name = "Proportion of Species", limits = c(0, 1)) +
-  coord_cartesian() +
-  labs(title = "C", x = "", y = "") +
-  theme_bw(base_size = 12)+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"))
-p2
-
-#Plot maps
-grid.arrange(p, p1, p2, ncol = 1, nrow = 3) 
