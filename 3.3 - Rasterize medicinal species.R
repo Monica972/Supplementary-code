@@ -23,7 +23,7 @@ gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 ## ------------------------------------------------------------------------------
 
 ## Rasterize each medicinal animal group - sf files created from subsetting 
-#the spatial data to medicinal species (supplementary code 3)
+#the spatial data to medicinal species (supplementary code 3.1)
 
 ## ------------------------------------------------------------------------------
 
