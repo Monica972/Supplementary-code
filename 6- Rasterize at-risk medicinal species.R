@@ -1,10 +1,3 @@
-
-## ------------------------------------------------------------------------------
-
-## Set working directory, define data
-
-## ------------------------------------------------------------------------------
-
 #Install packages
 install.packages("fasterize") #a lot faster than rasterize but only works with sf polygons
 
@@ -26,7 +19,7 @@ gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 
 ## ------------------------------------------------------------------------------
 
-## Rasterize each animal group of at risk species
+## Rasterize each animal group of at risk species 
 
 ## ------------------------------------------------------------------------------
 
