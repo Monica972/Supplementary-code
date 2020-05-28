@@ -1,5 +1,5 @@
 #Install packages
-install.packages("fasterize")
+install.packages("fasterize") #a lot faster than rasterize but only works with sf polygons
 install.packages("raster")
 install.packages("tidyverse")
 install.packages("sf")
