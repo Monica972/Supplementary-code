@@ -1,3 +1,5 @@
+#Set working directory
+setwd("~/Documents/Honours/SpatialData")
 
 #install packages
 install.packages("tidyverse", dependencies = TRUE)
@@ -6,6 +8,10 @@ install.packages("rgdal", dependencies = TRUE)
 install.packages("RColorBrewer")
 install.packages("colorRamps")
 install.packages("mapproj")
+install.packages("sp")
+install.packages("maptools")
+install.packages("gridExtra")
+install.packages("raster")
 
 #load packages
 library(tidyverse)
@@ -14,14 +20,10 @@ library(sp)
 library(rgdal)
 library(maptools)
 library(raster)
-library(fasterize)
 library(RColorBrewer)
 library(colorRamps)
 library(gridExtra)
 library(mapproj)
-
-#Set working directory
-setwd("~/Documents/Honours/SpatialData")
 
 #Load full species raster
 combine <- raster("CombinedRastALL.tif")
