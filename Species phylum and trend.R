@@ -1,9 +1,3 @@
-## ------------------------------------------------------------------------------
-
-## Set working directory, define data
-
-## ------------------------------------------------------------------------------
-
 # Set working directory
 
 setwd("~/Documents/Honours")
@@ -11,40 +5,14 @@ getwd()
 
 # Install packages to be used
 
-install.packages("rgdal")
-install.packages("tidyverse")
 install.packages("gridExtra")
-install.packages("maps")
-install.packages("tmap")
-install.packages("fBasics")
-install.packages("plyr")
-install.packages("dplyr")
-install.packages("spdep")
-install.packages("lubridate")
-install.packages("grid")
-install.packages("gtable")
-install.packages("plotly")
 install.packages("ggplot2")
-install.packages("RColorBrewer")
 install.packages("shades")
 
 # Load packages to use
 
-library(rgdal)
-library(tidyverse)
 library(gridExtra)
-library(maps)
-library(tmap)
-library(fBasics)
-library(plyr)
-library(dplyr)
-library(spdep)
-library(lubridate)
-library(grid)
-library(gtable)
-library(plotly)
 library(ggplot2)
-library(RColorBrewer)
 library(shades)
 
 # Read data file
