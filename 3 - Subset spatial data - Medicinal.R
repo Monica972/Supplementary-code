@@ -1,3 +1,5 @@
+#Set working directory
+setwd("~/Documents/Honours/SpatialData")
 
 #install required packages
 install.packages("tidyverse", dependencies = TRUE)
@@ -10,9 +12,6 @@ library(sf)
 library(sp)
 library(rgdal)
 library(raster)
-
-#Set working directory
-setwd("~/Documents/Honours/SpatialData")
 
 ## ------------------------------------------------------------------------------
 
