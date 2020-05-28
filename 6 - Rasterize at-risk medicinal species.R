@@ -1,25 +1,29 @@
+# Set working directory
+setwd("~/Documents/Honours/SpatialData/Ends")
+
 #Install packages
 install.packages("fasterize") #a lot faster than rasterize but only works with sf polygons
+install.packages("raster")
+install.packages("tidyverse")
+install.packages("sf")
+install.packages("sp")
+install.packages("rdgal")
 
 #Load packages
 library(tidyverse)
 library(sf)
 library(sp)
 library(rgdal)
-library(maptools)
 library(raster)
 library(fasterize)
-library(sf)
-
-# Set working directory
-setwd("~/Documents/Honours/SpatialData/Ends")
 
 #create a global 1 degree raster
 gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 
 ## ------------------------------------------------------------------------------
 
-## Rasterize each animal group of at risk species 
+## Rasterize each animal group of at risk species - sf files created from 
+#subsetting spatial data to at-risk medicinal species (supplementart code 4)
 
 ## ------------------------------------------------------------------------------
 
