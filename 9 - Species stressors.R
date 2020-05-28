@@ -1,17 +1,5 @@
 #Load packages
-library(rgdal)
-library(tidyverse)
 library(gridExtra)
-library(maps)
-library(tmap)
-library(fBasics)
-library(plyr)
-library(dplyr)
-library(spdep)
-library(lubridate)
-library(grid)
-library(gtable)
-library(plotly)
 library(ggplot2)
 library(fmsb)
 
