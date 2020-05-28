@@ -1,9 +1,3 @@
-## ------------------------------------------------------------------------------
-
-## Set working directory, define data
-
-## ------------------------------------------------------------------------------
-
 # Set working directory
 setwd("~/Documents/Honours/SpatialData/Subs")
 
