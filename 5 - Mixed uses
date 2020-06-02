@@ -202,19 +202,20 @@ ggplot(data = na.omit(data6), aes(RedListCat, values), na.rm = TRUE) +
 ##------------------------------------------------------------------------------
 
 #Med only vs Mixed CR
-fisher.test(matrix(c(10, 39, 354-10, 716-39), ncol = 2))
+fisher.test(matrix(c(MedCRnum, MixCRnum, (Medonlynum - MedCRnum), (Mixednum - MixCRnum)), ncol = 2))
 
 #Med only vs Mixed EX
-fisher.test(matrix(c(1, 3, 354-1, 716-3), ncol = 2))
+fisher.test(matrix(c(MedEXnum, MixEXnum, (Medonlynum - MedEXnum), (Mixednum - MixEXnum)), ncol = 2))
 
 #Med only vs Mixed EN
-fisher.test(matrix(c(18, 70, 354-18, 716-70), ncol = 2))
+fisher.test(matrix(c(MedENnum, MixENnum, (Medonlynum - MedENnum), (Mixednum - MixENnum)), ncol = 2))
 
 #Med only vs Mixed VU
-fisher.test(matrix(c(16, 124, 354-16, 716-124), ncol = 2))
+fisher.test(matrix(c(MedVUnum, MixVUnum, (Medonlynum - MedVUnum), (Mixednum - MixVUnum)), ncol = 2))
 
 #Med only vs Mixed NT
-fisher.test(matrix(c(12, 57, 354-12, 716-57), ncol = 2))
+fisher.test(matrix(c(MedNTnum, MixNTnum, (Medonlynum - MedNTnum), (Mixednum - MixNTnum)), ncol = 2))
 
 #Med only vs Mixed at risk (VU, CR, EN)
-fisher.test(matrix(c(44, 235, 354-44, 716-235), ncol = 2))
+fisher.test(matrix(c(atRiskMednum, atRiskMixnum, (Medonlynum - atRiskMednum), (Mixednum - atRiskMixnum)), ncol = 2))
+
