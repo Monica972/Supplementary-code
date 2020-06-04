@@ -27,60 +27,60 @@ threatobsnum <- nrow(threatmed)
 
 ## -----------------------------------------------------------------------
 
-                # Threats by stressors 
+# Threats by stressors 
 
 ## -----------------------------------------------------------------------
 #Threat 1: Residential and commercial development
 
-ResEcoCon <-subset(threatmed, grepl("1.1", threatmed$X1.1) | grepl("1.1", threatmed$X1.2) | grepl("1.1", threatmed$X1.3))
+ResEcoCon <-subset(threatmed, grepl("1.1", threatmed$Y1.1) | grepl("1.1", threatmed$Y1.2) | grepl("1.1", threatmed$Y1.3))
 ResEcoConnum <- nrow(ResEcoCon)
 ResEcoConper <-round((ResEcoConnum/threatobsnum * 100), dig=2)
 
-ResEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X1.1) | grepl("1.2", threatmed$X1.2) | grepl("1.2", threatmed$X1.3))
+ResEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y1.1) | grepl("1.2", threatmed$Y1.2) | grepl("1.2", threatmed$Y1.3))
 ResEcoDegnum <- nrow(ResEcoDeg)
 ResEcoDegper <-round((ResEcoDegnum/threatobsnum * 100), dig=2)
 
-ResIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X1.1) | grepl("1.3", threatmed$X1.2) | grepl("1.3", threatmed$X1.3))
+ResIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y1.1) | grepl("1.3", threatmed$Y1.2) | grepl("1.3", threatmed$Y1.3))
 ResIndirEcoEffnum <- nrow(ResIndirEcoEff)
 ResIndirEcoEffper <-round((ResIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-ResSpecMort <-subset(threatmed, grepl("2.1", threatmed$X1.1) | grepl("2.1", threatmed$X1.2) | grepl("2.1", threatmed$X1.3))
+ResSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y1.1) | grepl("2.1", threatmed$Y1.2) | grepl("2.1", threatmed$Y1.3))
 ResSpecMortnum <- nrow(ResSpecMort)
 ResSpecMortper <-round((ResSpecMortnum/threatobsnum * 100), dig=2)
 
-ResSpecDist <-subset(threatmed, grepl("2.2", threatmed$X1.1) | grepl("2.2", threatmed$X1.2) | grepl("2.2", threatmed$X1.3))
+ResSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y1.1) | grepl("2.2", threatmed$Y1.2) | grepl("2.2", threatmed$Y1.3))
 ResSpecDistnum <- nrow(ResSpecDist)
 ResSpecDistper <-round((ResSpecDistnum/threatobsnum * 100), dig=2)
 
-ResHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X1.1) | grepl("2.3.1", threatmed$X1.2) | grepl("2.3.1", threatmed$X1.3))
+ResHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y1.1) | grepl("2.3.1", threatmed$Y1.2) | grepl("2.3.1", threatmed$Y1.3))
 ResHybridnum <- nrow(ResHybrid)
 ResHybridper <-round((ResHybridnum/threatobsnum * 100), dig=2)
 
-ResComp <-subset(threatmed, grepl("2.3.2", threatmed$X1.1) | grepl("2.3.2", threatmed$X1.2) | grepl("2.3.2", threatmed$X1.3))
+ResComp <-subset(threatmed, grepl("2.3.2", threatmed$Y1.1) | grepl("2.3.2", threatmed$Y1.2) | grepl("2.3.2", threatmed$Y1.3))
 ResCompnum <- nrow(ResComp)
 ResCompper <-round((ResCompnum/threatobsnum * 100), dig=2)
 
-ResLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X1.1) | grepl("2.3.3", threatmed$X1.2) | grepl("2.3.3", threatmed$X1.3))
+ResLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y1.1) | grepl("2.3.3", threatmed$Y1.2) | grepl("2.3.3", threatmed$Y1.3))
 ResLossMutnum <- nrow(ResLossMut)
 ResLossMutper <-round((ResLossMutnum/threatobsnum * 100), dig=2)
 
-ResLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X1.1) | grepl("2.3.4", threatmed$X1.2) | grepl("2.3.4", threatmed$X1.3))
+ResLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y1.1) | grepl("2.3.4", threatmed$Y1.2) | grepl("2.3.4", threatmed$Y1.3))
 ResLossPollnum <- nrow(ResLossPoll)
 ResLossPollper <-round((ResLossPollnum/threatobsnum * 100), dig=2)
 
-ResInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X1.1) | grepl("2.3.5", threatmed$X1.2) | grepl("2.3.5", threatmed$X1.3))
+ResInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y1.1) | grepl("2.3.5", threatmed$Y1.2) | grepl("2.3.5", threatmed$Y1.3))
 ResInbreednum <- nrow(ResInbreed)
 ResInbreedper <-round((ResInbreednum/threatobsnum * 100), dig=2)
 
-ResSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X1.1) | grepl("2.3.6", threatmed$X1.2) | grepl("2.3.6", threatmed$X1.3))
+ResSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y1.1) | grepl("2.3.6", threatmed$Y1.2) | grepl("2.3.6", threatmed$Y1.3))
 ResSkewSexnum <- nrow(ResSkewSex)
 ResSkewSexper <-round((ResSkewSexnum/threatobsnum * 100), dig=2)
 
-ResRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X1.1) | grepl("2.3.7", threatmed$X1.2) | grepl("2.3.7", threatmed$X1.3))
+ResRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y1.1) | grepl("2.3.7", threatmed$Y1.2) | grepl("2.3.7", threatmed$Y1.3))
 ResRedRepSucnum <- nrow(ResRedRepSuc)
 ResRedRepSucper <-round((ResRedRepSucnum/threatobsnum * 100), dig=2)
 
-ResOth <-subset(threatmed, grepl("2.3.8", threatmed$X1.1) | grepl("2.3.8", threatmed$X1.2) | grepl("2.3.8", threatmed$X1.3))
+ResOth <-subset(threatmed, grepl("2.3.8", threatmed$Y1.1) | grepl("2.3.8", threatmed$Y1.2) | grepl("2.3.8", threatmed$Y1.3))
 ResOthnum <- nrow(ResOth)
 ResOthper <-round((ResOthnum/threatobsnum * 100), dig=2)
 
@@ -88,94 +88,94 @@ Restotal <- (ResEcoConnum +ResEcoDegnum + ResIndirEcoEffnum + ResPastUnnum + Res
 ResPer <- round((Restotal/threatobsnum * 100), dig = 2)
 
 #Threat 2: Agriculture and aquaculture
-AgriEcoCon <-subset(threatmed, grepl("1.1", threatmed$X2.1) | grepl("1.1", threatmed$X2.1.1) | grepl("1.1", threatmed$X2.1.2) | grepl("1.1", threatmed$X2.1.3) | grepl("1.1", threatmed$X2.1.4) |
-                      grepl("1.1", threatmed$X2.2) | grepl("1.1", threatmed$X2.2.1) | grepl("1.1", threatmed$X2.2.2) | grepl("1.1", threatmed$X2.2.3) |
-                      grepl("1.1", threatmed$X2.3) | grepl("1.1", threatmed$X2.3.1) | grepl("1.1", threatmed$X2.3.2) | grepl("1.1", threatmed$X2.3.3) | grepl("1.1", threatmed$X2.3.4) |
-                      grepl("1.1", threatmed$X2.4) | grepl("1.1", threatmed$X2.4.1) | grepl("1.1", threatmed$X2.4.2) | grepl("1.1", threatmed$X2.4.3))
+AgriEcoCon <-subset(threatmed, grepl("1.1", threatmed$Y2.1) | grepl("1.1", threatmed$Y2.1.1) | grepl("1.1", threatmed$Y2.1.2) | grepl("1.1", threatmed$Y2.1.3) | grepl("1.1", threatmed$Y2.1.4) |
+                      grepl("1.1", threatmed$Y2.2) | grepl("1.1", threatmed$Y2.2.1) | grepl("1.1", threatmed$Y2.2.2) | grepl("1.1", threatmed$Y2.2.3) |
+                      grepl("1.1", threatmed$Y2.3) | grepl("1.1", threatmed$Y2.3.1) | grepl("1.1", threatmed$Y2.3.2) | grepl("1.1", threatmed$Y2.3.3) | grepl("1.1", threatmed$Y2.3.4) |
+                      grepl("1.1", threatmed$Y2.4) | grepl("1.1", threatmed$Y2.4.1) | grepl("1.1", threatmed$Y2.4.2) | grepl("1.1", threatmed$Y2.4.3))
 AgriEcoConnum <- nrow(AgriEcoCon)
 AgriEcoConper <-round((AgriEcoConnum/threatobsnum * 100), dig=2)
 
-AgriEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X2.1) | grepl("1.2", threatmed$X2.1.1) | grepl("1.2", threatmed$X2.1.2) | grepl("1.2", threatmed$X2.1.3) | grepl("1.2", threatmed$X2.1.4) |
-                      grepl("1.2", threatmed$X2.2) | grepl("1.2", threatmed$X2.2.1) | grepl("1.2", threatmed$X2.2.2) | grepl("1.2", threatmed$X2.2.3) |
-                      grepl("1.2", threatmed$X2.3) | grepl("1.2", threatmed$X2.3.1) | grepl("1.2", threatmed$X2.3.2) | grepl("1.2", threatmed$X2.3.3) | grepl("1.2", threatmed$X2.3.4) |
-                      grepl("1.2", threatmed$X2.4) | grepl("1.2", threatmed$X2.4.1) | grepl("1.2", threatmed$X2.4.2) | grepl("1.2", threatmed$X2.4.3))
+AgriEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y2.1) | grepl("1.2", threatmed$Y2.1.1) | grepl("1.2", threatmed$Y2.1.2) | grepl("1.2", threatmed$Y2.1.3) | grepl("1.2", threatmed$Y2.1.4) |
+                      grepl("1.2", threatmed$Y2.2) | grepl("1.2", threatmed$Y2.2.1) | grepl("1.2", threatmed$Y2.2.2) | grepl("1.2", threatmed$Y2.2.3) |
+                      grepl("1.2", threatmed$Y2.3) | grepl("1.2", threatmed$Y2.3.1) | grepl("1.2", threatmed$Y2.3.2) | grepl("1.2", threatmed$Y2.3.3) | grepl("1.2", threatmed$Y2.3.4) |
+                      grepl("1.2", threatmed$Y2.4) | grepl("1.2", threatmed$Y2.4.1) | grepl("1.2", threatmed$Y2.4.2) | grepl("1.2", threatmed$Y2.4.3))
 AgriEcoDegnum <- nrow(AgriEcoDeg)
 AgriEcoDegper <-round((AgriEcoDegnum/threatobsnum * 100), dig=2)
 
-AgriIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X2.1) | grepl("1.3", threatmed$X2.1.1) | grepl("1.3", threatmed$X2.1.2) | grepl("1.3", threatmed$X2.1.3) | grepl("1.3", threatmed$X2.1.4) |
-                           grepl("1.3", threatmed$X2.2) | grepl("1.3", threatmed$X2.2.1) | grepl("1.3", threatmed$X2.2.2) | grepl("1.3", threatmed$X2.2.3) |
-                           grepl("1.3", threatmed$X2.3) | grepl("1.3", threatmed$X2.3.1) | grepl("1.3", threatmed$X2.3.2) | grepl("1.3", threatmed$X2.3.3) | grepl("1.3", threatmed$X2.3.4) |
-                           grepl("1.3", threatmed$X2.4) | grepl("1.3", threatmed$X2.4.1) | grepl("1.3", threatmed$X2.4.2) | grepl("1.3", threatmed$X2.4.3))
+AgriIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y2.1) | grepl("1.3", threatmed$Y2.1.1) | grepl("1.3", threatmed$Y2.1.2) | grepl("1.3", threatmed$Y2.1.3) | grepl("1.3", threatmed$Y2.1.4) |
+                           grepl("1.3", threatmed$Y2.2) | grepl("1.3", threatmed$Y2.2.1) | grepl("1.3", threatmed$Y2.2.2) | grepl("1.3", threatmed$Y2.2.3) |
+                           grepl("1.3", threatmed$Y2.3) | grepl("1.3", threatmed$Y2.3.1) | grepl("1.3", threatmed$Y2.3.2) | grepl("1.3", threatmed$Y2.3.3) | grepl("1.3", threatmed$Y2.3.4) |
+                           grepl("1.3", threatmed$Y2.4) | grepl("1.3", threatmed$Y2.4.1) | grepl("1.3", threatmed$Y2.4.2) | grepl("1.3", threatmed$Y2.4.3))
 AgriIndirEcoEffnum <- nrow(AgriIndirEcoEff)
 AgriIndirEcoEffper <-round((AgriIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-AgriSpecMort <- subset(threatmed, grepl("2.1", threatmed$X2.1) | grepl("2.1", threatmed$X2.1.1) | grepl("2.1", threatmed$X2.1.2) | grepl("2.1", threatmed$X2.1.3) | grepl("2.1", threatmed$X2.1.4) |
-                         grepl("2.1", threatmed$X2.2) | grepl("2.1", threatmed$X2.2.1) | grepl("2.1", threatmed$X2.2.2) | grepl("2.1", threatmed$X2.2.3) |
-                         grepl("2.1", threatmed$X2.3) | grepl("2.1", threatmed$X2.3.1) | grepl("2.1", threatmed$X2.3.2) | grepl("2.1", threatmed$X2.3.3) | grepl("2.1", threatmed$X2.3.4) |
-                         grepl("2.1", threatmed$X2.4) | grepl("2.1", threatmed$X2.4.1) | grepl("2.1", threatmed$X2.4.2) | grepl("2.1", threatmed$X2.4.3))
+AgriSpecMort <- subset(threatmed, grepl("2.1", threatmed$Y2.1) | grepl("2.1", threatmed$Y2.1.1) | grepl("2.1", threatmed$Y2.1.2) | grepl("2.1", threatmed$Y2.1.3) | grepl("2.1", threatmed$Y2.1.4) |
+                         grepl("2.1", threatmed$Y2.2) | grepl("2.1", threatmed$Y2.2.1) | grepl("2.1", threatmed$Y2.2.2) | grepl("2.1", threatmed$Y2.2.3) |
+                         grepl("2.1", threatmed$Y2.3) | grepl("2.1", threatmed$Y2.3.1) | grepl("2.1", threatmed$Y2.3.2) | grepl("2.1", threatmed$Y2.3.3) | grepl("2.1", threatmed$Y2.3.4) |
+                         grepl("2.1", threatmed$Y2.4) | grepl("2.1", threatmed$Y2.4.1) | grepl("2.1", threatmed$Y2.4.2) | grepl("2.1", threatmed$Y2.4.3))
 AgriSpecMortnum <- nrow(AgriSpecMort)
 AgriSpecMortper <-round((AgriSpecMortnum/threatobsnum * 100), dig=2)
 
-AgriSpecDist <- subset(threatmed, grepl("2.2", threatmed$X2.1) | grepl("2.2", threatmed$X2.1.1) | grepl("2.2", threatmed$X2.1.2) | grepl("2.2", threatmed$X2.1.3) | grepl("2.2", threatmed$X2.1.4) |
-                         grepl("2.2", threatmed$X2.2) | grepl("2.2", threatmed$X2.2.1) | grepl("2.2", threatmed$X2.2.2) | grepl("2.2", threatmed$X2.2.3) |
-                         grepl("2.2", threatmed$X2.3) | grepl("2.2", threatmed$X2.3.1) | grepl("2.2", threatmed$X2.3.2) | grepl("2.2", threatmed$X2.3.3) | grepl("2.2", threatmed$X2.3.4) |
-                         grepl("2.2", threatmed$X2.4) | grepl("2.2", threatmed$X2.4.1) | grepl("2.2", threatmed$X2.4.2) | grepl("2.2", threatmed$X2.4.3))
+AgriSpecDist <- subset(threatmed, grepl("2.2", threatmed$Y2.1) | grepl("2.2", threatmed$Y2.1.1) | grepl("2.2", threatmed$Y2.1.2) | grepl("2.2", threatmed$Y2.1.3) | grepl("2.2", threatmed$Y2.1.4) |
+                         grepl("2.2", threatmed$Y2.2) | grepl("2.2", threatmed$Y2.2.1) | grepl("2.2", threatmed$Y2.2.2) | grepl("2.2", threatmed$Y2.2.3) |
+                         grepl("2.2", threatmed$Y2.3) | grepl("2.2", threatmed$Y2.3.1) | grepl("2.2", threatmed$Y2.3.2) | grepl("2.2", threatmed$Y2.3.3) | grepl("2.2", threatmed$Y2.3.4) |
+                         grepl("2.2", threatmed$Y2.4) | grepl("2.2", threatmed$Y2.4.1) | grepl("2.2", threatmed$Y2.4.2) | grepl("2.2", threatmed$Y2.4.3))
 AgriSpecDistnum <- nrow(AgriSpecDist)
 AgriSpecDistper <-round((AgriSpecDistnum/threatobsnum * 100), dig=2)
 
-AgriHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X2.1) | grepl("2.3.1", threatmed$X2.1.1) | grepl("2.3.1", threatmed$X2.1.2) | grepl("2.3.1", threatmed$X2.1.3) | grepl("2.3.1", threatmed$X2.1.4) |
-                      grepl("2.3.1", threatmed$X2.2) | grepl("2.3.1", threatmed$X2.2.1) | grepl("2.3.1", threatmed$X2.2.2) | grepl("2.3.1", threatmed$X2.2.3) |
-                      grepl("2.3.1", threatmed$X2.3) | grepl("2.3.1", threatmed$X2.3.1) | grepl("2.3.1", threatmed$X2.3.2) | grepl("2.3.1", threatmed$X2.3.3) | grepl("2.3.1", threatmed$X2.3.4) |
-                      grepl("2.3.1", threatmed$X2.4) | grepl("2.3.1", threatmed$X2.4.1) | grepl("2.3.1", threatmed$X2.4.2) | grepl("2.3.1", threatmed$X2.4.3))
+AgriHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y2.1) | grepl("2.3.1", threatmed$Y2.1.1) | grepl("2.3.1", threatmed$Y2.1.2) | grepl("2.3.1", threatmed$Y2.1.3) | grepl("2.3.1", threatmed$Y2.1.4) |
+                      grepl("2.3.1", threatmed$Y2.2) | grepl("2.3.1", threatmed$Y2.2.1) | grepl("2.3.1", threatmed$Y2.2.2) | grepl("2.3.1", threatmed$Y2.2.3) |
+                      grepl("2.3.1", threatmed$Y2.3) | grepl("2.3.1", threatmed$Y2.3.1) | grepl("2.3.1", threatmed$Y2.3.2) | grepl("2.3.1", threatmed$Y2.3.3) | grepl("2.3.1", threatmed$Y2.3.4) |
+                      grepl("2.3.1", threatmed$Y2.4) | grepl("2.3.1", threatmed$Y2.4.1) | grepl("2.3.1", threatmed$Y2.4.2) | grepl("2.3.1", threatmed$Y2.4.3))
 AgriHybridnum <- nrow(AgriHybrid)
 AgriHybridper <-round((AgriHybridnum/threatobsnum * 100), dig=2)
 
-AgriComp <-subset(threatmed, grepl("2.3.2", threatmed$X2.1) | grepl("2.3.2", threatmed$X2.1.1) | grepl("2.3.2", threatmed$X2.1.2) | grepl("2.3.2", threatmed$X2.1.3) | grepl("2.3.2", threatmed$X2.1.4) |
-                    grepl("2.3.2", threatmed$X2.2) | grepl("2.3.2", threatmed$X2.2.1) | grepl("2.3.2", threatmed$X2.2.2) | grepl("2.3.2", threatmed$X2.2.3) |
-                    grepl("2.3.2", threatmed$X2.3) | grepl("2.3.2", threatmed$X2.3.1) | grepl("2.3.2", threatmed$X2.3.2) | grepl("2.3.2", threatmed$X2.3.3) | grepl("2.3.2", threatmed$X2.3.4) |
-                    grepl("2.3.2", threatmed$X2.4) | grepl("2.3.2", threatmed$X2.4.1) | grepl("2.3.2", threatmed$X2.4.2) | grepl("2.3.2", threatmed$X2.4.3))
+AgriComp <-subset(threatmed, grepl("2.3.2", threatmed$Y2.1) | grepl("2.3.2", threatmed$Y2.1.1) | grepl("2.3.2", threatmed$Y2.1.2) | grepl("2.3.2", threatmed$Y2.1.3) | grepl("2.3.2", threatmed$Y2.1.4) |
+                    grepl("2.3.2", threatmed$Y2.2) | grepl("2.3.2", threatmed$Y2.2.1) | grepl("2.3.2", threatmed$Y2.2.2) | grepl("2.3.2", threatmed$Y2.2.3) |
+                    grepl("2.3.2", threatmed$Y2.3) | grepl("2.3.2", threatmed$Y2.3.1) | grepl("2.3.2", threatmed$Y2.3.2) | grepl("2.3.2", threatmed$Y2.3.3) | grepl("2.3.2", threatmed$Y2.3.4) |
+                    grepl("2.3.2", threatmed$Y2.4) | grepl("2.3.2", threatmed$Y2.4.1) | grepl("2.3.2", threatmed$Y2.4.2) | grepl("2.3.2", threatmed$Y2.4.3))
 AgriCompnum <- nrow(AgriComp)
 AgriCompper <-round((AgriCompnum/threatobsnum * 100), dig=2)
 
-AgriLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X2.1) | grepl("2.3.3", threatmed$X2.1.1) | grepl("2.3.3", threatmed$X2.1.2) | grepl("2.3.3", threatmed$X2.1.3) | grepl("2.3.3", threatmed$X2.1.4) |
-                       grepl("2.3.3", threatmed$X2.2) | grepl("2.3.3", threatmed$X2.2.1) | grepl("2.3.3", threatmed$X2.2.2) | grepl("2.3.3", threatmed$X2.2.3) |
-                       grepl("2.3.3", threatmed$X2.3) | grepl("2.3.3", threatmed$X2.3.1) | grepl("2.3.3", threatmed$X2.3.2) | grepl("2.3.3", threatmed$X2.3.3) | grepl("2.3.3", threatmed$X2.3.4) |
-                       grepl("2.3.3", threatmed$X2.4) | grepl("2.3.3", threatmed$X2.4.1) | grepl("2.3.3", threatmed$X2.4.2) | grepl("2.3.3", threatmed$X2.4.3))
+AgriLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y2.1) | grepl("2.3.3", threatmed$Y2.1.1) | grepl("2.3.3", threatmed$Y2.1.2) | grepl("2.3.3", threatmed$Y2.1.3) | grepl("2.3.3", threatmed$Y2.1.4) |
+                       grepl("2.3.3", threatmed$Y2.2) | grepl("2.3.3", threatmed$Y2.2.1) | grepl("2.3.3", threatmed$Y2.2.2) | grepl("2.3.3", threatmed$Y2.2.3) |
+                       grepl("2.3.3", threatmed$Y2.3) | grepl("2.3.3", threatmed$Y2.3.1) | grepl("2.3.3", threatmed$Y2.3.2) | grepl("2.3.3", threatmed$Y2.3.3) | grepl("2.3.3", threatmed$Y2.3.4) |
+                       grepl("2.3.3", threatmed$Y2.4) | grepl("2.3.3", threatmed$Y2.4.1) | grepl("2.3.3", threatmed$Y2.4.2) | grepl("2.3.3", threatmed$Y2.4.3))
 AgriLossMutnum <- nrow(AgriLossMut)
 AgriLossMutper <-round((AgriLossMutnum/threatobsnum * 100), dig=2)
 
-AgriLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X2.1) | grepl("2.3.4", threatmed$X2.1.1) | grepl("2.3.4", threatmed$X2.1.2) | grepl("2.3.4", threatmed$X2.1.3) | grepl("2.3.4", threatmed$X2.1.4) |
-                        grepl("2.3.4", threatmed$X2.2) | grepl("2.3.4", threatmed$X2.2.1) | grepl("2.3.4", threatmed$X2.2.2) | grepl("2.3.4", threatmed$X2.2.3) |
-                        grepl("2.3.4", threatmed$X2.3) | grepl("2.3.4", threatmed$X2.3.1) | grepl("2.3.4", threatmed$X2.3.2) | grepl("2.3.4", threatmed$X2.3.3) | grepl("2.3.4", threatmed$X2.3.4) |
-                        grepl("2.3.4", threatmed$X2.4) | grepl("2.3.4", threatmed$X2.4.1) | grepl("2.3.4", threatmed$X2.4.2) | grepl("2.3.4", threatmed$X2.4.3))
+AgriLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y2.1) | grepl("2.3.4", threatmed$Y2.1.1) | grepl("2.3.4", threatmed$Y2.1.2) | grepl("2.3.4", threatmed$Y2.1.3) | grepl("2.3.4", threatmed$Y2.1.4) |
+                        grepl("2.3.4", threatmed$Y2.2) | grepl("2.3.4", threatmed$Y2.2.1) | grepl("2.3.4", threatmed$Y2.2.2) | grepl("2.3.4", threatmed$Y2.2.3) |
+                        grepl("2.3.4", threatmed$Y2.3) | grepl("2.3.4", threatmed$Y2.3.1) | grepl("2.3.4", threatmed$Y2.3.2) | grepl("2.3.4", threatmed$Y2.3.3) | grepl("2.3.4", threatmed$Y2.3.4) |
+                        grepl("2.3.4", threatmed$Y2.4) | grepl("2.3.4", threatmed$Y2.4.1) | grepl("2.3.4", threatmed$Y2.4.2) | grepl("2.3.4", threatmed$Y2.4.3))
 AgriLossPollnum <- nrow(AgriLossPoll)
 AgriLossPollper <-round((AgriLossPollnum/threatobsnum * 100), dig=2)
 
-AgriInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X2.1) | grepl("2.3.5", threatmed$X2.1.1) | grepl("2.3.5", threatmed$X2.1.2) | grepl("2.3.5", threatmed$X2.1.3) | grepl("2.3.5", threatmed$X2.1.4) |
-                       grepl("2.3.5", threatmed$X2.2) | grepl("2.3.5", threatmed$X2.2.1) | grepl("2.3.5", threatmed$X2.2.2) | grepl("2.3.5", threatmed$X2.2.3) |
-                       grepl("2.3.5", threatmed$X2.3) | grepl("2.3.5", threatmed$X2.3.1) | grepl("2.3.5", threatmed$X2.3.2) | grepl("2.3.5", threatmed$X2.3.3) | grepl("2.3.5", threatmed$X2.3.4) |
-                       grepl("2.3.5", threatmed$X2.4) | grepl("2.3.5", threatmed$X2.4.1) | grepl("2.3.5", threatmed$X2.4.2) | grepl("2.3.5", threatmed$X2.4.3))
+AgriInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y2.1) | grepl("2.3.5", threatmed$Y2.1.1) | grepl("2.3.5", threatmed$Y2.1.2) | grepl("2.3.5", threatmed$Y2.1.3) | grepl("2.3.5", threatmed$Y2.1.4) |
+                       grepl("2.3.5", threatmed$Y2.2) | grepl("2.3.5", threatmed$Y2.2.1) | grepl("2.3.5", threatmed$Y2.2.2) | grepl("2.3.5", threatmed$Y2.2.3) |
+                       grepl("2.3.5", threatmed$Y2.3) | grepl("2.3.5", threatmed$Y2.3.1) | grepl("2.3.5", threatmed$Y2.3.2) | grepl("2.3.5", threatmed$Y2.3.3) | grepl("2.3.5", threatmed$Y2.3.4) |
+                       grepl("2.3.5", threatmed$Y2.4) | grepl("2.3.5", threatmed$Y2.4.1) | grepl("2.3.5", threatmed$Y2.4.2) | grepl("2.3.5", threatmed$Y2.4.3))
 AgriInbreednum <- nrow(AgriInbreed)
 AgriInbreedper <-round((AgriInbreednum/threatobsnum * 100), dig=2)
 
-AgriSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X2.1) | grepl("2.3.6", threatmed$X2.1.1) | grepl("2.3.6", threatmed$X2.1.2) | grepl("2.3.6", threatmed$X2.1.3) | grepl("2.3.6", threatmed$X2.1.4) |
-                       grepl("2.3.6", threatmed$X2.2) | grepl("2.3.6", threatmed$X2.2.1) | grepl("2.3.6", threatmed$X2.2.2) | grepl("2.3.6", threatmed$X2.2.3) |
-                       grepl("2.3.6", threatmed$X2.3) | grepl("2.3.6", threatmed$X2.3.1) | grepl("2.3.6", threatmed$X2.3.2) | grepl("2.3.6", threatmed$X2.3.3) | grepl("2.3.6", threatmed$X2.3.4) |
-                       grepl("2.3.6", threatmed$X2.4) | grepl("2.3.6", threatmed$X2.4.1) | grepl("2.3.6", threatmed$X2.4.2) | grepl("2.3.6", threatmed$X2.4.3))
+AgriSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y2.1) | grepl("2.3.6", threatmed$Y2.1.1) | grepl("2.3.6", threatmed$Y2.1.2) | grepl("2.3.6", threatmed$Y2.1.3) | grepl("2.3.6", threatmed$Y2.1.4) |
+                       grepl("2.3.6", threatmed$Y2.2) | grepl("2.3.6", threatmed$Y2.2.1) | grepl("2.3.6", threatmed$Y2.2.2) | grepl("2.3.6", threatmed$Y2.2.3) |
+                       grepl("2.3.6", threatmed$Y2.3) | grepl("2.3.6", threatmed$Y2.3.1) | grepl("2.3.6", threatmed$Y2.3.2) | grepl("2.3.6", threatmed$Y2.3.3) | grepl("2.3.6", threatmed$Y2.3.4) |
+                       grepl("2.3.6", threatmed$Y2.4) | grepl("2.3.6", threatmed$Y2.4.1) | grepl("2.3.6", threatmed$Y2.4.2) | grepl("2.3.6", threatmed$Y2.4.3))
 AgriSkewSexnum <- nrow(AgriSkewSex)
 AgriSkewSexper <-round((AgriSkewSexnum/threatobsnum * 100), dig=2)
 
-AgriRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X2.1) | grepl("2.3.7", threatmed$X2.1.1) | grepl("2.3.7", threatmed$X2.1.2) | grepl("2.3.7", threatmed$X2.1.3) | grepl("2.3.7", threatmed$X2.1.4) |
-                         grepl("2.3.7", threatmed$X2.2) | grepl("2.3.7", threatmed$X2.2.1) | grepl("2.3.7", threatmed$X2.2.2) | grepl("2.3.7", threatmed$X2.2.3) |
-                         grepl("2.3.7", threatmed$X2.3) | grepl("2.3.7", threatmed$X2.3.1) | grepl("2.3.7", threatmed$X2.3.2) | grepl("2.3.7", threatmed$X2.3.3) | grepl("2.3.7", threatmed$X2.3.4) |
-                         grepl("2.3.7", threatmed$X2.4) | grepl("2.3.7", threatmed$X2.4.1) | grepl("2.3.7", threatmed$X2.4.2) | grepl("2.3.7", threatmed$X2.4.3))
+AgriRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y2.1) | grepl("2.3.7", threatmed$Y2.1.1) | grepl("2.3.7", threatmed$Y2.1.2) | grepl("2.3.7", threatmed$Y2.1.3) | grepl("2.3.7", threatmed$Y2.1.4) |
+                         grepl("2.3.7", threatmed$Y2.2) | grepl("2.3.7", threatmed$Y2.2.1) | grepl("2.3.7", threatmed$Y2.2.2) | grepl("2.3.7", threatmed$Y2.2.3) |
+                         grepl("2.3.7", threatmed$Y2.3) | grepl("2.3.7", threatmed$Y2.3.1) | grepl("2.3.7", threatmed$Y2.3.2) | grepl("2.3.7", threatmed$Y2.3.3) | grepl("2.3.7", threatmed$Y2.3.4) |
+                         grepl("2.3.7", threatmed$Y2.4) | grepl("2.3.7", threatmed$Y2.4.1) | grepl("2.3.7", threatmed$Y2.4.2) | grepl("2.3.7", threatmed$Y2.4.3))
 AgriRedRepSucnum <- nrow(AgriRedRepSuc)
 AgriRedRepSucper <-round((AgriRedRepSucnum/threatobsnum * 100), dig=2)
 
-AgriOth <-subset(threatmed, grepl("2.3.8", threatmed$X2.1) | grepl("2.3.8", threatmed$X2.1.1) | grepl("2.3.8", threatmed$X2.1.2) | grepl("2.3.8", threatmed$X2.1.3) | grepl("2.3.8", threatmed$X2.1.4) |
-                   grepl("2.3.8", threatmed$X2.2) | grepl("2.3.8", threatmed$X2.2.1) | grepl("2.3.8", threatmed$X2.2.2) | grepl("2.3.8", threatmed$X2.2.3) |
-                   grepl("2.3.8", threatmed$X2.3) | grepl("2.3.8", threatmed$X2.3.1) | grepl("2.3.8", threatmed$X2.3.2) | grepl("2.3.8", threatmed$X2.3.3) | grepl("2.3.8", threatmed$X2.3.4) |
-                   grepl("2.3.8", threatmed$X2.4) | grepl("2.3.8", threatmed$X2.4.1) | grepl("2.3.8", threatmed$X2.4.2) | grepl("2.3.8", threatmed$X2.4.3))
+AgriOth <-subset(threatmed, grepl("2.3.8", threatmed$Y2.1) | grepl("2.3.8", threatmed$Y2.1.1) | grepl("2.3.8", threatmed$Y2.1.2) | grepl("2.3.8", threatmed$Y2.1.3) | grepl("2.3.8", threatmed$Y2.1.4) |
+                   grepl("2.3.8", threatmed$Y2.2) | grepl("2.3.8", threatmed$Y2.2.1) | grepl("2.3.8", threatmed$Y2.2.2) | grepl("2.3.8", threatmed$Y2.2.3) |
+                   grepl("2.3.8", threatmed$Y2.3) | grepl("2.3.8", threatmed$Y2.3.1) | grepl("2.3.8", threatmed$Y2.3.2) | grepl("2.3.8", threatmed$Y2.3.3) | grepl("2.3.8", threatmed$Y2.3.4) |
+                   grepl("2.3.8", threatmed$Y2.4) | grepl("2.3.8", threatmed$Y2.4.1) | grepl("2.3.8", threatmed$Y2.4.2) | grepl("2.3.8", threatmed$Y2.4.3))
 AgriOthnum <- nrow(AgriOth)
 AgriOthper <-round((AgriOthnum/threatobsnum * 100), dig=2)
 
@@ -183,55 +183,55 @@ Agritotal <- (AgriEcoConnum + AgriEcoDegnum + AgriIndirEcoEffnum + AgriPastUnnum
 AgriPer <- round((Agritotal/threatobsnum * 100), dig = 2)
 
 #Threat 3: Energy Production and mining
-EnEcoCon <-subset(threatmed, grepl("1.1", threatmed$X3.1) | grepl("1.1", threatmed$X3.2) | grepl("1.1", threatmed$X3.3))
+EnEcoCon <-subset(threatmed, grepl("1.1", threatmed$Y3.1) | grepl("1.1", threatmed$Y3.2) | grepl("1.1", threatmed$Y3.3))
 EnEcoConnum <- nrow(EnEcoCon)
 EnEcoConper <-round((EnEcoConnum/threatobsnum * 100), dig=2)
 
-EnEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X3.1) | grepl("1.2", threatmed$X3.2) | grepl("1.2", threatmed$X3.3))
+EnEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y3.1) | grepl("1.2", threatmed$Y3.2) | grepl("1.2", threatmed$Y3.3))
 EnEcoDegnum <- nrow(EnEcoDeg)
 EnEcoDegper <-round((EnEcoDegnum/threatobsnum * 100), dig=2)
 
-EnIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X3.1) | grepl("1.3", threatmed$X3.2) | grepl("1.3", threatmed$X3.3))
+EnIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y3.1) | grepl("1.3", threatmed$Y3.2) | grepl("1.3", threatmed$Y3.3))
 EnIndirEcoEffnum <- nrow(EnIndirEcoEff)
 EnIndirEcoEffper <-round((EnIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-EnSpecMort <-subset(threatmed, grepl("2.1", threatmed$X3.1) | grepl("2.1", threatmed$X3.2) | grepl("2.1", threatmed$X3.3))
+EnSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y3.1) | grepl("2.1", threatmed$Y3.2) | grepl("2.1", threatmed$Y3.3))
 EnSpecMortnum <- nrow(EnSpecMort)
 EnSpecMortper <-round((EnSpecMortnum/threatobsnum * 100), dig=2)
 
-EnSpecDist <-subset(threatmed, grepl("2.2", threatmed$X3.1) | grepl("2.2", threatmed$X3.2) | grepl("2.2", threatmed$X3.3))
+EnSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y3.1) | grepl("2.2", threatmed$Y3.2) | grepl("2.2", threatmed$Y3.3))
 EnSpecDistnum <- nrow(EnSpecDist)
 EnSpecDistper <-round((EnSpecDistnum/threatobsnum * 100), dig=2)
 
-EnHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X3.1) | grepl("2.3.1", threatmed$X3.2) | grepl("2.3.1", threatmed$X3.3))
+EnHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y3.1) | grepl("2.3.1", threatmed$Y3.2) | grepl("2.3.1", threatmed$Y3.3))
 EnHybridnum <- nrow(EnHybrid)
 EnHybridper <-round((EnHybridnum/threatobsnum * 100), dig=2)
 
-EnComp <-subset(threatmed, grepl("2.3.2", threatmed$X3.1) | grepl("2.3.2", threatmed$X3.2) | grepl("2.3.2", threatmed$X3.3))
+EnComp <-subset(threatmed, grepl("2.3.2", threatmed$Y3.1) | grepl("2.3.2", threatmed$Y3.2) | grepl("2.3.2", threatmed$Y3.3))
 EnCompnum <- nrow(EnComp)
 EnCompper <-round((EnCompnum/threatobsnum * 100), dig=2)
 
-EnLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X3.1) | grepl("2.3.3", threatmed$X3.2) | grepl("2.3.3", threatmed$X3.3))
+EnLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y3.1) | grepl("2.3.3", threatmed$Y3.2) | grepl("2.3.3", threatmed$Y3.3))
 EnLossMutnum <- nrow(EnLossMut)
 EnLossMutper <-round((EnLossMutnum/threatobsnum * 100), dig=2)
 
-EnLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X3.1) | grepl("2.3.4", threatmed$X3.2) | grepl("2.3.4", threatmed$X3.3))
+EnLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y3.1) | grepl("2.3.4", threatmed$Y3.2) | grepl("2.3.4", threatmed$Y3.3))
 EnLossPollnum <- nrow(EnLossPoll)
 EnLossPollper <-round((EnLossPollnum/threatobsnum * 100), dig=2)
 
-EnInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X3.1) | grepl("2.3.5", threatmed$X3.2) | grepl("2.3.5", threatmed$X3.3))
+EnInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y3.1) | grepl("2.3.5", threatmed$Y3.2) | grepl("2.3.5", threatmed$Y3.3))
 EnInbreednum <- nrow(EnInbreed)
 EnInbreedper <-round((EnInbreednum/threatobsnum * 100), dig=2)
 
-EnSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X3.1) | grepl("2.3.6", threatmed$X3.2) | grepl("2.3.6", threatmed$X3.3))
+EnSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y3.1) | grepl("2.3.6", threatmed$Y3.2) | grepl("2.3.6", threatmed$Y3.3))
 EnSkewSexnum <- nrow(EnSkewSex)
 EnSkewSexper <-round((EnSkewSexnum/threatobsnum * 100), dig=2)
 
-EnRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X3.1) | grepl("2.3.7", threatmed$X3.2) | grepl("2.3.7", threatmed$X3.3))
+EnRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y3.1) | grepl("2.3.7", threatmed$Y3.2) | grepl("2.3.7", threatmed$Y3.3))
 EnRedRepSucnum <- nrow(EnRedRepSuc)
 EnRedRepSucper <-round((EnRedRepSucnum/threatobsnum * 100), dig=2)
 
-EnOth <-subset(threatmed, grepl("2.3.8", threatmed$X3.1) | grepl("2.3.8", threatmed$X3.2) | grepl("2.3.8", threatmed$X3.3))
+EnOth <-subset(threatmed, grepl("2.3.8", threatmed$Y3.1) | grepl("2.3.8", threatmed$Y3.2) | grepl("2.3.8", threatmed$Y3.3))
 EnOthnum <- nrow(EnOth)
 EnOthper <-round((EnOthnum/threatobsnum * 100), dig=2)
 
@@ -239,55 +239,55 @@ Entotal <- (EnEcoConnum + EnEcoDegnum + EnIndirEcoEffnum + EnPastUnnum + EnSpecD
 EnPer <- round((Entotal/threatobsnum * 100), dig = 2)
 
 #Threat 4: Transportation and service corridors
-TransEcoCon <-subset(threatmed, grepl("1.1", threatmed$X4.1) | grepl("1.1", threatmed$X4.2) | grepl("1.1", threatmed$X4.3) | grepl("1.1", threatmed$X4.4))
+TransEcoCon <-subset(threatmed, grepl("1.1", threatmed$Y4.1) | grepl("1.1", threatmed$Y4.2) | grepl("1.1", threatmed$Y4.3) | grepl("1.1", threatmed$Y4.4))
 TransEcoConnum <- nrow(TransEcoCon)
 TransEcoConper <-round((TransEcoConnum/threatobsnum * 100), dig=2)
 
-TransEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X4.1) | grepl("1.2", threatmed$X4.2) | grepl("1.2", threatmed$X4.3) | grepl("1.2", threatmed$X4.4))
+TransEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y4.1) | grepl("1.2", threatmed$Y4.2) | grepl("1.2", threatmed$Y4.3) | grepl("1.2", threatmed$Y4.4))
 TransEcoDegnum <- nrow(TransEcoDeg)
 TransEcoDegper <-round((TransEcoDegnum/threatobsnum * 100), dig=2)
 
-TransIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X4.1) | grepl("1.3", threatmed$X4.2) | grepl("1.3", threatmed$X4.3) | grepl("1.3", threatmed$X4.4))
+TransIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y4.1) | grepl("1.3", threatmed$Y4.2) | grepl("1.3", threatmed$Y4.3) | grepl("1.3", threatmed$Y4.4))
 TransIndirEcoEffnum <- nrow(TransIndirEcoEff)
 TransIndirEcoEffper <-round((TransIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-TransSpecMort <-subset(threatmed, grepl("2.1", threatmed$X4.1) | grepl("2.1", threatmed$X4.2) | grepl("2.1", threatmed$X4.3) | grepl("2.1", threatmed$X4.4))
+TransSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y4.1) | grepl("2.1", threatmed$Y4.2) | grepl("2.1", threatmed$Y4.3) | grepl("2.1", threatmed$Y4.4))
 TransSpecMortnum <- nrow(TransSpecMort)
 TransSpecMortper <-round((TransSpecMortnum/threatobsnum * 100), dig=2)
 
-TransSpecDist <-subset(threatmed, grepl("2.2", threatmed$X4.1) | grepl("2.2", threatmed$X4.2) | grepl("2.2", threatmed$X4.3) | grepl("2.2", threatmed$X4.4))
+TransSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y4.1) | grepl("2.2", threatmed$Y4.2) | grepl("2.2", threatmed$Y4.3) | grepl("2.2", threatmed$Y4.4))
 TransSpecDistnum <- nrow(TransSpecDist)
 TransSpecDistper <-round((TransSpecDistnum/threatobsnum * 100), dig=2)
 
-TransHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X4.1) | grepl("2.3.1", threatmed$X4.2) | grepl("2.3.1", threatmed$X4.3) | grepl("2.3.1", threatmed$X4.4))
+TransHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y4.1) | grepl("2.3.1", threatmed$Y4.2) | grepl("2.3.1", threatmed$Y4.3) | grepl("2.3.1", threatmed$Y4.4))
 TransHybridnum <- nrow(TransHybrid)
 TransHybridper <-round((TransHybridnum/threatobsnum * 100), dig=2)
 
-TransComp <-subset(threatmed, grepl("2.3.2", threatmed$X4.1) | grepl("2.3.2", threatmed$X4.2) | grepl("2.3.2", threatmed$X4.3) | grepl("2.3.2", threatmed$X4.4))
+TransComp <-subset(threatmed, grepl("2.3.2", threatmed$Y4.1) | grepl("2.3.2", threatmed$Y4.2) | grepl("2.3.2", threatmed$Y4.3) | grepl("2.3.2", threatmed$Y4.4))
 TransCompnum <- nrow(TransComp)
 TransCompper <-round((TransCompnum/threatobsnum * 100), dig=2)
 
-TransLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X4.1) | grepl("2.3.3", threatmed$X4.2) | grepl("2.3.3", threatmed$X4.3) | grepl("2.3.3", threatmed$X4.4))
+TransLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y4.1) | grepl("2.3.3", threatmed$Y4.2) | grepl("2.3.3", threatmed$Y4.3) | grepl("2.3.3", threatmed$Y4.4))
 TransLossMutnum <- nrow(TransLossMut)
 TransLossMutper <-round((TransLossMutnum/threatobsnum * 100), dig=2)
 
-TransLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X4.1) | grepl("2.3.4", threatmed$X4.2) | grepl("2.3.4", threatmed$X4.3) | grepl("2.3.4", threatmed$X4.4))
+TransLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y4.1) | grepl("2.3.4", threatmed$Y4.2) | grepl("2.3.4", threatmed$Y4.3) | grepl("2.3.4", threatmed$Y4.4))
 TransLossPollnum <- nrow(TransLossPoll)
 TransLossPollper <-round((TransLossPollnum/threatobsnum * 100), dig=2)
 
-TransInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X4.1) | grepl("2.3.5", threatmed$X4.2) | grepl("2.3.5", threatmed$X4.3) | grepl("2.3.5", threatmed$X4.4))
+TransInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y4.1) | grepl("2.3.5", threatmed$Y4.2) | grepl("2.3.5", threatmed$Y4.3) | grepl("2.3.5", threatmed$Y4.4))
 TransInbreednum <- nrow(TransInbreed)
 TransInbreedper <-round((TransInbreednum/threatobsnum * 100), dig=2)
 
-TransSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X4.1) | grepl("2.3.6", threatmed$X4.2) | grepl("2.3.6", threatmed$X4.3) | grepl("2.3.6", threatmed$X4.4))
+TransSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y4.1) | grepl("2.3.6", threatmed$Y4.2) | grepl("2.3.6", threatmed$Y4.3) | grepl("2.3.6", threatmed$Y4.4))
 TransSkewSexnum <- nrow(TransSkewSex)
 TransSkewSexper <-round((TransSkewSexnum/threatobsnum * 100), dig=2)
 
-TransRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X4.1) | grepl("2.3.7", threatmed$X4.2) | grepl("2.3.7", threatmed$X4.3) | grepl("2.3.7", threatmed$X4.4))
+TransRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y4.1) | grepl("2.3.7", threatmed$Y4.2) | grepl("2.3.7", threatmed$Y4.3) | grepl("2.3.7", threatmed$Y4.4))
 TransRedRepSucnum <- nrow(TransRedRepSuc)
 TransRedRepSucper <-round((TransRedRepSucnum/threatobsnum * 100), dig=2)
 
-TransOth <-subset(threatmed, grepl("2.3.8", threatmed$X4.1) | grepl("2.3.8", threatmed$X4.2) | grepl("2.3.8", threatmed$X4.3) | grepl("2.3.8", threatmed$X4.4))
+TransOth <-subset(threatmed, grepl("2.3.8", threatmed$Y4.1) | grepl("2.3.8", threatmed$Y4.2) | grepl("2.3.8", threatmed$Y4.3) | grepl("2.3.8", threatmed$Y4.4))
 TransOthnum <- nrow(TransOth)
 TransOthper <-round((TransOthnum/threatobsnum * 100), dig=2)
 
@@ -295,94 +295,94 @@ Transtotal <- (TransEcoConnum + TransEcoDegnum + TransIndirEcoEffnum + TransPast
 TransPer <- round((Transtotal/threatobsnum * 100), dig = 2)
 
 #Threat 5: Biological resource use
-BioEcoCon <-subset(threatmed, grepl("1.1", threatmed$X5.1) | grepl("1.1", threatmed$X5.1.1) | grepl("1.1", threatmed$X5.1.2) | grepl("1.1", threatmed$X5.1.3) | grepl("1.1", threatmed$X5.1.4) |
-                     grepl("1.1", threatmed$X5.2) | grepl("1.1", threatmed$X5.2.1) | grepl("1.1", threatmed$X5.2.2) | grepl("1.1", threatmed$X5.2.3) | grepl("1.1", threatmed$X5.2.4) | 
-                     grepl("1.1", threatmed$X5.3) | grepl("1.1", threatmed$X5.3.1) | grepl("1.1", threatmed$X5.3.2) | grepl("1.1", threatmed$X5.3.3) | grepl("1.1", threatmed$X5.3.4) |
-                     grepl("1.1", threatmed$X5.4) | grepl("1.1", threatmed$X5.4.1) | grepl("1.1", threatmed$X5.4.2) | grepl("1.1", threatmed$X5.4.3) | grepl("1.1", threatmed$X5.4.4) | grepl("1.1", threatmed$X5.4.5) | grepl("1.1", threatmed$X5.4.6))
+BioEcoCon <-subset(threatmed, grepl("1.1", threatmed$Y5.1) | grepl("1.1", threatmed$Y5.1.1) | grepl("1.1", threatmed$Y5.1.2) | grepl("1.1", threatmed$Y5.1.3) | grepl("1.1", threatmed$Y5.1.4) |
+                     grepl("1.1", threatmed$Y5.2) | grepl("1.1", threatmed$Y5.2.1) | grepl("1.1", threatmed$Y5.2.2) | grepl("1.1", threatmed$Y5.2.3) | grepl("1.1", threatmed$Y5.2.4) | 
+                     grepl("1.1", threatmed$Y5.3) | grepl("1.1", threatmed$Y5.3.1) | grepl("1.1", threatmed$Y5.3.2) | grepl("1.1", threatmed$Y5.3.3) | grepl("1.1", threatmed$Y5.3.4) |
+                     grepl("1.1", threatmed$Y5.4) | grepl("1.1", threatmed$Y5.4.1) | grepl("1.1", threatmed$Y5.4.2) | grepl("1.1", threatmed$Y5.4.3) | grepl("1.1", threatmed$Y5.4.4) | grepl("1.1", threatmed$Y5.4.5) | grepl("1.1", threatmed$Y5.4.6))
 BioEcoConnum <- nrow(BioEcoCon)
 BioEcoConper <-round((BioEcoConnum/threatobsnum * 100), dig=2)
 
-BioEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X5.1) | grepl("1.2", threatmed$X5.1.1) | grepl("1.2", threatmed$X5.1.2) | grepl("1.2", threatmed$X5.1.3) | grepl("1.2", threatmed$X5.1.4) |
-                     grepl("1.2", threatmed$X5.2) | grepl("1.2", threatmed$X5.2.1) | grepl("1.2", threatmed$X5.2.2) | grepl("1.2", threatmed$X5.2.3) | grepl("1.2", threatmed$X5.2.4) | 
-                     grepl("1.2", threatmed$X5.3) | grepl("1.2", threatmed$X5.3.1) | grepl("1.2", threatmed$X5.3.2) | grepl("1.2", threatmed$X5.3.3) | grepl("1.2", threatmed$X5.3.4) |
-                     grepl("1.2", threatmed$X5.4) | grepl("1.2", threatmed$X5.4.1) | grepl("1.2", threatmed$X5.4.2) | grepl("1.2", threatmed$X5.4.3) | grepl("1.2", threatmed$X5.4.4) | grepl("1.2", threatmed$X5.4.5) | grepl("1.2", threatmed$X5.4.6))
+BioEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y5.1) | grepl("1.2", threatmed$Y5.1.1) | grepl("1.2", threatmed$Y5.1.2) | grepl("1.2", threatmed$Y5.1.3) | grepl("1.2", threatmed$Y5.1.4) |
+                     grepl("1.2", threatmed$Y5.2) | grepl("1.2", threatmed$Y5.2.1) | grepl("1.2", threatmed$Y5.2.2) | grepl("1.2", threatmed$Y5.2.3) | grepl("1.2", threatmed$Y5.2.4) | 
+                     grepl("1.2", threatmed$Y5.3) | grepl("1.2", threatmed$Y5.3.1) | grepl("1.2", threatmed$Y5.3.2) | grepl("1.2", threatmed$Y5.3.3) | grepl("1.2", threatmed$Y5.3.4) |
+                     grepl("1.2", threatmed$Y5.4) | grepl("1.2", threatmed$Y5.4.1) | grepl("1.2", threatmed$Y5.4.2) | grepl("1.2", threatmed$Y5.4.3) | grepl("1.2", threatmed$Y5.4.4) | grepl("1.2", threatmed$Y5.4.5) | grepl("1.2", threatmed$Y5.4.6))
 BioEcoDegnum <- nrow(BioEcoDeg)
 BioEcoDegper <-round((BioEcoDegnum/threatobsnum * 100), dig=2)
 
-BioIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X5.1) | grepl("1.3", threatmed$X5.1.1) | grepl("1.3", threatmed$X5.1.2) | grepl("1.3", threatmed$X5.1.3) | grepl("1.3", threatmed$X5.1.4) |
-                          grepl("1.3", threatmed$X5.2) | grepl("1.3", threatmed$X5.2.1) | grepl("1.3", threatmed$X5.2.2) | grepl("1.3", threatmed$X5.2.3) | grepl("1.3", threatmed$X5.2.4) | 
-                          grepl("1.3", threatmed$X5.3) | grepl("1.3", threatmed$X5.3.1) | grepl("1.3", threatmed$X5.3.2) | grepl("1.3", threatmed$X5.3.3) | grepl("1.3", threatmed$X5.3.4) |
-                          grepl("1.3", threatmed$X5.4) | grepl("1.3", threatmed$X5.4.1) | grepl("1.3", threatmed$X5.4.2) | grepl("1.3", threatmed$X5.4.3) | grepl("1.3", threatmed$X5.4.4) | grepl("1.3", threatmed$X5.4.5) | grepl("1.3", threatmed$X5.4.6))
+BioIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y5.1) | grepl("1.3", threatmed$Y5.1.1) | grepl("1.3", threatmed$Y5.1.2) | grepl("1.3", threatmed$Y5.1.3) | grepl("1.3", threatmed$Y5.1.4) |
+                          grepl("1.3", threatmed$Y5.2) | grepl("1.3", threatmed$Y5.2.1) | grepl("1.3", threatmed$Y5.2.2) | grepl("1.3", threatmed$Y5.2.3) | grepl("1.3", threatmed$Y5.2.4) | 
+                          grepl("1.3", threatmed$Y5.3) | grepl("1.3", threatmed$Y5.3.1) | grepl("1.3", threatmed$Y5.3.2) | grepl("1.3", threatmed$Y5.3.3) | grepl("1.3", threatmed$Y5.3.4) |
+                          grepl("1.3", threatmed$Y5.4) | grepl("1.3", threatmed$Y5.4.1) | grepl("1.3", threatmed$Y5.4.2) | grepl("1.3", threatmed$Y5.4.3) | grepl("1.3", threatmed$Y5.4.4) | grepl("1.3", threatmed$Y5.4.5) | grepl("1.3", threatmed$Y5.4.6))
 BioIndirEcoEffnum <- nrow(BioIndirEcoEff)
 BioIndirEcoEffper <-round((BioIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-BioSpecMort <-subset(threatmed, grepl("2.1", threatmed$X5.1) | grepl("2.1", threatmed$X5.1.1) | grepl("2.1", threatmed$X5.1.2) | grepl("2.1", threatmed$X5.1.3) | grepl("2.1", threatmed$X5.1.4) |
-                       grepl("2.1", threatmed$X5.2) | grepl("2.1", threatmed$X5.2.1) | grepl("2.1", threatmed$X5.2.2) | grepl("2.1", threatmed$X5.2.3) | grepl("2.1", threatmed$X5.2.4) | 
-                       grepl("2.1", threatmed$X5.3) | grepl("2.1", threatmed$X5.3.1) | grepl("2.1", threatmed$X5.3.2) | grepl("2.1", threatmed$X5.3.3) | grepl("2.1", threatmed$X5.3.4) |
-                       grepl("2.1", threatmed$X5.4) | grepl("2.1", threatmed$X5.4.1) | grepl("2.1", threatmed$X5.4.2) | grepl("2.1", threatmed$X5.4.3) | grepl("2.1", threatmed$X5.4.4) | grepl("2.1", threatmed$X5.4.5) | grepl("2.1", threatmed$X5.4.6))
+BioSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y5.1) | grepl("2.1", threatmed$Y5.1.1) | grepl("2.1", threatmed$Y5.1.2) | grepl("2.1", threatmed$Y5.1.3) | grepl("2.1", threatmed$Y5.1.4) |
+                       grepl("2.1", threatmed$Y5.2) | grepl("2.1", threatmed$Y5.2.1) | grepl("2.1", threatmed$Y5.2.2) | grepl("2.1", threatmed$Y5.2.3) | grepl("2.1", threatmed$Y5.2.4) | 
+                       grepl("2.1", threatmed$Y5.3) | grepl("2.1", threatmed$Y5.3.1) | grepl("2.1", threatmed$Y5.3.2) | grepl("2.1", threatmed$Y5.3.3) | grepl("2.1", threatmed$Y5.3.4) |
+                       grepl("2.1", threatmed$Y5.4) | grepl("2.1", threatmed$Y5.4.1) | grepl("2.1", threatmed$Y5.4.2) | grepl("2.1", threatmed$Y5.4.3) | grepl("2.1", threatmed$Y5.4.4) | grepl("2.1", threatmed$Y5.4.5) | grepl("2.1", threatmed$Y5.4.6))
 BioSpecMortnum <- nrow(BioSpecMort)
 BioSpecMortper <-round((BioSpecMortnum/threatobsnum * 100), dig=2)
 
-BioSpecDist <-subset(threatmed, grepl("2.2", threatmed$X5.1) | grepl("2.2", threatmed$X5.1.1) | grepl("2.2", threatmed$X5.1.2) | grepl("2.2", threatmed$X5.1.3) | grepl("2.2", threatmed$X5.1.4) |
-                       grepl("2.2", threatmed$X5.2) | grepl("2.2", threatmed$X5.2.1) | grepl("2.2", threatmed$X5.2.2) | grepl("2.2", threatmed$X5.2.3) | grepl("2.2", threatmed$X5.2.4) | 
-                       grepl("2.2", threatmed$X5.3) | grepl("2.2", threatmed$X5.3.1) | grepl("2.2", threatmed$X5.3.2) | grepl("2.2", threatmed$X5.3.3) | grepl("2.2", threatmed$X5.3.4) |
-                       grepl("2.2", threatmed$X5.4) | grepl("2.2", threatmed$X5.4.1) | grepl("2.2", threatmed$X5.4.2) | grepl("2.2", threatmed$X5.4.3) | grepl("2.2", threatmed$X5.4.4) | grepl("2.2", threatmed$X5.4.5) | grepl("2.2", threatmed$X5.4.6))
+BioSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y5.1) | grepl("2.2", threatmed$Y5.1.1) | grepl("2.2", threatmed$Y5.1.2) | grepl("2.2", threatmed$Y5.1.3) | grepl("2.2", threatmed$Y5.1.4) |
+                       grepl("2.2", threatmed$Y5.2) | grepl("2.2", threatmed$Y5.2.1) | grepl("2.2", threatmed$Y5.2.2) | grepl("2.2", threatmed$Y5.2.3) | grepl("2.2", threatmed$Y5.2.4) | 
+                       grepl("2.2", threatmed$Y5.3) | grepl("2.2", threatmed$Y5.3.1) | grepl("2.2", threatmed$Y5.3.2) | grepl("2.2", threatmed$Y5.3.3) | grepl("2.2", threatmed$Y5.3.4) |
+                       grepl("2.2", threatmed$Y5.4) | grepl("2.2", threatmed$Y5.4.1) | grepl("2.2", threatmed$Y5.4.2) | grepl("2.2", threatmed$Y5.4.3) | grepl("2.2", threatmed$Y5.4.4) | grepl("2.2", threatmed$Y5.4.5) | grepl("2.2", threatmed$Y5.4.6))
 BioSpecDistnum <- nrow(BioSpecDist)
 BioSpecDistper <-round((BioSpecDistnum/threatobsnum * 100), dig=2)
 
-BioHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X5.1) | grepl("2.3.1", threatmed$X5.1.1) | grepl("2.3.1", threatmed$X5.1.2) | grepl("2.3.1", threatmed$X5.1.3) | grepl("2.3.1", threatmed$X5.1.4) |
-                     grepl("2.3.1", threatmed$X5.2) | grepl("2.3.1", threatmed$X5.2.1) | grepl("2.3.1", threatmed$X5.2.2) | grepl("2.3.1", threatmed$X5.2.3) | grepl("2.3.1", threatmed$X5.2.4) | 
-                     grepl("2.3.1", threatmed$X5.3) | grepl("2.3.1", threatmed$X5.3.1) | grepl("2.3.1", threatmed$X5.3.2) | grepl("2.3.1", threatmed$X5.3.3) | grepl("2.3.1", threatmed$X5.3.4) |
-                     grepl("2.3.1", threatmed$X5.4) | grepl("2.3.1", threatmed$X5.4.1) | grepl("2.3.1", threatmed$X5.4.2) | grepl("2.3.1", threatmed$X5.4.3) | grepl("2.3.1", threatmed$X5.4.4) | grepl("2.3.1", threatmed$X5.4.5) | grepl("2.3.1", threatmed$X5.4.6))
+BioHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y5.1) | grepl("2.3.1", threatmed$Y5.1.1) | grepl("2.3.1", threatmed$Y5.1.2) | grepl("2.3.1", threatmed$Y5.1.3) | grepl("2.3.1", threatmed$Y5.1.4) |
+                     grepl("2.3.1", threatmed$Y5.2) | grepl("2.3.1", threatmed$Y5.2.1) | grepl("2.3.1", threatmed$Y5.2.2) | grepl("2.3.1", threatmed$Y5.2.3) | grepl("2.3.1", threatmed$Y5.2.4) | 
+                     grepl("2.3.1", threatmed$Y5.3) | grepl("2.3.1", threatmed$Y5.3.1) | grepl("2.3.1", threatmed$Y5.3.2) | grepl("2.3.1", threatmed$Y5.3.3) | grepl("2.3.1", threatmed$Y5.3.4) |
+                     grepl("2.3.1", threatmed$Y5.4) | grepl("2.3.1", threatmed$Y5.4.1) | grepl("2.3.1", threatmed$Y5.4.2) | grepl("2.3.1", threatmed$Y5.4.3) | grepl("2.3.1", threatmed$Y5.4.4) | grepl("2.3.1", threatmed$Y5.4.5) | grepl("2.3.1", threatmed$Y5.4.6))
 BioHybridnum <- nrow(BioHybrid)
 BioHybridper <-round((BioHybridnum/threatobsnum * 100), dig=2)
 
-BioComp <-subset(threatmed, grepl("2.3.2", threatmed$X5.1) | grepl("2.3.2", threatmed$X5.1.1) | grepl("2.3.2", threatmed$X5.1.2) | grepl("2.3.2", threatmed$X5.1.3) | grepl("2.3.2", threatmed$X5.1.4) |
-                   grepl("2.3.2", threatmed$X5.2) | grepl("2.3.2", threatmed$X5.2.1) | grepl("2.3.2", threatmed$X5.2.2) | grepl("2.3.2", threatmed$X5.2.3) | grepl("2.3.2", threatmed$X5.2.4) | 
-                   grepl("2.3.2", threatmed$X5.3) | grepl("2.3.2", threatmed$X5.3.1) | grepl("2.3.2", threatmed$X5.3.2) | grepl("2.3.2", threatmed$X5.3.3) | grepl("2.3.2", threatmed$X5.3.4) |
-                   grepl("2.3.2", threatmed$X5.4) | grepl("2.3.2", threatmed$X5.4.1) | grepl("2.3.2", threatmed$X5.4.2) | grepl("2.3.2", threatmed$X5.4.3) | grepl("2.3.2", threatmed$X5.4.4) | grepl("2.3.2", threatmed$X5.4.5) | grepl("2.3.2", threatmed$X5.4.6))
+BioComp <-subset(threatmed, grepl("2.3.2", threatmed$Y5.1) | grepl("2.3.2", threatmed$Y5.1.1) | grepl("2.3.2", threatmed$Y5.1.2) | grepl("2.3.2", threatmed$Y5.1.3) | grepl("2.3.2", threatmed$Y5.1.4) |
+                   grepl("2.3.2", threatmed$Y5.2) | grepl("2.3.2", threatmed$Y5.2.1) | grepl("2.3.2", threatmed$Y5.2.2) | grepl("2.3.2", threatmed$Y5.2.3) | grepl("2.3.2", threatmed$Y5.2.4) | 
+                   grepl("2.3.2", threatmed$Y5.3) | grepl("2.3.2", threatmed$Y5.3.1) | grepl("2.3.2", threatmed$Y5.3.2) | grepl("2.3.2", threatmed$Y5.3.3) | grepl("2.3.2", threatmed$Y5.3.4) |
+                   grepl("2.3.2", threatmed$Y5.4) | grepl("2.3.2", threatmed$Y5.4.1) | grepl("2.3.2", threatmed$Y5.4.2) | grepl("2.3.2", threatmed$Y5.4.3) | grepl("2.3.2", threatmed$Y5.4.4) | grepl("2.3.2", threatmed$Y5.4.5) | grepl("2.3.2", threatmed$Y5.4.6))
 BioCompnum <- nrow(BioComp)
 BioCompper <-round((BioCompnum/threatobsnum * 100), dig=2)
 
-BioLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X5.1) | grepl("2.3.3", threatmed$X5.1.1) | grepl("2.3.3", threatmed$X5.1.2) | grepl("2.3.3", threatmed$X5.1.3) | grepl("2.3.3", threatmed$X5.1.4) |
-                      grepl("2.3.3", threatmed$X5.2) | grepl("2.3.3", threatmed$X5.2.1) | grepl("2.3.3", threatmed$X5.2.2) | grepl("2.3.3", threatmed$X5.2.3) | grepl("2.3.3", threatmed$X5.2.4) | 
-                      grepl("2.3.3", threatmed$X5.3) | grepl("2.3.3", threatmed$X5.3.1) | grepl("2.3.3", threatmed$X5.3.2) | grepl("2.3.3", threatmed$X5.3.3) | grepl("2.3.3", threatmed$X5.3.4) |
-                      grepl("2.3.3", threatmed$X5.4) | grepl("2.3.3", threatmed$X5.4.1) | grepl("2.3.3", threatmed$X5.4.2) | grepl("2.3.3", threatmed$X5.4.3) | grepl("2.3.3", threatmed$X5.4.4) | grepl("2.3.3", threatmed$X5.4.5) | grepl("2.3.3", threatmed$X5.4.6))
+BioLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y5.1) | grepl("2.3.3", threatmed$Y5.1.1) | grepl("2.3.3", threatmed$Y5.1.2) | grepl("2.3.3", threatmed$Y5.1.3) | grepl("2.3.3", threatmed$Y5.1.4) |
+                      grepl("2.3.3", threatmed$Y5.2) | grepl("2.3.3", threatmed$Y5.2.1) | grepl("2.3.3", threatmed$Y5.2.2) | grepl("2.3.3", threatmed$Y5.2.3) | grepl("2.3.3", threatmed$Y5.2.4) | 
+                      grepl("2.3.3", threatmed$Y5.3) | grepl("2.3.3", threatmed$Y5.3.1) | grepl("2.3.3", threatmed$Y5.3.2) | grepl("2.3.3", threatmed$Y5.3.3) | grepl("2.3.3", threatmed$Y5.3.4) |
+                      grepl("2.3.3", threatmed$Y5.4) | grepl("2.3.3", threatmed$Y5.4.1) | grepl("2.3.3", threatmed$Y5.4.2) | grepl("2.3.3", threatmed$Y5.4.3) | grepl("2.3.3", threatmed$Y5.4.4) | grepl("2.3.3", threatmed$Y5.4.5) | grepl("2.3.3", threatmed$Y5.4.6))
 BioLossMutnum <- nrow(BioLossMut)
 BioLossMutper <-round((BioLossMutnum/threatobsnum * 100), dig=2)
 
-BioLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X5.1) | grepl("2.3.4", threatmed$X5.1.1) | grepl("2.3.4", threatmed$X5.1.2) | grepl("2.3.4", threatmed$X5.1.3) | grepl("2.3.4", threatmed$X5.1.4) |
-                       grepl("2.3.4", threatmed$X5.2) | grepl("2.3.4", threatmed$X5.2.1) | grepl("2.3.4", threatmed$X5.2.2) | grepl("2.3.4", threatmed$X5.2.3) | grepl("2.3.4", threatmed$X5.2.4) | 
-                       grepl("2.3.4", threatmed$X5.3) | grepl("2.3.4", threatmed$X5.3.1) | grepl("2.3.4", threatmed$X5.3.2) | grepl("2.3.4", threatmed$X5.3.3) | grepl("2.3.4", threatmed$X5.3.4) |
-                       grepl("2.3.4", threatmed$X5.4) | grepl("2.3.4", threatmed$X5.4.1) | grepl("2.3.4", threatmed$X5.4.2) | grepl("2.3.4", threatmed$X5.4.3) | grepl("2.3.4", threatmed$X5.4.4) | grepl("2.3.4", threatmed$X5.4.5) | grepl("2.3.4", threatmed$X5.4.6))
+BioLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y5.1) | grepl("2.3.4", threatmed$Y5.1.1) | grepl("2.3.4", threatmed$Y5.1.2) | grepl("2.3.4", threatmed$Y5.1.3) | grepl("2.3.4", threatmed$Y5.1.4) |
+                       grepl("2.3.4", threatmed$Y5.2) | grepl("2.3.4", threatmed$Y5.2.1) | grepl("2.3.4", threatmed$Y5.2.2) | grepl("2.3.4", threatmed$Y5.2.3) | grepl("2.3.4", threatmed$Y5.2.4) | 
+                       grepl("2.3.4", threatmed$Y5.3) | grepl("2.3.4", threatmed$Y5.3.1) | grepl("2.3.4", threatmed$Y5.3.2) | grepl("2.3.4", threatmed$Y5.3.3) | grepl("2.3.4", threatmed$Y5.3.4) |
+                       grepl("2.3.4", threatmed$Y5.4) | grepl("2.3.4", threatmed$Y5.4.1) | grepl("2.3.4", threatmed$Y5.4.2) | grepl("2.3.4", threatmed$Y5.4.3) | grepl("2.3.4", threatmed$Y5.4.4) | grepl("2.3.4", threatmed$Y5.4.5) | grepl("2.3.4", threatmed$Y5.4.6))
 BioLossPollnum <- nrow(BioLossPoll)
 BioLossPollper <-round((BioLossPollnum/threatobsnum * 100), dig=2)
 
-BioInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X5.1) | grepl("2.3.5", threatmed$X5.1.1) | grepl("2.3.5", threatmed$X5.1.2) | grepl("2.3.5", threatmed$X5.1.3) | grepl("2.3.5", threatmed$X5.1.4) |
-                      grepl("2.3.5", threatmed$X5.2) | grepl("2.3.5", threatmed$X5.2.1) | grepl("2.3.5", threatmed$X5.2.2) | grepl("2.3.5", threatmed$X5.2.3) | grepl("2.3.5", threatmed$X5.2.4) | 
-                      grepl("2.3.5", threatmed$X5.3) | grepl("2.3.5", threatmed$X5.3.1) | grepl("2.3.5", threatmed$X5.3.2) | grepl("2.3.5", threatmed$X5.3.3) | grepl("2.3.5", threatmed$X5.3.4) |
-                      grepl("2.3.5", threatmed$X5.4) | grepl("2.3.5", threatmed$X5.4.1) | grepl("2.3.5", threatmed$X5.4.2) | grepl("2.3.5", threatmed$X5.4.3) | grepl("2.3.5", threatmed$X5.4.4) | grepl("2.3.5", threatmed$X5.4.5) | grepl("2.3.5", threatmed$X5.4.6))
+BioInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y5.1) | grepl("2.3.5", threatmed$Y5.1.1) | grepl("2.3.5", threatmed$Y5.1.2) | grepl("2.3.5", threatmed$Y5.1.3) | grepl("2.3.5", threatmed$Y5.1.4) |
+                      grepl("2.3.5", threatmed$Y5.2) | grepl("2.3.5", threatmed$Y5.2.1) | grepl("2.3.5", threatmed$Y5.2.2) | grepl("2.3.5", threatmed$Y5.2.3) | grepl("2.3.5", threatmed$Y5.2.4) | 
+                      grepl("2.3.5", threatmed$Y5.3) | grepl("2.3.5", threatmed$Y5.3.1) | grepl("2.3.5", threatmed$Y5.3.2) | grepl("2.3.5", threatmed$Y5.3.3) | grepl("2.3.5", threatmed$Y5.3.4) |
+                      grepl("2.3.5", threatmed$Y5.4) | grepl("2.3.5", threatmed$Y5.4.1) | grepl("2.3.5", threatmed$Y5.4.2) | grepl("2.3.5", threatmed$Y5.4.3) | grepl("2.3.5", threatmed$Y5.4.4) | grepl("2.3.5", threatmed$Y5.4.5) | grepl("2.3.5", threatmed$Y5.4.6))
 BioInbreednum <- nrow(BioInbreed)
 BioInbreedper <-round((BioInbreednum/threatobsnum * 100), dig=2)
 
-BioSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X5.1) | grepl("2.3.6", threatmed$X5.1.1) | grepl("2.3.6", threatmed$X5.1.2) | grepl("2.3.6", threatmed$X5.1.3) | grepl("2.3.6", threatmed$X5.1.4) |
-                      grepl("2.3.6", threatmed$X5.2) | grepl("2.3.6", threatmed$X5.2.1) | grepl("2.3.6", threatmed$X5.2.2) | grepl("2.3.6", threatmed$X5.2.3) | grepl("2.3.6", threatmed$X5.2.4) | 
-                      grepl("2.3.6", threatmed$X5.3) | grepl("2.3.6", threatmed$X5.3.1) | grepl("2.3.6", threatmed$X5.3.2) | grepl("2.3.6", threatmed$X5.3.3) | grepl("2.3.6", threatmed$X5.3.4) |
-                      grepl("2.3.6", threatmed$X5.4) | grepl("2.3.6", threatmed$X5.4.1) | grepl("2.3.6", threatmed$X5.4.2) | grepl("2.3.6", threatmed$X5.4.3) | grepl("2.3.6", threatmed$X5.4.4) | grepl("2.3.6", threatmed$X5.4.5) | grepl("2.3.6", threatmed$X5.4.6))
+BioSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y5.1) | grepl("2.3.6", threatmed$Y5.1.1) | grepl("2.3.6", threatmed$Y5.1.2) | grepl("2.3.6", threatmed$Y5.1.3) | grepl("2.3.6", threatmed$Y5.1.4) |
+                      grepl("2.3.6", threatmed$Y5.2) | grepl("2.3.6", threatmed$Y5.2.1) | grepl("2.3.6", threatmed$Y5.2.2) | grepl("2.3.6", threatmed$Y5.2.3) | grepl("2.3.6", threatmed$Y5.2.4) | 
+                      grepl("2.3.6", threatmed$Y5.3) | grepl("2.3.6", threatmed$Y5.3.1) | grepl("2.3.6", threatmed$Y5.3.2) | grepl("2.3.6", threatmed$Y5.3.3) | grepl("2.3.6", threatmed$Y5.3.4) |
+                      grepl("2.3.6", threatmed$Y5.4) | grepl("2.3.6", threatmed$Y5.4.1) | grepl("2.3.6", threatmed$Y5.4.2) | grepl("2.3.6", threatmed$Y5.4.3) | grepl("2.3.6", threatmed$Y5.4.4) | grepl("2.3.6", threatmed$Y5.4.5) | grepl("2.3.6", threatmed$Y5.4.6))
 BioSkewSexnum <- nrow(BioSkewSex)
 BioSkewSexper <-round((BioSkewSexnum/threatobsnum * 100), dig=2)
 
-BioRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X5.1) | grepl("2.3.7", threatmed$X5.1.1) | grepl("2.3.7", threatmed$X5.1.2) | grepl("2.3.7", threatmed$X5.1.3) | grepl("2.3.7", threatmed$X5.1.4) |
-                        grepl("2.3.7", threatmed$X5.2) | grepl("2.3.7", threatmed$X5.2.1) | grepl("2.3.7", threatmed$X5.2.2) | grepl("2.3.7", threatmed$X5.2.3) | grepl("2.3.7", threatmed$X5.2.4) | 
-                        grepl("2.3.7", threatmed$X5.3) | grepl("2.3.7", threatmed$X5.3.1) | grepl("2.3.7", threatmed$X5.3.2) | grepl("2.3.7", threatmed$X5.3.3) | grepl("2.3.7", threatmed$X5.3.4) |
-                        grepl("2.3.7", threatmed$X5.4) | grepl("2.3.7", threatmed$X5.4.1) | grepl("2.3.7", threatmed$X5.4.2) | grepl("2.3.7", threatmed$X5.4.3) | grepl("2.3.7", threatmed$X5.4.4) | grepl("2.3.7", threatmed$X5.4.5) | grepl("2.3.7", threatmed$X5.4.6))
+BioRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y5.1) | grepl("2.3.7", threatmed$Y5.1.1) | grepl("2.3.7", threatmed$Y5.1.2) | grepl("2.3.7", threatmed$Y5.1.3) | grepl("2.3.7", threatmed$Y5.1.4) |
+                        grepl("2.3.7", threatmed$Y5.2) | grepl("2.3.7", threatmed$Y5.2.1) | grepl("2.3.7", threatmed$Y5.2.2) | grepl("2.3.7", threatmed$Y5.2.3) | grepl("2.3.7", threatmed$Y5.2.4) | 
+                        grepl("2.3.7", threatmed$Y5.3) | grepl("2.3.7", threatmed$Y5.3.1) | grepl("2.3.7", threatmed$Y5.3.2) | grepl("2.3.7", threatmed$Y5.3.3) | grepl("2.3.7", threatmed$Y5.3.4) |
+                        grepl("2.3.7", threatmed$Y5.4) | grepl("2.3.7", threatmed$Y5.4.1) | grepl("2.3.7", threatmed$Y5.4.2) | grepl("2.3.7", threatmed$Y5.4.3) | grepl("2.3.7", threatmed$Y5.4.4) | grepl("2.3.7", threatmed$Y5.4.5) | grepl("2.3.7", threatmed$Y5.4.6))
 BioRedRepSucnum <- nrow(BioRedRepSuc)
 BioRedRepSucper <-round((BioRedRepSucnum/threatobsnum * 100), dig=2)
 
-BioOth <-subset(threatmed, grepl("2.3.8", threatmed$X5.1) | grepl("2.3.8", threatmed$X5.1.1) | grepl("2.3.8", threatmed$X5.1.2) | grepl("2.3.8", threatmed$X5.1.3) | grepl("2.3.8", threatmed$X5.1.4) |
-                  grepl("2.3.8", threatmed$X5.2) | grepl("2.3.8", threatmed$X5.2.1) | grepl("2.3.8", threatmed$X5.2.2) | grepl("2.3.8", threatmed$X5.2.3) | grepl("2.3.8", threatmed$X5.2.4) | 
-                  grepl("2.3.8", threatmed$X5.3) | grepl("2.3.8", threatmed$X5.3.1) | grepl("2.3.8", threatmed$X5.3.2) | grepl("2.3.8", threatmed$X5.3.3) | grepl("2.3.8", threatmed$X5.3.4) |
-                  grepl("2.3.8", threatmed$X5.4) | grepl("2.3.8", threatmed$X5.4.1) | grepl("2.3.8", threatmed$X5.4.2) | grepl("2.3.8", threatmed$X5.4.3) | grepl("2.3.8", threatmed$X5.4.4) | grepl("2.3.8", threatmed$X5.4.5) | grepl("2.3.8", threatmed$X5.4.6))
+BioOth <-subset(threatmed, grepl("2.3.8", threatmed$Y5.1) | grepl("2.3.8", threatmed$Y5.1.1) | grepl("2.3.8", threatmed$Y5.1.2) | grepl("2.3.8", threatmed$Y5.1.3) | grepl("2.3.8", threatmed$Y5.1.4) |
+                  grepl("2.3.8", threatmed$Y5.2) | grepl("2.3.8", threatmed$Y5.2.1) | grepl("2.3.8", threatmed$Y5.2.2) | grepl("2.3.8", threatmed$Y5.2.3) | grepl("2.3.8", threatmed$Y5.2.4) | 
+                  grepl("2.3.8", threatmed$Y5.3) | grepl("2.3.8", threatmed$Y5.3.1) | grepl("2.3.8", threatmed$Y5.3.2) | grepl("2.3.8", threatmed$Y5.3.3) | grepl("2.3.8", threatmed$Y5.3.4) |
+                  grepl("2.3.8", threatmed$Y5.4) | grepl("2.3.8", threatmed$Y5.4.1) | grepl("2.3.8", threatmed$Y5.4.2) | grepl("2.3.8", threatmed$Y5.4.3) | grepl("2.3.8", threatmed$Y5.4.4) | grepl("2.3.8", threatmed$Y5.4.5) | grepl("2.3.8", threatmed$Y5.4.6))
 BioOthnum <- nrow(BioOth)
 BioOthper <-round((BioOthnum/threatobsnum * 100), dig=2)
 
@@ -390,55 +390,55 @@ Biototal <- (BioEcoConnum + BioEcoDegnum + BioIndirEcoEffnum + BioPastUnnum + Bi
 BioPer <- round((Biototal/threatobsnum * 100), dig = 2)
 
 #Threat 6: Human intrusions and disturbance
-HuEcoCon <-subset(threatmed, grepl("1.1", threatmed$X6.1) | grepl("1.1", threatmed$X6.2) | grepl("1.1", threatmed$X6.3))
+HuEcoCon <-subset(threatmed, grepl("1.1", threatmed$Y6.1) | grepl("1.1", threatmed$Y6.2) | grepl("1.1", threatmed$Y6.3))
 HuEcoConnum <- nrow(HuEcoCon)
 HuEcoConper <-round((HuEcoConnum/threatobsnum * 100), dig=2)
 
-HuEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X6.1) | grepl("1.2", threatmed$X6.2) | grepl("1.2", threatmed$X6.3))
+HuEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y6.1) | grepl("1.2", threatmed$Y6.2) | grepl("1.2", threatmed$Y6.3))
 HuEcoDegnum <- nrow(HuEcoDeg)
 HuEcoDegper <-round((HuEcoDegnum/threatobsnum * 100), dig=2)
 
-HuIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X6.1) | grepl("1.3", threatmed$X6.2) | grepl("1.3", threatmed$X6.3))
+HuIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y6.1) | grepl("1.3", threatmed$Y6.2) | grepl("1.3", threatmed$Y6.3))
 HuIndirEcoEffnum <- nrow(HuIndirEcoEff)
 HuIndirEcoEffper <-round((HuIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-HuSpecMort <-subset(threatmed, grepl("2.1", threatmed$X6.1) | grepl("2.1", threatmed$X6.2) | grepl("2.1", threatmed$X6.3))
+HuSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y6.1) | grepl("2.1", threatmed$Y6.2) | grepl("2.1", threatmed$Y6.3))
 HuSpecMortnum <- nrow(HuSpecMort)
 HuSpecMortper <-round((HuSpecMortnum/threatobsnum * 100), dig=2)
 
-HuSpecDist <-subset(threatmed, grepl("2.2", threatmed$X6.1) | grepl("2.2", threatmed$X6.2) | grepl("2.2", threatmed$X6.3))
+HuSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y6.1) | grepl("2.2", threatmed$Y6.2) | grepl("2.2", threatmed$Y6.3))
 HuSpecDistnum <- nrow(HuSpecDist)
 HuSpecDistper <-round((HuSpecDistnum/threatobsnum * 100), dig=2)
 
-HuHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X6.1) | grepl("2.3.1", threatmed$X6.2) | grepl("2.3.1", threatmed$X6.3))
+HuHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y6.1) | grepl("2.3.1", threatmed$Y6.2) | grepl("2.3.1", threatmed$Y6.3))
 HuHybridnum <- nrow(HuHybrid)
 HuHybridper <-round((HuHybridnum/threatobsnum * 100), dig=2)
 
-HuComp <-subset(threatmed, grepl("2.3.2", threatmed$X6.1) | grepl("2.3.2", threatmed$X6.2) | grepl("2.3.2", threatmed$X6.3))
+HuComp <-subset(threatmed, grepl("2.3.2", threatmed$Y6.1) | grepl("2.3.2", threatmed$Y6.2) | grepl("2.3.2", threatmed$Y6.3))
 HuCompnum <- nrow(HuComp)
 HuCompper <-round((HuCompnum/threatobsnum * 100), dig=2)
 
-HuLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X6.1) | grepl("2.3.3", threatmed$X6.2) | grepl("2.3.3", threatmed$X6.3))
+HuLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y6.1) | grepl("2.3.3", threatmed$Y6.2) | grepl("2.3.3", threatmed$Y6.3))
 HuLossMutnum <- nrow(HuLossMut)
 HuLossMutper <-round((HuLossMutnum/threatobsnum * 100), dig=2)
 
-HuLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X6.1) | grepl("2.3.4", threatmed$X6.2) | grepl("2.3.4", threatmed$X6.3))
+HuLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y6.1) | grepl("2.3.4", threatmed$Y6.2) | grepl("2.3.4", threatmed$Y6.3))
 HuLossPollnum <- nrow(HuLossPoll)
 HuLossPollper <-round((HuLossPollnum/threatobsnum * 100), dig=2)
 
-HuInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X6.1) | grepl("2.3.5", threatmed$X6.2) | grepl("2.3.5", threatmed$X6.3))
+HuInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y6.1) | grepl("2.3.5", threatmed$Y6.2) | grepl("2.3.5", threatmed$Y6.3))
 HuInbreednum <- nrow(HuInbreed)
 HuInbreedper <-round((HuInbreednum/threatobsnum * 100), dig=2)
 
-HuSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X6.1) | grepl("2.3.6", threatmed$X6.2) | grepl("2.3.6", threatmed$X6.3))
+HuSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y6.1) | grepl("2.3.6", threatmed$Y6.2) | grepl("2.3.6", threatmed$Y6.3))
 HuSkewSexnum <- nrow(HuSkewSex)
 HuSkewSexper <-round((HuSkewSexnum/threatobsnum * 100), dig=2)
 
-HuRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X6.1) | grepl("2.3.7", threatmed$X6.2) | grepl("2.3.7", threatmed$X6.3))
+HuRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y6.1) | grepl("2.3.7", threatmed$Y6.2) | grepl("2.3.7", threatmed$Y6.3))
 HuRedRepSucnum <- nrow(HuRedRepSuc)
 HuRedRepSucper <-round((HuRedRepSucnum/threatobsnum * 100), dig=2)
 
-HuOth <-subset(threatmed, grepl("2.3.8", threatmed$X6.1) | grepl("2.3.8", threatmed$X6.2) | grepl("2.3.8", threatmed$X6.3))
+HuOth <-subset(threatmed, grepl("2.3.8", threatmed$Y6.1) | grepl("2.3.8", threatmed$Y6.2) | grepl("2.3.8", threatmed$Y6.3))
 HuOthnum <- nrow(HuOth)
 HuOthper <-round((HuOthnum/threatobsnum * 100), dig=2)
 
@@ -446,81 +446,81 @@ Hutotal <- (HuEcoConnum + HuEcoDegnum + HuIndirEcoEffnum + HuPastUnnum + HuSpecD
 HuPer <- round((Hutotal/threatobsnum * 100), dig = 2)
 
 #Threat 7: Natural system modifications
-NatEcoCon <- subset(threatmed, grepl("1.1", threatmed$X7.1) |  grepl("1.1", threatmed$X7.1.1) | grepl("1.1", threatmed$X7.1.2) | grepl("1.1", threatmed$X7.1.3) |  
-                      grepl("1.1", threatmed$X7.2) |  grepl("1.1", threatmed$X7.2.1) | grepl("1.1", threatmed$X7.2.2) | grepl("1.1", threatmed$X7.2.3) | grepl("1.1", threatmed$X7.2.4) | grepl("1.1", threatmed$X7.2.5) | grepl("1.1", threatmed$X7.2.6) | grepl("1.1", threatmed$X7.2.7) | grepl("1.1", threatmed$X7.2.8) |  grepl("1.1", threatmed$X7.2.9) |  grepl("1.1", threatmed$X7.2.10) | grepl("1.1", threatmed$X7.2.11) |
-                      grepl("1.1", threatmed$X7.3))
+NatEcoCon <- subset(threatmed, grepl("1.1", threatmed$Y7.1) |  grepl("1.1", threatmed$Y7.1.1) | grepl("1.1", threatmed$Y7.1.2) | grepl("1.1", threatmed$Y7.1.3) |  
+                      grepl("1.1", threatmed$Y7.2) |  grepl("1.1", threatmed$Y7.2.1) | grepl("1.1", threatmed$Y7.2.2) | grepl("1.1", threatmed$Y7.2.3) | grepl("1.1", threatmed$Y7.2.4) | grepl("1.1", threatmed$Y7.2.5) | grepl("1.1", threatmed$Y7.2.6) | grepl("1.1", threatmed$Y7.2.7) | grepl("1.1", threatmed$Y7.2.8) |  grepl("1.1", threatmed$Y7.2.9) |  grepl("1.1", threatmed$Y7.2.10) | grepl("1.1", threatmed$Y7.2.11) |
+                      grepl("1.1", threatmed$Y7.3))
 NatEcoConnum <- nrow(NatEcoCon)
 NatEcoConper <-round((NatEcoConnum/threatobsnum * 100), dig=2)
 
-NatEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X7.1) |  grepl("1.2", threatmed$X7.1.1) | grepl("1.2", threatmed$X7.1.2) | grepl("1.2", threatmed$X7.1.3) |  
-                     grepl("1.2", threatmed$X7.2) |  grepl("1.2", threatmed$X7.2.1) | grepl("1.2", threatmed$X7.2.2) | grepl("1.2", threatmed$X7.2.3) | grepl("1.2", threatmed$X7.2.4) | grepl("1.2", threatmed$X7.2.5) | grepl("1.2", threatmed$X7.2.6) | grepl("1.2", threatmed$X7.2.7) | grepl("1.2", threatmed$X7.2.8) |  grepl("1.2", threatmed$X7.2.9) |  grepl("1.2", threatmed$X7.2.10) | grepl("1.2", threatmed$X7.2.11) |
-                     grepl("1.2", threatmed$X7.3))
+NatEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y7.1) |  grepl("1.2", threatmed$Y7.1.1) | grepl("1.2", threatmed$Y7.1.2) | grepl("1.2", threatmed$Y7.1.3) |  
+                     grepl("1.2", threatmed$Y7.2) |  grepl("1.2", threatmed$Y7.2.1) | grepl("1.2", threatmed$Y7.2.2) | grepl("1.2", threatmed$Y7.2.3) | grepl("1.2", threatmed$Y7.2.4) | grepl("1.2", threatmed$Y7.2.5) | grepl("1.2", threatmed$Y7.2.6) | grepl("1.2", threatmed$Y7.2.7) | grepl("1.2", threatmed$Y7.2.8) |  grepl("1.2", threatmed$Y7.2.9) |  grepl("1.2", threatmed$Y7.2.10) | grepl("1.2", threatmed$Y7.2.11) |
+                     grepl("1.2", threatmed$Y7.3))
 NatEcoDegnum <- nrow(NatEcoDeg)
 NatEcoDegper <-round((NatEcoDegnum/threatobsnum * 100), dig=2)
 
-NatIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X7.1) |  grepl("1.3", threatmed$X7.1.1) | grepl("1.3", threatmed$X7.1.2) | grepl("1.3", threatmed$X7.1.3) |  
-                          grepl("1.3", threatmed$X7.2) |  grepl("1.3", threatmed$X7.2.1) | grepl("1.3", threatmed$X7.2.2) | grepl("1.3", threatmed$X7.2.3) | grepl("1.3", threatmed$X7.2.4) | grepl("1.3", threatmed$X7.2.5) | grepl("1.3", threatmed$X7.2.6) | grepl("1.3", threatmed$X7.2.7) | grepl("1.3", threatmed$X7.2.8) |  grepl("1.3", threatmed$X7.2.9) |  grepl("1.3", threatmed$X7.2.10) | grepl("1.3", threatmed$X7.2.11) |
-                          grepl("1.3", threatmed$X7.3))
+NatIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y7.1) |  grepl("1.3", threatmed$Y7.1.1) | grepl("1.3", threatmed$Y7.1.2) | grepl("1.3", threatmed$Y7.1.3) |  
+                          grepl("1.3", threatmed$Y7.2) |  grepl("1.3", threatmed$Y7.2.1) | grepl("1.3", threatmed$Y7.2.2) | grepl("1.3", threatmed$Y7.2.3) | grepl("1.3", threatmed$Y7.2.4) | grepl("1.3", threatmed$Y7.2.5) | grepl("1.3", threatmed$Y7.2.6) | grepl("1.3", threatmed$Y7.2.7) | grepl("1.3", threatmed$Y7.2.8) |  grepl("1.3", threatmed$Y7.2.9) |  grepl("1.3", threatmed$Y7.2.10) | grepl("1.3", threatmed$Y7.2.11) |
+                          grepl("1.3", threatmed$Y7.3))
 NatIndirEcoEffnum <- nrow(NatIndirEcoEff)
 NatIndirEcoEffper <-round((NatIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-NatSpecMort <-subset(threatmed, grepl("2.1", threatmed$X7.1) |  grepl("2.1", threatmed$X7.1.1) | grepl("2.1", threatmed$X7.1.2) | grepl("2.1", threatmed$X7.1.3) |  
-                       grepl("2.1", threatmed$X7.2) |  grepl("2.1", threatmed$X7.2.1) | grepl("2.1", threatmed$X7.2.2) | grepl("2.1", threatmed$X7.2.3) | grepl("2.1", threatmed$X7.2.4) | grepl("2.1", threatmed$X7.2.5) | grepl("2.1", threatmed$X7.2.6) | grepl("2.1", threatmed$X7.2.7) | grepl("2.1", threatmed$X7.2.8) |  grepl("2.1", threatmed$X7.2.9) |  grepl("2.1", threatmed$X7.2.10) | grepl("2.1", threatmed$X7.2.11) |
-                       grepl("2.1", threatmed$X7.3))
+NatSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y7.1) |  grepl("2.1", threatmed$Y7.1.1) | grepl("2.1", threatmed$Y7.1.2) | grepl("2.1", threatmed$Y7.1.3) |  
+                       grepl("2.1", threatmed$Y7.2) |  grepl("2.1", threatmed$Y7.2.1) | grepl("2.1", threatmed$Y7.2.2) | grepl("2.1", threatmed$Y7.2.3) | grepl("2.1", threatmed$Y7.2.4) | grepl("2.1", threatmed$Y7.2.5) | grepl("2.1", threatmed$Y7.2.6) | grepl("2.1", threatmed$Y7.2.7) | grepl("2.1", threatmed$Y7.2.8) |  grepl("2.1", threatmed$Y7.2.9) |  grepl("2.1", threatmed$Y7.2.10) | grepl("2.1", threatmed$Y7.2.11) |
+                       grepl("2.1", threatmed$Y7.3))
 NatSpecMortnum <- nrow(NatSpecMort)
 NatSpecMortper <-round((NatSpecMortnum/threatobsnum * 100), dig=2)
 
-NatSpecDist <-subset(threatmed, grepl("2.2", threatmed$X7.1) |  grepl("2.2", threatmed$X7.1.1) | grepl("2.2", threatmed$X7.1.2) | grepl("2.2", threatmed$X7.1.3) |  
-                       grepl("2.2", threatmed$X7.2) |  grepl("2.2", threatmed$X7.2.1) | grepl("2.2", threatmed$X7.2.2) | grepl("2.2", threatmed$X7.2.3) | grepl("2.2", threatmed$X7.2.4) | grepl("2.2", threatmed$X7.2.5) | grepl("2.2", threatmed$X7.2.6) | grepl("2.2", threatmed$X7.2.7) | grepl("2.2", threatmed$X7.2.8) |  grepl("2.2", threatmed$X7.2.9) |  grepl("2.2", threatmed$X7.2.10) | grepl("2.2", threatmed$X7.2.11) |
-                       grepl("2.2", threatmed$X7.3))
+NatSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y7.1) |  grepl("2.2", threatmed$Y7.1.1) | grepl("2.2", threatmed$Y7.1.2) | grepl("2.2", threatmed$Y7.1.3) |  
+                       grepl("2.2", threatmed$Y7.2) |  grepl("2.2", threatmed$Y7.2.1) | grepl("2.2", threatmed$Y7.2.2) | grepl("2.2", threatmed$Y7.2.3) | grepl("2.2", threatmed$Y7.2.4) | grepl("2.2", threatmed$Y7.2.5) | grepl("2.2", threatmed$Y7.2.6) | grepl("2.2", threatmed$Y7.2.7) | grepl("2.2", threatmed$Y7.2.8) |  grepl("2.2", threatmed$Y7.2.9) |  grepl("2.2", threatmed$Y7.2.10) | grepl("2.2", threatmed$Y7.2.11) |
+                       grepl("2.2", threatmed$Y7.3))
 NatSpecDistnum <- nrow(NatSpecDist)
 NatSpecDistper <-round((NatSpecDistnum/threatobsnum * 100), dig=2)
 
-NatHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X7.1) |  grepl("2.3.1", threatmed$X7.1.1) | grepl("2.3.1", threatmed$X7.1.2) | grepl("2.3.1", threatmed$X7.1.3) |  
-                     grepl("2.3.1", threatmed$X7.2) |  grepl("2.3.1", threatmed$X7.2.1) | grepl("2.3.1", threatmed$X7.2.2) | grepl("2.3.1", threatmed$X7.2.3) | grepl("2.3.1", threatmed$X7.2.4) | grepl("2.3.1", threatmed$X7.2.5) | grepl("2.3.1", threatmed$X7.2.6) | grepl("2.3.1", threatmed$X7.2.7) | grepl("2.3.1", threatmed$X7.2.8) |  grepl("2.3.1", threatmed$X7.2.9) |  grepl("2.3.1", threatmed$X7.2.10) | grepl("2.3.1", threatmed$X7.2.11) |
-                     grepl("2.3.1", threatmed$X7.3))
+NatHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y7.1) |  grepl("2.3.1", threatmed$Y7.1.1) | grepl("2.3.1", threatmed$Y7.1.2) | grepl("2.3.1", threatmed$Y7.1.3) |  
+                     grepl("2.3.1", threatmed$Y7.2) |  grepl("2.3.1", threatmed$Y7.2.1) | grepl("2.3.1", threatmed$Y7.2.2) | grepl("2.3.1", threatmed$Y7.2.3) | grepl("2.3.1", threatmed$Y7.2.4) | grepl("2.3.1", threatmed$Y7.2.5) | grepl("2.3.1", threatmed$Y7.2.6) | grepl("2.3.1", threatmed$Y7.2.7) | grepl("2.3.1", threatmed$Y7.2.8) |  grepl("2.3.1", threatmed$Y7.2.9) |  grepl("2.3.1", threatmed$Y7.2.10) | grepl("2.3.1", threatmed$Y7.2.11) |
+                     grepl("2.3.1", threatmed$Y7.3))
 NatHybridnum <- nrow(NatHybrid)
 NatHybridper <-round((NatHybridnum/threatobsnum * 100), dig=2)
 
-NatComp <-subset(threatmed, grepl("2.3.2", threatmed$X7.1) |  grepl("2.3.2", threatmed$X7.1.1) | grepl("2.3.2", threatmed$X7.1.2) | grepl("2.3.2", threatmed$X7.1.3) |  
-                   grepl("2.3.2", threatmed$X7.2) |  grepl("2.3.2", threatmed$X7.2.1) | grepl("2.3.2", threatmed$X7.2.2) | grepl("2.3.2", threatmed$X7.2.3) | grepl("2.3.2", threatmed$X7.2.4) | grepl("2.3.2", threatmed$X7.2.5) | grepl("2.3.2", threatmed$X7.2.6) | grepl("2.3.2", threatmed$X7.2.7) | grepl("2.3.2", threatmed$X7.2.8) |  grepl("2.3.2", threatmed$X7.2.9) |  grepl("2.3.2", threatmed$X7.2.10) | grepl("2.3.2", threatmed$X7.2.11) |
-                   grepl("2.3.2", threatmed$X7.3))
+NatComp <-subset(threatmed, grepl("2.3.2", threatmed$Y7.1) |  grepl("2.3.2", threatmed$Y7.1.1) | grepl("2.3.2", threatmed$Y7.1.2) | grepl("2.3.2", threatmed$Y7.1.3) |  
+                   grepl("2.3.2", threatmed$Y7.2) |  grepl("2.3.2", threatmed$Y7.2.1) | grepl("2.3.2", threatmed$Y7.2.2) | grepl("2.3.2", threatmed$Y7.2.3) | grepl("2.3.2", threatmed$Y7.2.4) | grepl("2.3.2", threatmed$Y7.2.5) | grepl("2.3.2", threatmed$Y7.2.6) | grepl("2.3.2", threatmed$Y7.2.7) | grepl("2.3.2", threatmed$Y7.2.8) |  grepl("2.3.2", threatmed$Y7.2.9) |  grepl("2.3.2", threatmed$Y7.2.10) | grepl("2.3.2", threatmed$Y7.2.11) |
+                   grepl("2.3.2", threatmed$Y7.3))
 NatCompnum <- nrow(NatComp)
 NatCompper <-round((NatCompnum/threatobsnum * 100), dig=2)
 
-NatLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X7.1) |  grepl("2.3.3", threatmed$X7.1.1) | grepl("2.3.3", threatmed$X7.1.2) | grepl("2.3.3", threatmed$X7.1.3) |  
-                      grepl("2.3.3", threatmed$X7.2) |  grepl("2.3.3", threatmed$X7.2.1) | grepl("2.3.3", threatmed$X7.2.2) | grepl("2.3.3", threatmed$X7.2.3) | grepl("2.3.3", threatmed$X7.2.4) | grepl("2.3.3", threatmed$X7.2.5) | grepl("2.3.3", threatmed$X7.2.6) | grepl("2.3.3", threatmed$X7.2.7) | grepl("2.3.3", threatmed$X7.2.8) |  grepl("2.3.3", threatmed$X7.2.9) |  grepl("2.3.3", threatmed$X7.2.10) | grepl("2.3.3", threatmed$X7.2.11) |
-                      grepl("2.3.3", threatmed$X7.3))
+NatLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y7.1) |  grepl("2.3.3", threatmed$Y7.1.1) | grepl("2.3.3", threatmed$Y7.1.2) | grepl("2.3.3", threatmed$Y7.1.3) |  
+                      grepl("2.3.3", threatmed$Y7.2) |  grepl("2.3.3", threatmed$Y7.2.1) | grepl("2.3.3", threatmed$Y7.2.2) | grepl("2.3.3", threatmed$Y7.2.3) | grepl("2.3.3", threatmed$Y7.2.4) | grepl("2.3.3", threatmed$Y7.2.5) | grepl("2.3.3", threatmed$Y7.2.6) | grepl("2.3.3", threatmed$Y7.2.7) | grepl("2.3.3", threatmed$Y7.2.8) |  grepl("2.3.3", threatmed$Y7.2.9) |  grepl("2.3.3", threatmed$Y7.2.10) | grepl("2.3.3", threatmed$Y7.2.11) |
+                      grepl("2.3.3", threatmed$Y7.3))
 NatLossMutnum <- nrow(NatLossMut)
 NatLossMutper <-round((NatLossMutnum/threatobsnum * 100), dig=2)
 
-NatLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X7.1) |  grepl("2.3.4", threatmed$X7.1.1) | grepl("2.3.4", threatmed$X7.1.2) | grepl("2.3.4", threatmed$X7.1.3) |  
-                       grepl("2.3.4", threatmed$X7.2) |  grepl("2.3.4", threatmed$X7.2.1) | grepl("2.3.4", threatmed$X7.2.2) | grepl("2.3.4", threatmed$X7.2.3) | grepl("2.3.4", threatmed$X7.2.4) | grepl("2.3.4", threatmed$X7.2.5) | grepl("2.3.4", threatmed$X7.2.6) | grepl("2.3.4", threatmed$X7.2.7) | grepl("2.3.4", threatmed$X7.2.8) |  grepl("2.3.4", threatmed$X7.2.9) |  grepl("2.3.4", threatmed$X7.2.10) | grepl("2.3.4", threatmed$X7.2.11) |
-                       grepl("2.3.4", threatmed$X7.3))
+NatLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y7.1) |  grepl("2.3.4", threatmed$Y7.1.1) | grepl("2.3.4", threatmed$Y7.1.2) | grepl("2.3.4", threatmed$Y7.1.3) |  
+                       grepl("2.3.4", threatmed$Y7.2) |  grepl("2.3.4", threatmed$Y7.2.1) | grepl("2.3.4", threatmed$Y7.2.2) | grepl("2.3.4", threatmed$Y7.2.3) | grepl("2.3.4", threatmed$Y7.2.4) | grepl("2.3.4", threatmed$Y7.2.5) | grepl("2.3.4", threatmed$Y7.2.6) | grepl("2.3.4", threatmed$Y7.2.7) | grepl("2.3.4", threatmed$Y7.2.8) |  grepl("2.3.4", threatmed$Y7.2.9) |  grepl("2.3.4", threatmed$Y7.2.10) | grepl("2.3.4", threatmed$Y7.2.11) |
+                       grepl("2.3.4", threatmed$Y7.3))
 NatLossPollnum <- nrow(NatLossPoll)
 NatLossPollper <-round((NatLossPollnum/threatobsnum * 100), dig=2)
 
-NatInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X7.1) |  grepl("2.3.5", threatmed$X7.1.1) | grepl("2.3.5", threatmed$X7.1.2) | grepl("2.3.5", threatmed$X7.1.3) |  
-                      grepl("2.3.5", threatmed$X7.2) |  grepl("2.3.5", threatmed$X7.2.1) | grepl("2.3.5", threatmed$X7.2.2) | grepl("2.3.5", threatmed$X7.2.3) | grepl("2.3.5", threatmed$X7.2.4) | grepl("2.3.5", threatmed$X7.2.5) | grepl("2.3.5", threatmed$X7.2.6) | grepl("2.3.5", threatmed$X7.2.7) | grepl("2.3.5", threatmed$X7.2.8) |  grepl("2.3.5", threatmed$X7.2.9) |  grepl("2.3.5", threatmed$X7.2.10) | grepl("2.3.5", threatmed$X7.2.11) |
-                      grepl("2.3.5", threatmed$X7.3))
+NatInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y7.1) |  grepl("2.3.5", threatmed$Y7.1.1) | grepl("2.3.5", threatmed$Y7.1.2) | grepl("2.3.5", threatmed$Y7.1.3) |  
+                      grepl("2.3.5", threatmed$Y7.2) |  grepl("2.3.5", threatmed$Y7.2.1) | grepl("2.3.5", threatmed$Y7.2.2) | grepl("2.3.5", threatmed$Y7.2.3) | grepl("2.3.5", threatmed$Y7.2.4) | grepl("2.3.5", threatmed$Y7.2.5) | grepl("2.3.5", threatmed$Y7.2.6) | grepl("2.3.5", threatmed$Y7.2.7) | grepl("2.3.5", threatmed$Y7.2.8) |  grepl("2.3.5", threatmed$Y7.2.9) |  grepl("2.3.5", threatmed$Y7.2.10) | grepl("2.3.5", threatmed$Y7.2.11) |
+                      grepl("2.3.5", threatmed$Y7.3))
 NatInbreednum <- nrow(NatInbreed)
 NatInbreedper <-round((NatInbreednum/threatobsnum * 100), dig=2)
 
-NatSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X7.1) |  grepl("2.3.6", threatmed$X7.1.1) | grepl("2.3.6", threatmed$X7.1.2) | grepl("2.3.6", threatmed$X7.1.3) |  
-                      grepl("2.3.6", threatmed$X7.2) |  grepl("2.3.6", threatmed$X7.2.1) | grepl("2.3.6", threatmed$X7.2.2) | grepl("2.3.6", threatmed$X7.2.3) | grepl("2.3.6", threatmed$X7.2.4) | grepl("2.3.6", threatmed$X7.2.5) | grepl("2.3.6", threatmed$X7.2.6) | grepl("2.3.6", threatmed$X7.2.7) | grepl("2.3.6", threatmed$X7.2.8) |  grepl("2.3.6", threatmed$X7.2.9) |  grepl("2.3.6", threatmed$X7.2.10) | grepl("2.3.6", threatmed$X7.2.11) |
-                      grepl("2.3.6", threatmed$X7.3))
+NatSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y7.1) |  grepl("2.3.6", threatmed$Y7.1.1) | grepl("2.3.6", threatmed$Y7.1.2) | grepl("2.3.6", threatmed$Y7.1.3) |  
+                      grepl("2.3.6", threatmed$Y7.2) |  grepl("2.3.6", threatmed$Y7.2.1) | grepl("2.3.6", threatmed$Y7.2.2) | grepl("2.3.6", threatmed$Y7.2.3) | grepl("2.3.6", threatmed$Y7.2.4) | grepl("2.3.6", threatmed$Y7.2.5) | grepl("2.3.6", threatmed$Y7.2.6) | grepl("2.3.6", threatmed$Y7.2.7) | grepl("2.3.6", threatmed$Y7.2.8) |  grepl("2.3.6", threatmed$Y7.2.9) |  grepl("2.3.6", threatmed$Y7.2.10) | grepl("2.3.6", threatmed$Y7.2.11) |
+                      grepl("2.3.6", threatmed$Y7.3))
 NatSkewSexnum <- nrow(NatSkewSex)
 NatSkewSexper <-round((NatSkewSexnum/threatobsnum * 100), dig=2)
 
-NatRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X7.1) |  grepl("2.3.7", threatmed$X7.1.1) | grepl("2.3.7", threatmed$X7.1.2) | grepl("2.3.7", threatmed$X7.1.3) |  
-                        grepl("2.3.7", threatmed$X7.2) |  grepl("2.3.7", threatmed$X7.2.1) | grepl("2.3.7", threatmed$X7.2.2) | grepl("2.3.7", threatmed$X7.2.3) | grepl("2.3.7", threatmed$X7.2.4) | grepl("2.3.7", threatmed$X7.2.5) | grepl("2.3.7", threatmed$X7.2.6) | grepl("2.3.7", threatmed$X7.2.7) | grepl("2.3.7", threatmed$X7.2.8) |  grepl("2.3.7", threatmed$X7.2.9) |  grepl("2.3.7", threatmed$X7.2.10) | grepl("2.3.7", threatmed$X7.2.11) |
-                        grepl("2.3.7", threatmed$X7.3))
+NatRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y7.1) |  grepl("2.3.7", threatmed$Y7.1.1) | grepl("2.3.7", threatmed$Y7.1.2) | grepl("2.3.7", threatmed$Y7.1.3) |  
+                        grepl("2.3.7", threatmed$Y7.2) |  grepl("2.3.7", threatmed$Y7.2.1) | grepl("2.3.7", threatmed$Y7.2.2) | grepl("2.3.7", threatmed$Y7.2.3) | grepl("2.3.7", threatmed$Y7.2.4) | grepl("2.3.7", threatmed$Y7.2.5) | grepl("2.3.7", threatmed$Y7.2.6) | grepl("2.3.7", threatmed$Y7.2.7) | grepl("2.3.7", threatmed$Y7.2.8) |  grepl("2.3.7", threatmed$Y7.2.9) |  grepl("2.3.7", threatmed$Y7.2.10) | grepl("2.3.7", threatmed$Y7.2.11) |
+                        grepl("2.3.7", threatmed$Y7.3))
 NatRedRepSucnum <- nrow(NatRedRepSuc)
 NatRedRepSucper <-round((NatRedRepSucnum/threatobsnum * 100), dig=2)
 
-NatOth <-subset(threatmed, grepl("2.3.8", threatmed$X7.1) |  grepl("2.3.8", threatmed$X7.1.1) | grepl("2.3.8", threatmed$X7.1.2) | grepl("2.3.8", threatmed$X7.1.3) |  
-                  grepl("2.3.8", threatmed$X7.2) |  grepl("2.3.8", threatmed$X7.2.1) | grepl("2.3.8", threatmed$X7.2.2) | grepl("2.3.8", threatmed$X7.2.3) | grepl("2.3.8", threatmed$X7.2.4) | grepl("2.3.8", threatmed$X7.2.5) | grepl("2.3.8", threatmed$X7.2.6) | grepl("2.3.8", threatmed$X7.2.7) | grepl("2.3.8", threatmed$X7.2.8) |  grepl("2.3.8", threatmed$X7.2.9) |  grepl("2.3.8", threatmed$X7.2.10) | grepl("2.3.8", threatmed$X7.2.11) |
-                  grepl("2.3.8", threatmed$X7.3))
+NatOth <-subset(threatmed, grepl("2.3.8", threatmed$Y7.1) |  grepl("2.3.8", threatmed$Y7.1.1) | grepl("2.3.8", threatmed$Y7.1.2) | grepl("2.3.8", threatmed$Y7.1.3) |  
+                  grepl("2.3.8", threatmed$Y7.2) |  grepl("2.3.8", threatmed$Y7.2.1) | grepl("2.3.8", threatmed$Y7.2.2) | grepl("2.3.8", threatmed$Y7.2.3) | grepl("2.3.8", threatmed$Y7.2.4) | grepl("2.3.8", threatmed$Y7.2.5) | grepl("2.3.8", threatmed$Y7.2.6) | grepl("2.3.8", threatmed$Y7.2.7) | grepl("2.3.8", threatmed$Y7.2.8) |  grepl("2.3.8", threatmed$Y7.2.9) |  grepl("2.3.8", threatmed$Y7.2.10) | grepl("2.3.8", threatmed$Y7.2.11) |
+                  grepl("2.3.8", threatmed$Y7.3))
 NatOthnum <- nrow(NatOth)
 NatOthper <-round((NatOthnum/threatobsnum * 100), dig=2)
 
@@ -528,120 +528,120 @@ Nattotal <- (NatEcoConnum + NatEcoDegnum + NatIndirEcoEffnum + NatPastUnnum + Na
 NatPer <- round((Nattotal/threatobsnum * 100), dig = 2)
 
 #Threat 8: Invasion and other problematic species, genes and diseases
-InvEcoCon <- subset(threatmed, grepl("1.1", threatmed$X8.1) | grepl("1.1", threatmed$X8.1.1) | grepl("1.1", threatmed$X8.1.2) | 
-                      grepl("1.1", threatmed$X8.2) | grepl("1.1", threatmed$X8.2.1) | grepl("1.1", threatmed$X8.2.2) | 
-                      grepl("1.1", threatmed$X8.3) | 
-                      grepl("1.1", threatmed$X8.4) | grepl("1.1", threatmed$X8.4.1) | grepl("1.1", threatmed$X8.4.2) | 
-                      grepl("1.1", threatmed$X8.5) | grepl("1.1", threatmed$X8.5.1) | grepl("1.1", threatmed$X8.5.2) | 
-                      grepl("1.1", threatmed$X8.6))
+InvEcoCon <- subset(threatmed, grepl("1.1", threatmed$Y8.1) | grepl("1.1", threatmed$Y8.1.1) | grepl("1.1", threatmed$Y8.1.2) | 
+                      grepl("1.1", threatmed$Y8.2) | grepl("1.1", threatmed$Y8.2.1) | grepl("1.1", threatmed$Y8.2.2) | 
+                      grepl("1.1", threatmed$Y8.3) | 
+                      grepl("1.1", threatmed$Y8.4) | grepl("1.1", threatmed$Y8.4.1) | grepl("1.1", threatmed$Y8.4.2) | 
+                      grepl("1.1", threatmed$Y8.5) | grepl("1.1", threatmed$Y8.5.1) | grepl("1.1", threatmed$Y8.5.2) | 
+                      grepl("1.1", threatmed$Y8.6))
 InvEcoConnum <- nrow(InvEcoCon)
 InvEcoConper <-round((InvEcoConnum/threatobsnum * 100), dig=2)
 
-InvEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X8.1) | grepl("1.2", threatmed$X8.1.1) | grepl("1.2", threatmed$X8.1.2) | 
-                     grepl("1.2", threatmed$X8.2) | grepl("1.2", threatmed$X8.2.1) | grepl("1.2", threatmed$X8.2.2) | 
-                     grepl("1.2", threatmed$X8.3) | 
-                     grepl("1.2", threatmed$X8.4) | grepl("1.2", threatmed$X8.4.1) | grepl("1.2", threatmed$X8.4.2) | 
-                     grepl("1.2", threatmed$X8.5) | grepl("1.2", threatmed$X8.5.1) | grepl("1.2", threatmed$X8.5.2) | 
-                     grepl("1.2", threatmed$X8.6))
+InvEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y8.1) | grepl("1.2", threatmed$Y8.1.1) | grepl("1.2", threatmed$Y8.1.2) | 
+                     grepl("1.2", threatmed$Y8.2) | grepl("1.2", threatmed$Y8.2.1) | grepl("1.2", threatmed$Y8.2.2) | 
+                     grepl("1.2", threatmed$Y8.3) | 
+                     grepl("1.2", threatmed$Y8.4) | grepl("1.2", threatmed$Y8.4.1) | grepl("1.2", threatmed$Y8.4.2) | 
+                     grepl("1.2", threatmed$Y8.5) | grepl("1.2", threatmed$Y8.5.1) | grepl("1.2", threatmed$Y8.5.2) | 
+                     grepl("1.2", threatmed$Y8.6))
 InvEcoDegnum <- nrow(InvEcoDeg)
 InvEcoDegper <-round((InvEcoDegnum/threatobsnum * 100), dig=2)
 
-InvIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X8.1) | grepl("1.3", threatmed$X8.1.1) | grepl("1.3", threatmed$X8.1.2) | 
-                          grepl("1.3", threatmed$X8.2) | grepl("1.3", threatmed$X8.2.1) | grepl("1.3", threatmed$X8.2.2) | 
-                          grepl("1.3", threatmed$X8.3) | 
-                          grepl("1.3", threatmed$X8.4) | grepl("1.3", threatmed$X8.4.1) | grepl("1.3", threatmed$X8.4.2) | 
-                          grepl("1.3", threatmed$X8.5) | grepl("1.3", threatmed$X8.5.1) | grepl("1.3", threatmed$X8.5.2) | 
-                          grepl("1.3", threatmed$X8.6))
+InvIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y8.1) | grepl("1.3", threatmed$Y8.1.1) | grepl("1.3", threatmed$Y8.1.2) | 
+                          grepl("1.3", threatmed$Y8.2) | grepl("1.3", threatmed$Y8.2.1) | grepl("1.3", threatmed$Y8.2.2) | 
+                          grepl("1.3", threatmed$Y8.3) | 
+                          grepl("1.3", threatmed$Y8.4) | grepl("1.3", threatmed$Y8.4.1) | grepl("1.3", threatmed$Y8.4.2) | 
+                          grepl("1.3", threatmed$Y8.5) | grepl("1.3", threatmed$Y8.5.1) | grepl("1.3", threatmed$Y8.5.2) | 
+                          grepl("1.3", threatmed$Y8.6))
 InvIndirEcoEffnum <- nrow(InvIndirEcoEff)
 InvIndirEcoEffper <-round((InvIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-InvSpecMort <-subset(threatmed, grepl("2.1", threatmed$X8.1) | grepl("2.1", threatmed$X8.1.1) | grepl("2.1", threatmed$X8.1.2) | 
-                       grepl("2.1", threatmed$X8.2) | grepl("2.1", threatmed$X8.2.1) | grepl("2.1", threatmed$X8.2.2) | 
-                       grepl("2.1", threatmed$X8.3) | 
-                       grepl("2.1", threatmed$X8.4) | grepl("2.1", threatmed$X8.4.1) | grepl("2.1", threatmed$X8.4.2) | 
-                       grepl("2.1", threatmed$X8.5) | grepl("2.1", threatmed$X8.5.1) | grepl("2.1", threatmed$X8.5.2) | 
-                       grepl("2.1", threatmed$X8.6))
+InvSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y8.1) | grepl("2.1", threatmed$Y8.1.1) | grepl("2.1", threatmed$Y8.1.2) | 
+                       grepl("2.1", threatmed$Y8.2) | grepl("2.1", threatmed$Y8.2.1) | grepl("2.1", threatmed$Y8.2.2) | 
+                       grepl("2.1", threatmed$Y8.3) | 
+                       grepl("2.1", threatmed$Y8.4) | grepl("2.1", threatmed$Y8.4.1) | grepl("2.1", threatmed$Y8.4.2) | 
+                       grepl("2.1", threatmed$Y8.5) | grepl("2.1", threatmed$Y8.5.1) | grepl("2.1", threatmed$Y8.5.2) | 
+                       grepl("2.1", threatmed$Y8.6))
 InvSpecMortnum <- nrow(InvSpecMort)
 InvSpecMortper <-round((InvSpecMortnum/threatobsnum * 100), dig=2)
 
-InvSpecDist <-subset(threatmed, grepl("2.2", threatmed$X8.1) | grepl("2.2", threatmed$X8.1.1) | grepl("2.2", threatmed$X8.1.2) | 
-                       grepl("2.2", threatmed$X8.2) | grepl("2.2", threatmed$X8.2.1) | grepl("2.2", threatmed$X8.2.2) | 
-                       grepl("2.2", threatmed$X8.3) | 
-                       grepl("2.2", threatmed$X8.4) | grepl("2.2", threatmed$X8.4.1) | grepl("2.2", threatmed$X8.4.2) | 
-                       grepl("2.2", threatmed$X8.5) | grepl("2.2", threatmed$X8.5.1) | grepl("2.2", threatmed$X8.5.2) | 
-                       grepl("2.2", threatmed$X8.6))
+InvSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y8.1) | grepl("2.2", threatmed$Y8.1.1) | grepl("2.2", threatmed$Y8.1.2) | 
+                       grepl("2.2", threatmed$Y8.2) | grepl("2.2", threatmed$Y8.2.1) | grepl("2.2", threatmed$Y8.2.2) | 
+                       grepl("2.2", threatmed$Y8.3) | 
+                       grepl("2.2", threatmed$Y8.4) | grepl("2.2", threatmed$Y8.4.1) | grepl("2.2", threatmed$Y8.4.2) | 
+                       grepl("2.2", threatmed$Y8.5) | grepl("2.2", threatmed$Y8.5.1) | grepl("2.2", threatmed$Y8.5.2) | 
+                       grepl("2.2", threatmed$Y8.6))
 InvSpecDistnum <- nrow(InvSpecDist)
 InvSpecDistper <-round((InvSpecDistnum/threatobsnum * 100), dig=2)
 
-InvHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X8.1) | grepl("2.3.1", threatmed$X8.1.1) | grepl("2.3.1", threatmed$X8.1.2) | 
-                     grepl("2.3.1", threatmed$X8.2) | grepl("2.3.1", threatmed$X8.2.1) | grepl("2.3.1", threatmed$X8.2.2) | 
-                     grepl("2.3.1", threatmed$X8.3) | 
-                     grepl("2.3.1", threatmed$X8.4) | grepl("2.3.1", threatmed$X8.4.1) | grepl("2.3.1", threatmed$X8.4.2) | 
-                     grepl("2.3.1", threatmed$X8.5) | grepl("2.3.1", threatmed$X8.5.1) | grepl("2.3.1", threatmed$X8.5.2) | 
-                     grepl("2.3.1", threatmed$X8.6))
+InvHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y8.1) | grepl("2.3.1", threatmed$Y8.1.1) | grepl("2.3.1", threatmed$Y8.1.2) | 
+                     grepl("2.3.1", threatmed$Y8.2) | grepl("2.3.1", threatmed$Y8.2.1) | grepl("2.3.1", threatmed$Y8.2.2) | 
+                     grepl("2.3.1", threatmed$Y8.3) | 
+                     grepl("2.3.1", threatmed$Y8.4) | grepl("2.3.1", threatmed$Y8.4.1) | grepl("2.3.1", threatmed$Y8.4.2) | 
+                     grepl("2.3.1", threatmed$Y8.5) | grepl("2.3.1", threatmed$Y8.5.1) | grepl("2.3.1", threatmed$Y8.5.2) | 
+                     grepl("2.3.1", threatmed$Y8.6))
 InvHybridnum <- nrow(InvHybrid)
 InvHybridper <-round((InvHybridnum/threatobsnum * 100), dig=2)
 
-InvComp <-subset(threatmed, grepl("2.3.2", threatmed$X8.1) | grepl("2.3.2", threatmed$X8.1.1) | grepl("2.3.2", threatmed$X8.1.2) | 
-                   grepl("2.3.2", threatmed$X8.2) | grepl("2.3.2", threatmed$X8.2.1) | grepl("2.3.2", threatmed$X8.2.2) | 
-                   grepl("2.3.2", threatmed$X8.3) | 
-                   grepl("2.3.2", threatmed$X8.4) | grepl("2.3.2", threatmed$X8.4.1) | grepl("2.3.2", threatmed$X8.4.2) | 
-                   grepl("2.3.2", threatmed$X8.5) | grepl("2.3.2", threatmed$X8.5.1) | grepl("2.3.2", threatmed$X8.5.2) | 
-                   grepl("2.3.2", threatmed$X8.6))
+InvComp <-subset(threatmed, grepl("2.3.2", threatmed$Y8.1) | grepl("2.3.2", threatmed$Y8.1.1) | grepl("2.3.2", threatmed$Y8.1.2) | 
+                   grepl("2.3.2", threatmed$Y8.2) | grepl("2.3.2", threatmed$Y8.2.1) | grepl("2.3.2", threatmed$Y8.2.2) | 
+                   grepl("2.3.2", threatmed$Y8.3) | 
+                   grepl("2.3.2", threatmed$Y8.4) | grepl("2.3.2", threatmed$Y8.4.1) | grepl("2.3.2", threatmed$Y8.4.2) | 
+                   grepl("2.3.2", threatmed$Y8.5) | grepl("2.3.2", threatmed$Y8.5.1) | grepl("2.3.2", threatmed$Y8.5.2) | 
+                   grepl("2.3.2", threatmed$Y8.6))
 InvCompnum <- nrow(InvComp)
 InvCompper <-round((InvCompnum/threatobsnum * 100), dig=2)
 
-InvLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X8.1) | grepl("2.3.3", threatmed$X8.1.1) | grepl("2.3.3", threatmed$X8.1.2) | 
-                      grepl("2.3.3", threatmed$X8.2) | grepl("2.3.3", threatmed$X8.2.1) | grepl("2.3.3", threatmed$X8.2.2) | 
-                      grepl("2.3.3", threatmed$X8.3) | 
-                      grepl("2.3.3", threatmed$X8.4) | grepl("2.3.3", threatmed$X8.4.1) | grepl("2.3.3", threatmed$X8.4.2) | 
-                      grepl("2.3.3", threatmed$X8.5) | grepl("2.3.3", threatmed$X8.5.1) | grepl("2.3.3", threatmed$X8.5.2) | 
-                      grepl("2.3.3", threatmed$X8.6))
+InvLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y8.1) | grepl("2.3.3", threatmed$Y8.1.1) | grepl("2.3.3", threatmed$Y8.1.2) | 
+                      grepl("2.3.3", threatmed$Y8.2) | grepl("2.3.3", threatmed$Y8.2.1) | grepl("2.3.3", threatmed$Y8.2.2) | 
+                      grepl("2.3.3", threatmed$Y8.3) | 
+                      grepl("2.3.3", threatmed$Y8.4) | grepl("2.3.3", threatmed$Y8.4.1) | grepl("2.3.3", threatmed$Y8.4.2) | 
+                      grepl("2.3.3", threatmed$Y8.5) | grepl("2.3.3", threatmed$Y8.5.1) | grepl("2.3.3", threatmed$Y8.5.2) | 
+                      grepl("2.3.3", threatmed$Y8.6))
 InvLossMutnum <- nrow(InvLossMut)
 InvLossMutper <-round((InvLossMutnum/threatobsnum * 100), dig=2)
 
-InvLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X8.1) | grepl("2.3.4", threatmed$X8.1.1) | grepl("2.3.4", threatmed$X8.1.2) | 
-                       grepl("2.3.4", threatmed$X8.2) | grepl("2.3.4", threatmed$X8.2.1) | grepl("2.3.4", threatmed$X8.2.2) | 
-                       grepl("2.3.4", threatmed$X8.3) | 
-                       grepl("2.3.4", threatmed$X8.4) | grepl("2.3.4", threatmed$X8.4.1) | grepl("2.3.4", threatmed$X8.4.2) | 
-                       grepl("2.3.4", threatmed$X8.5) | grepl("2.3.4", threatmed$X8.5.1) | grepl("2.3.4", threatmed$X8.5.2) | 
-                       grepl("2.3.4", threatmed$X8.6))
+InvLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y8.1) | grepl("2.3.4", threatmed$Y8.1.1) | grepl("2.3.4", threatmed$Y8.1.2) | 
+                       grepl("2.3.4", threatmed$Y8.2) | grepl("2.3.4", threatmed$Y8.2.1) | grepl("2.3.4", threatmed$Y8.2.2) | 
+                       grepl("2.3.4", threatmed$Y8.3) | 
+                       grepl("2.3.4", threatmed$Y8.4) | grepl("2.3.4", threatmed$Y8.4.1) | grepl("2.3.4", threatmed$Y8.4.2) | 
+                       grepl("2.3.4", threatmed$Y8.5) | grepl("2.3.4", threatmed$Y8.5.1) | grepl("2.3.4", threatmed$Y8.5.2) | 
+                       grepl("2.3.4", threatmed$Y8.6))
 InvLossPollnum <- nrow(InvLossPoll)
 InvLossPollper <-round((InvLossPollnum/threatobsnum * 100), dig=2)
 
-InvInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X8.1) | grepl("2.3.5", threatmed$X8.1.1) | grepl("2.3.5", threatmed$X8.1.2) | 
-                      grepl("2.3.5", threatmed$X8.2) | grepl("2.3.5", threatmed$X8.2.1) | grepl("2.3.5", threatmed$X8.2.2) | 
-                      grepl("2.3.5", threatmed$X8.3) | 
-                      grepl("2.3.5", threatmed$X8.4) | grepl("2.3.5", threatmed$X8.4.1) | grepl("2.3.5", threatmed$X8.4.2) | 
-                      grepl("2.3.5", threatmed$X8.5) | grepl("2.3.5", threatmed$X8.5.1) | grepl("2.3.5", threatmed$X8.5.2) | 
-                      grepl("2.3.5", threatmed$X8.6))
+InvInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y8.1) | grepl("2.3.5", threatmed$Y8.1.1) | grepl("2.3.5", threatmed$Y8.1.2) | 
+                      grepl("2.3.5", threatmed$Y8.2) | grepl("2.3.5", threatmed$Y8.2.1) | grepl("2.3.5", threatmed$Y8.2.2) | 
+                      grepl("2.3.5", threatmed$Y8.3) | 
+                      grepl("2.3.5", threatmed$Y8.4) | grepl("2.3.5", threatmed$Y8.4.1) | grepl("2.3.5", threatmed$Y8.4.2) | 
+                      grepl("2.3.5", threatmed$Y8.5) | grepl("2.3.5", threatmed$Y8.5.1) | grepl("2.3.5", threatmed$Y8.5.2) | 
+                      grepl("2.3.5", threatmed$Y8.6))
 InvInbreednum <- nrow(InvInbreed)
 InvInbreedper <-round((InvInbreednum/threatobsnum * 100), dig=2)
 
-InvSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X8.1) | grepl("2.3.6", threatmed$X8.1.1) | grepl("2.3.6", threatmed$X8.1.2) | 
-                      grepl("2.3.6", threatmed$X8.2) | grepl("2.3.6", threatmed$X8.2.1) | grepl("2.3.6", threatmed$X8.2.2) | 
-                      grepl("2.3.6", threatmed$X8.3) | 
-                      grepl("2.3.6", threatmed$X8.4) | grepl("2.3.6", threatmed$X8.4.1) | grepl("2.3.6", threatmed$X8.4.2) | 
-                      grepl("2.3.6", threatmed$X8.5) | grepl("2.3.6", threatmed$X8.5.1) | grepl("2.3.6", threatmed$X8.5.2) | 
-                      grepl("2.3.6", threatmed$X8.6))
+InvSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y8.1) | grepl("2.3.6", threatmed$Y8.1.1) | grepl("2.3.6", threatmed$Y8.1.2) | 
+                      grepl("2.3.6", threatmed$Y8.2) | grepl("2.3.6", threatmed$Y8.2.1) | grepl("2.3.6", threatmed$Y8.2.2) | 
+                      grepl("2.3.6", threatmed$Y8.3) | 
+                      grepl("2.3.6", threatmed$Y8.4) | grepl("2.3.6", threatmed$Y8.4.1) | grepl("2.3.6", threatmed$Y8.4.2) | 
+                      grepl("2.3.6", threatmed$Y8.5) | grepl("2.3.6", threatmed$Y8.5.1) | grepl("2.3.6", threatmed$Y8.5.2) | 
+                      grepl("2.3.6", threatmed$Y8.6))
 InvSkewSexnum <- nrow(InvSkewSex)
 InvSkewSexper <-round((InvSkewSexnum/threatobsnum * 100), dig=2)
 
-InvRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X8.1) | grepl("2.3.7", threatmed$X8.1.1) | grepl("2.3.7", threatmed$X8.1.2) | 
-                        grepl("2.3.7", threatmed$X8.2) | grepl("2.3.7", threatmed$X8.2.1) | grepl("2.3.7", threatmed$X8.2.2) | 
-                        grepl("2.3.7", threatmed$X8.3) | 
-                        grepl("2.3.7", threatmed$X8.4) | grepl("2.3.7", threatmed$X8.4.1) | grepl("2.3.7", threatmed$X8.4.2) | 
-                        grepl("2.3.7", threatmed$X8.5) | grepl("2.3.7", threatmed$X8.5.1) | grepl("2.3.7", threatmed$X8.5.2) | 
-                        grepl("2.3.7", threatmed$X8.6))
+InvRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y8.1) | grepl("2.3.7", threatmed$Y8.1.1) | grepl("2.3.7", threatmed$Y8.1.2) | 
+                        grepl("2.3.7", threatmed$Y8.2) | grepl("2.3.7", threatmed$Y8.2.1) | grepl("2.3.7", threatmed$Y8.2.2) | 
+                        grepl("2.3.7", threatmed$Y8.3) | 
+                        grepl("2.3.7", threatmed$Y8.4) | grepl("2.3.7", threatmed$Y8.4.1) | grepl("2.3.7", threatmed$Y8.4.2) | 
+                        grepl("2.3.7", threatmed$Y8.5) | grepl("2.3.7", threatmed$Y8.5.1) | grepl("2.3.7", threatmed$Y8.5.2) | 
+                        grepl("2.3.7", threatmed$Y8.6))
 InvRedRepSucnum <- nrow(InvRedRepSuc)
 InvRedRepSucper <-round((InvRedRepSucnum/threatobsnum * 100), dig=2)
 
-InvOth <-subset(threatmed, grepl("2.3.8", threatmed$X8.1) | grepl("2.3.8", threatmed$X8.1.1) | grepl("2.3.8", threatmed$X8.1.2) | 
-                  grepl("2.3.8", threatmed$X8.2) | grepl("2.3.8", threatmed$X8.2.1) | grepl("2.3.8", threatmed$X8.2.2) | 
-                  grepl("2.3.8", threatmed$X8.3) | 
-                  grepl("2.3.8", threatmed$X8.4) | grepl("2.3.8", threatmed$X8.4.1) | grepl("2.3.8", threatmed$X8.4.2) | 
-                  grepl("2.3.8", threatmed$X8.5) | grepl("2.3.8", threatmed$X8.5.1) | grepl("2.3.8", threatmed$X8.5.2) | 
-                  grepl("2.3.8", threatmed$X8.6))
+InvOth <-subset(threatmed, grepl("2.3.8", threatmed$Y8.1) | grepl("2.3.8", threatmed$Y8.1.1) | grepl("2.3.8", threatmed$Y8.1.2) | 
+                  grepl("2.3.8", threatmed$Y8.2) | grepl("2.3.8", threatmed$Y8.2.1) | grepl("2.3.8", threatmed$Y8.2.2) | 
+                  grepl("2.3.8", threatmed$Y8.3) | 
+                  grepl("2.3.8", threatmed$Y8.4) | grepl("2.3.8", threatmed$Y8.4.1) | grepl("2.3.8", threatmed$Y8.4.2) | 
+                  grepl("2.3.8", threatmed$Y8.5) | grepl("2.3.8", threatmed$Y8.5.1) | grepl("2.3.8", threatmed$Y8.5.2) | 
+                  grepl("2.3.8", threatmed$Y8.6))
 InvOthnum <- nrow(InvOth)
 InvOthper <-round((InvOthnum/threatobsnum * 100), dig=2)
 
@@ -649,68 +649,68 @@ Invtotal <- (InvEcoConnum + InEcoDegnum + InvIndirEcoEffnum + InvPastUnnum + Inv
 InvPer <- round((Invtotal/threatobsnum * 100), dig = 2)
 
 #Threat 9: Pollution
-PollEcoCon <- subset(threatmed, grepl("1.1", threatmed$X9.1) | grepl("1.1", threatmed$X9.1.1) | grepl("1.1", threatmed$X9.1.2) | grepl("1.1", threatmed$X9.1.3) | 
-                       grepl("1.1", threatmed$X9.2) | grepl("1.1", threatmed$X9.2.1) | grepl("1.1", threatmed$X9.2.2) | grepl("1.1", threatmed$X9.2.3))
+PollEcoCon <- subset(threatmed, grepl("1.1", threatmed$Y9.1) | grepl("1.1", threatmed$Y9.1.1) | grepl("1.1", threatmed$Y9.1.2) | grepl("1.1", threatmed$Y9.1.3) | 
+                       grepl("1.1", threatmed$Y9.2) | grepl("1.1", threatmed$Y9.2.1) | grepl("1.1", threatmed$Y9.2.2) | grepl("1.1", threatmed$Y9.2.3))
 PollEcoConnum <- nrow(PollEcoCon)
 PollEcoConper <-round((PollEcoConnum/threatobsnum * 100), dig=2)
 
-PollEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X9.1) | grepl("1.2", threatmed$X9.1.1) | grepl("1.2", threatmed$X9.1.2) | grepl("1.2", threatmed$X9.1.3) | 
-                      grepl("1.2", threatmed$X9.2) | grepl("1.2", threatmed$X9.2.1) | grepl("1.2", threatmed$X9.2.2) | grepl("1.2", threatmed$X9.2.3))
+PollEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y9.1) | grepl("1.2", threatmed$Y9.1.1) | grepl("1.2", threatmed$Y9.1.2) | grepl("1.2", threatmed$Y9.1.3) | 
+                      grepl("1.2", threatmed$Y9.2) | grepl("1.2", threatmed$Y9.2.1) | grepl("1.2", threatmed$Y9.2.2) | grepl("1.2", threatmed$Y9.2.3))
 PollEcoDegnum <- nrow(PollEcoDeg)
 PollEcoDegper <-round((PollEcoDegnum/threatobsnum * 100), dig=2)
 
-PollIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X9.1) | grepl("1.3", threatmed$X9.1.1) | grepl("1.3", threatmed$X9.1.2) | grepl("1.3", threatmed$X9.1.3) | 
-                           grepl("1.3", threatmed$X9.2) | grepl("1.3", threatmed$X9.2.1) | grepl("1.3", threatmed$X9.2.2) | grepl("1.3", threatmed$X9.2.3))
+PollIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y9.1) | grepl("1.3", threatmed$Y9.1.1) | grepl("1.3", threatmed$Y9.1.2) | grepl("1.3", threatmed$Y9.1.3) | 
+                           grepl("1.3", threatmed$Y9.2) | grepl("1.3", threatmed$Y9.2.1) | grepl("1.3", threatmed$Y9.2.2) | grepl("1.3", threatmed$Y9.2.3))
 PollIndirEcoEffnum <- nrow(PollIndirEcoEff)
 PollIndirEcoEffper <-round((PollIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-PollSpecMort <-subset(threatmed, grepl("2.1", threatmed$X9.1) | grepl("2.1", threatmed$X9.1.1) | grepl("2.1", threatmed$X9.1.2) | grepl("2.1", threatmed$X9.1.3) | 
-                        grepl("2.1", threatmed$X9.2) | grepl("2.1", threatmed$X9.2.1) | grepl("2.1", threatmed$X9.2.2) | grepl("2.1", threatmed$X9.2.3))
+PollSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y9.1) | grepl("2.1", threatmed$Y9.1.1) | grepl("2.1", threatmed$Y9.1.2) | grepl("2.1", threatmed$Y9.1.3) | 
+                        grepl("2.1", threatmed$Y9.2) | grepl("2.1", threatmed$Y9.2.1) | grepl("2.1", threatmed$Y9.2.2) | grepl("2.1", threatmed$Y9.2.3))
 PollSpecMortnum <- nrow(PollSpecMort)
 PollSpecMortper <-round((PollSpecMortnum/threatobsnum * 100), dig=2)
 
-PollSpecDist <-subset(threatmed, grepl("2.2", threatmed$X9.1) | grepl("2.2", threatmed$X9.1.1) | grepl("2.2", threatmed$X9.1.2) | grepl("2.2", threatmed$X9.1.3) | 
-                        grepl("2.2", threatmed$X9.2) | grepl("2.2", threatmed$X9.2.1) | grepl("2.2", threatmed$X9.2.2) | grepl("2.2", threatmed$X9.2.3))
+PollSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y9.1) | grepl("2.2", threatmed$Y9.1.1) | grepl("2.2", threatmed$Y9.1.2) | grepl("2.2", threatmed$Y9.1.3) | 
+                        grepl("2.2", threatmed$Y9.2) | grepl("2.2", threatmed$Y9.2.1) | grepl("2.2", threatmed$Y9.2.2) | grepl("2.2", threatmed$Y9.2.3))
 PollSpecDistnum <- nrow(PollSpecDist)
 PollSpecDistper <-round((PollSpecDistnum/threatobsnum * 100), dig=2)
 
-PollHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X9.1) | grepl("2.3.1", threatmed$X9.1.1) | grepl("2.3.1", threatmed$X9.1.2) | grepl("2.3.1", threatmed$X9.1.3) | 
-                      grepl("2.3.1", threatmed$X9.2) | grepl("2.3.1", threatmed$X9.2.1) | grepl("2.3.1", threatmed$X9.2.2) | grepl("2.3.1", threatmed$X9.2.3))
+PollHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y9.1) | grepl("2.3.1", threatmed$Y9.1.1) | grepl("2.3.1", threatmed$Y9.1.2) | grepl("2.3.1", threatmed$Y9.1.3) | 
+                      grepl("2.3.1", threatmed$Y9.2) | grepl("2.3.1", threatmed$Y9.2.1) | grepl("2.3.1", threatmed$Y9.2.2) | grepl("2.3.1", threatmed$Y9.2.3))
 PollHybridnum <- nrow(PollHybrid)
 PollHybridper <-round((PollHybridnum/threatobsnum * 100), dig=2)
 
-PollComp <-subset(threatmed, grepl("2.3.2", threatmed$X9.1) | grepl("2.3.2", threatmed$X9.1.1) | grepl("2.3.2", threatmed$X9.1.2) | grepl("2.3.2", threatmed$X9.1.3) | 
-                    grepl("2.3.2", threatmed$X9.2) | grepl("2.3.2", threatmed$X9.2.1) | grepl("2.3.2", threatmed$X9.2.2) | grepl("2.3.2", threatmed$X9.2.3))
+PollComp <-subset(threatmed, grepl("2.3.2", threatmed$Y9.1) | grepl("2.3.2", threatmed$Y9.1.1) | grepl("2.3.2", threatmed$Y9.1.2) | grepl("2.3.2", threatmed$Y9.1.3) | 
+                    grepl("2.3.2", threatmed$Y9.2) | grepl("2.3.2", threatmed$Y9.2.1) | grepl("2.3.2", threatmed$Y9.2.2) | grepl("2.3.2", threatmed$Y9.2.3))
 PollCompnum <- nrow(PollComp)
 PollCompper <-round((PollCompnum/threatobsnum * 100), dig=2)
 
-PollLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X9.1) | grepl("2.3.3", threatmed$X9.1.1) | grepl("2.3.3", threatmed$X9.1.2) | grepl("2.3.3", threatmed$X9.1.3) | 
-                       grepl("2.3.3", threatmed$X9.2) | grepl("2.3.3", threatmed$X9.2.1) | grepl("2.3.3", threatmed$X9.2.2) | grepl("2.3.3", threatmed$X9.2.3))
+PollLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y9.1) | grepl("2.3.3", threatmed$Y9.1.1) | grepl("2.3.3", threatmed$Y9.1.2) | grepl("2.3.3", threatmed$Y9.1.3) | 
+                       grepl("2.3.3", threatmed$Y9.2) | grepl("2.3.3", threatmed$Y9.2.1) | grepl("2.3.3", threatmed$Y9.2.2) | grepl("2.3.3", threatmed$Y9.2.3))
 PollLossMutnum <- nrow(PollLossMut)
 PollLossMutper <-round((PollLossMutnum/threatobsnum * 100), dig=2)
 
-PollLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X9.1) | grepl("2.3.4", threatmed$X9.1.1) | grepl("2.3.4", threatmed$X9.1.2) | grepl("2.3.4", threatmed$X9.1.3) | 
-                        grepl("2.3.4", threatmed$X9.2) | grepl("2.3.4", threatmed$X9.2.1) | grepl("2.3.4", threatmed$X9.2.2) | grepl("2.3.4", threatmed$X9.2.3))
+PollLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y9.1) | grepl("2.3.4", threatmed$Y9.1.1) | grepl("2.3.4", threatmed$Y9.1.2) | grepl("2.3.4", threatmed$Y9.1.3) | 
+                        grepl("2.3.4", threatmed$Y9.2) | grepl("2.3.4", threatmed$Y9.2.1) | grepl("2.3.4", threatmed$Y9.2.2) | grepl("2.3.4", threatmed$Y9.2.3))
 PollLossPollnum <- nrow(PollLossPoll)
 PollLossPollper <-round((PollLossPollnum/threatobsnum * 100), dig=2)
 
-PollInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X9.1) | grepl("2.3.5", threatmed$X9.1.1) | grepl("2.3.5", threatmed$X9.1.2) | grepl("2.3.5", threatmed$X9.1.3) | 
-                       grepl("2.3.5", threatmed$X9.2) | grepl("2.3.5", threatmed$X9.2.1) | grepl("2.3.5", threatmed$X9.2.2) | grepl("2.3.5", threatmed$X9.2.3))
+PollInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y9.1) | grepl("2.3.5", threatmed$Y9.1.1) | grepl("2.3.5", threatmed$Y9.1.2) | grepl("2.3.5", threatmed$Y9.1.3) | 
+                       grepl("2.3.5", threatmed$Y9.2) | grepl("2.3.5", threatmed$Y9.2.1) | grepl("2.3.5", threatmed$Y9.2.2) | grepl("2.3.5", threatmed$Y9.2.3))
 PollInbreednum <- nrow(PollInbreed)
 PollInbreedper <-round((PollInbreednum/threatobsnum * 100), dig=2)
 
-PollSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X9.1) | grepl("2.3.6", threatmed$X9.1.1) | grepl("2.3.6", threatmed$X9.1.2) | grepl("2.3.6", threatmed$X9.1.3) | 
-                       grepl("2.3.6", threatmed$X9.2) | grepl("2.3.6", threatmed$X9.2.1) | grepl("2.3.6", threatmed$X9.2.2) | grepl("2.3.6", threatmed$X9.2.3))
+PollSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y9.1) | grepl("2.3.6", threatmed$Y9.1.1) | grepl("2.3.6", threatmed$Y9.1.2) | grepl("2.3.6", threatmed$Y9.1.3) | 
+                       grepl("2.3.6", threatmed$Y9.2) | grepl("2.3.6", threatmed$Y9.2.1) | grepl("2.3.6", threatmed$Y9.2.2) | grepl("2.3.6", threatmed$Y9.2.3))
 PollSkewSexnum <- nrow(PollSkewSex)
 PollSkewSexper <-round((PollSkewSexnum/threatobsnum * 100), dig=2)
 
-PollRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X9.1) | grepl("2.3.7", threatmed$X9.1.1) | grepl("2.3.7", threatmed$X9.1.2) | grepl("2.3.7", threatmed$X9.1.3) | 
-                         grepl("2.3.7", threatmed$X9.2) | grepl("2.3.7", threatmed$X9.2.1) | grepl("2.3.7", threatmed$X9.2.2) | grepl("2.3.7", threatmed$X9.2.3))
+PollRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y9.1) | grepl("2.3.7", threatmed$Y9.1.1) | grepl("2.3.7", threatmed$Y9.1.2) | grepl("2.3.7", threatmed$Y9.1.3) | 
+                         grepl("2.3.7", threatmed$Y9.2) | grepl("2.3.7", threatmed$Y9.2.1) | grepl("2.3.7", threatmed$Y9.2.2) | grepl("2.3.7", threatmed$Y9.2.3))
 PollRedRepSucnum <- nrow(PollRedRepSuc)
 PollRedRepSucper <-round((PollRedRepSucnum/threatobsnum * 100), dig=2)
 
-PollOth <-subset(threatmed, grepl("2.3.8", threatmed$X9.1) | grepl("2.3.8", threatmed$X9.1.1) | grepl("2.3.8", threatmed$X9.1.2) | grepl("2.3.8", threatmed$X9.1.3) | 
-                   grepl("2.3.8", threatmed$X9.2) | grepl("2.3.8", threatmed$X9.2.1) | grepl("2.3.8", threatmed$X9.2.2) | grepl("2.3.8", threatmed$X9.2.3))
+PollOth <-subset(threatmed, grepl("2.3.8", threatmed$Y9.1) | grepl("2.3.8", threatmed$Y9.1.1) | grepl("2.3.8", threatmed$Y9.1.2) | grepl("2.3.8", threatmed$Y9.1.3) | 
+                   grepl("2.3.8", threatmed$Y9.2) | grepl("2.3.8", threatmed$Y9.2.1) | grepl("2.3.8", threatmed$Y9.2.2) | grepl("2.3.8", threatmed$Y9.2.3))
 PollOthnum <- nrow(PollOth)
 PollOthper <-round((PollOthnum/threatobsnum * 100), dig=2)
 
@@ -718,55 +718,55 @@ Polltotal <- (PollEcoConnum + PollEcoDegnum + PollIndirEcoEffnum + PollPastUnnum
 PollPer <- round((Polltotal/threatobsnum * 100), dig = 2)
 
 #Threat 10: Geological events
-GeoEcoCon <- subset(threatmed, grepl("1.1", threatmed$X10.1) | grepl("1.1", threatmed$X10.2) | grepl("1.1", threatmed$X10.3))
+GeoEcoCon <- subset(threatmed, grepl("1.1", threatmed$Y10.1) | grepl("1.1", threatmed$Y10.2) | grepl("1.1", threatmed$Y10.3))
 GeoEcoConnum <- nrow(GeoEcoCon)
 GeoEcoConper <-round((GeoEcoConnum/threatobsnum * 100), dig=2)
 
-GeoEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X10.1) | grepl("1.2", threatmed$X10.2) | grepl("1.2", threatmed$X10.3))
+GeoEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y10.1) | grepl("1.2", threatmed$Y10.2) | grepl("1.2", threatmed$Y10.3))
 GeoEcoDegnum <- nrow(GeoEcoDeg)
 GeoEcoDegper <-round((GeoEcoDegnum/threatobsnum * 100), dig=2)
 
-GeoIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X10.1) | grepl("1.3", threatmed$X10.2) | grepl("1.3", threatmed$X10.3))
+GeoIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y10.1) | grepl("1.3", threatmed$Y10.2) | grepl("1.3", threatmed$Y10.3))
 GeoIndirEcoEffnum <- nrow(GeoIndirEcoEff)
 GeoIndirEcoEffper <-round((GeoIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-GeoSpecMort <-subset(threatmed, grepl("2.1", threatmed$X10.1) | grepl("2.1", threatmed$X10.2) | grepl("2.1", threatmed$X10.3))
+GeoSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y10.1) | grepl("2.1", threatmed$Y10.2) | grepl("2.1", threatmed$Y10.3))
 GeoSpecMortnum <- nrow(GeoSpecMort)
 GeoSpecMortper <-round((GeoSpecMortnum/threatobsnum * 100), dig=2)
 
-GeoSpecDist <-subset(threatmed, grepl("2.2", threatmed$X10.1) | grepl("2.2", threatmed$X10.2) | grepl("2.2", threatmed$X10.3))
+GeoSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y10.1) | grepl("2.2", threatmed$Y10.2) | grepl("2.2", threatmed$Y10.3))
 GeoSpecDistnum <- nrow(GeoSpecDist)
 GeoSpecDistper <-round((GeoSpecDistnum/threatobsnum * 100), dig=2)
 
-GeoHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X10.1) | grepl("2.3.1", threatmed$X10.2) | grepl("2.3.1", threatmed$X10.3))
+GeoHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y10.1) | grepl("2.3.1", threatmed$Y10.2) | grepl("2.3.1", threatmed$Y10.3))
 GeoHybridnum <- nrow(GeoHybrid)
 GeoHybridper <-round((GeoHybridnum/threatobsnum * 100), dig=2)
 
-GeoComp <-subset(threatmed, grepl("2.3.2", threatmed$X10.1) | grepl("2.3.2", threatmed$X10.2) | grepl("2.3.2", threatmed$X10.3))
+GeoComp <-subset(threatmed, grepl("2.3.2", threatmed$Y10.1) | grepl("2.3.2", threatmed$Y10.2) | grepl("2.3.2", threatmed$Y10.3))
 GeoCompnum <- nrow(GeoComp)
 GeoCompper <-round((GeoCompnum/threatobsnum * 100), dig=2)
 
-GeoLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X10.1) | grepl("2.3.3", threatmed$X10.2) | grepl("2.3.3", threatmed$X10.3))
+GeoLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y10.1) | grepl("2.3.3", threatmed$Y10.2) | grepl("2.3.3", threatmed$Y10.3))
 GeoLossMutnum <- nrow(GeoLossMut)
 GeoLossMutper <-round((GeoLossMutnum/threatobsnum * 100), dig=2)
 
-GeoLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X10.1) | grepl("2.3.4", threatmed$X10.2) | grepl("2.3.4", threatmed$X10.3))
+GeoLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y10.1) | grepl("2.3.4", threatmed$Y10.2) | grepl("2.3.4", threatmed$Y10.3))
 GeoLossPollnum <- nrow(GeoLossPoll)
 GeoLossPollper <-round((GeoLossPollnum/threatobsnum * 100), dig=2)
 
-GeoInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X10.1) | grepl("2.3.5", threatmed$X10.2) | grepl("2.3.5", threatmed$X10.3))
+GeoInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y10.1) | grepl("2.3.5", threatmed$Y10.2) | grepl("2.3.5", threatmed$Y10.3))
 GeoInbreednum <- nrow(GeoInbreed)
 GeoInbreedper <-round((GeoInbreednum/threatobsnum * 100), dig=2)
 
-GeoSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X10.1) | grepl("2.3.6", threatmed$X10.2) | grepl("2.3.6", threatmed$X10.3))
+GeoSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y10.1) | grepl("2.3.6", threatmed$Y10.2) | grepl("2.3.6", threatmed$Y10.3))
 GeoSkewSexnum <- nrow(GeoSkewSex)
 GeoSkewSexper <-round((GeoSkewSexnum/threatobsnum * 100), dig=2)
 
-GeoRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X10.1) | grepl("2.3.7", threatmed$X10.2) | grepl("2.3.7", threatmed$X10.3))
+GeoRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y10.1) | grepl("2.3.7", threatmed$Y10.2) | grepl("2.3.7", threatmed$Y10.3))
 GeoRedRepSucnum <- nrow(GeoRedRepSuc)
 GeoRedRepSucper <-round((GeoRedRepSucnum/threatobsnum * 100), dig=2)
 
-GeoOth <-subset(threatmed, grepl("2.3.8", threatmed$X10.1) | grepl("2.3.8", threatmed$X10.2) | grepl("2.3.8", threatmed$X10.3))
+GeoOth <-subset(threatmed, grepl("2.3.8", threatmed$Y10.1) | grepl("2.3.8", threatmed$Y10.2) | grepl("2.3.8", threatmed$Y10.3))
 GeoOthnum <- nrow(GeoOth)
 GeoOthper <-round((GeoOthnum/threatobsnum * 100), dig=2)
 
@@ -774,55 +774,55 @@ Geototal <- (GeoEcoConnum + GeoEcoDegnum + GeoIndirEcoEffnum + GeoPastUnnum + Ge
 GeoPer <- round((Geototal/threatobsnum * 100), dig = 2)
 
 #Threat 11: Climate change and severe weather
-CCEcoCon <- subset(threatmed, grepl("1.1", threatmed$X11.1) | grepl("1.1", threatmed$X11.2) | grepl("1.1", threatmed$X11.3) | grepl("1.1", threatmed$X11.4) | grepl("1.1", threatmed$X11.5))
+CCEcoCon <- subset(threatmed, grepl("1.1", threatmed$Y11.1) | grepl("1.1", threatmed$Y11.2) | grepl("1.1", threatmed$Y11.3) | grepl("1.1", threatmed$Y11.4) | grepl("1.1", threatmed$Y11.5))
 CCEcoConnum <- nrow(CCEcoCon)
 CCEcoConper <-round((CCEcoConnum/threatobsnum * 100), dig=2)
 
-CCEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X11.1) | grepl("1.2", threatmed$X11.2) | grepl("1.2", threatmed$X11.3) | grepl("1.2", threatmed$X11.4) | grepl("1.2", threatmed$X11.5))
+CCEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y11.1) | grepl("1.2", threatmed$Y11.2) | grepl("1.2", threatmed$Y11.3) | grepl("1.2", threatmed$Y11.4) | grepl("1.2", threatmed$Y11.5))
 CCEcoDegnum <- nrow(CCEcoDeg)
 CCEcoDegper <-round((CCEcoDegnum/threatobsnum * 100), dig=2)
 
-CCIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X11.1) | grepl("1.3", threatmed$X11.2) | grepl("1.3", threatmed$X11.3) | grepl("1.3", threatmed$X11.4) | grepl("1.3", threatmed$X11.5))
+CCIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y11.1) | grepl("1.3", threatmed$Y11.2) | grepl("1.3", threatmed$Y11.3) | grepl("1.3", threatmed$Y11.4) | grepl("1.3", threatmed$Y11.5))
 CCIndirEcoEffnum <- nrow(CCIndirEcoEff)
 CCIndirEcoEffper <-round((CCIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-CCSpecMort <-subset(threatmed, grepl("2.1", threatmed$X11.1) | grepl("2.1", threatmed$X11.2) | grepl("2.1", threatmed$X11.3) | grepl("2.1", threatmed$X11.4) | grepl("2.1", threatmed$X11.5))
+CCSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y11.1) | grepl("2.1", threatmed$Y11.2) | grepl("2.1", threatmed$Y11.3) | grepl("2.1", threatmed$Y11.4) | grepl("2.1", threatmed$Y11.5))
 CCSpecMortnum <- nrow(CCSpecMort)
 CCSpecMortper <-round((CCSpecMortnum/threatobsnum * 100), dig=2)
 
-CCSpecDist <-subset(threatmed, grepl("2.2", threatmed$X11.1) | grepl("2.2", threatmed$X11.2) | grepl("2.2", threatmed$X11.3) | grepl("2.2", threatmed$X11.4) | grepl("2.2", threatmed$X11.5))
+CCSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y11.1) | grepl("2.2", threatmed$Y11.2) | grepl("2.2", threatmed$Y11.3) | grepl("2.2", threatmed$Y11.4) | grepl("2.2", threatmed$Y11.5))
 CCSpecDistnum <- nrow(CCSpecDist)
 CCSpecDistper <-round((CCSpecDistnum/threatobsnum * 100), dig=2)
 
-CCHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X11.1) | grepl("2.3.1", threatmed$X11.2) | grepl("2.3.1", threatmed$X11.3) | grepl("2.3.1", threatmed$X11.4) | grepl("2.3.1", threatmed$X11.5))
+CCHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y11.1) | grepl("2.3.1", threatmed$Y11.2) | grepl("2.3.1", threatmed$Y11.3) | grepl("2.3.1", threatmed$Y11.4) | grepl("2.3.1", threatmed$Y11.5))
 CCHybridnum <- nrow(CCHybrid)
 CCHybridper <-round((CCHybridnum/threatobsnum * 100), dig=2)
 
-CCComp <-subset(threatmed, grepl("2.3.2", threatmed$X11.1) | grepl("2.3.2", threatmed$X11.2) | grepl("2.3.2", threatmed$X11.3) | grepl("2.3.2", threatmed$X11.4) | grepl("2.3.2", threatmed$X11.5))
+CCComp <-subset(threatmed, grepl("2.3.2", threatmed$Y11.1) | grepl("2.3.2", threatmed$Y11.2) | grepl("2.3.2", threatmed$Y11.3) | grepl("2.3.2", threatmed$Y11.4) | grepl("2.3.2", threatmed$Y11.5))
 CCCompnum <- nrow(CCComp)
 CCCompper <-round((CCCompnum/threatobsnum * 100), dig=2)
 
-CCLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X11.1) | grepl("2.3.3", threatmed$X11.2) | grepl("2.3.3", threatmed$X11.3) | grepl("2.3.3", threatmed$X11.4) | grepl("2.3.3", threatmed$X11.5))
+CCLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y11.1) | grepl("2.3.3", threatmed$Y11.2) | grepl("2.3.3", threatmed$Y11.3) | grepl("2.3.3", threatmed$Y11.4) | grepl("2.3.3", threatmed$Y11.5))
 CCLossMutnum <- nrow(CCLossMut)
 CCLossMutper <-round((CCLossMutnum/threatobsnum * 100), dig=2)
 
-CCLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X11.1) | grepl("2.3.4", threatmed$X11.2) | grepl("2.3.4", threatmed$X11.3) | grepl("2.3.4", threatmed$X11.4) | grepl("2.3.4", threatmed$X11.5))
+CCLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y11.1) | grepl("2.3.4", threatmed$Y11.2) | grepl("2.3.4", threatmed$Y11.3) | grepl("2.3.4", threatmed$Y11.4) | grepl("2.3.4", threatmed$Y11.5))
 CCLossPollnum <- nrow(CCLossPoll)
 CCLossPollper <-round((CCLossPollnum/threatobsnum * 100), dig=2)
 
-CCInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X11.1) | grepl("2.3.5", threatmed$X11.2) | grepl("2.3.5", threatmed$X11.3) | grepl("2.3.5", threatmed$X11.4) | grepl("2.3.5", threatmed$X11.5))
+CCInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y11.1) | grepl("2.3.5", threatmed$Y11.2) | grepl("2.3.5", threatmed$Y11.3) | grepl("2.3.5", threatmed$Y11.4) | grepl("2.3.5", threatmed$Y11.5))
 CCInbreednum <- nrow(CCInbreed)
 CCInbreedper <-round((CCInbreednum/threatobsnum * 100), dig=2)
 
-CCSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X11.1) | grepl("2.3.6", threatmed$X11.2) | grepl("2.3.6", threatmed$X11.3) | grepl("2.3.6", threatmed$X11.4) | grepl("2.3.6", threatmed$X11.5))
+CCSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y11.1) | grepl("2.3.6", threatmed$Y11.2) | grepl("2.3.6", threatmed$Y11.3) | grepl("2.3.6", threatmed$Y11.4) | grepl("2.3.6", threatmed$Y11.5))
 CCSkewSexnum <- nrow(CCSkewSex)
 CCSkewSexper <-round((CCSkewSexnum/threatobsnum * 100), dig=2)
 
-CCRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X11.1) | grepl("2.3.7", threatmed$X11.2) | grepl("2.3.7", threatmed$X11.3) | grepl("2.3.7", threatmed$X11.4) | grepl("2.3.7", threatmed$X11.5))
+CCRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y11.1) | grepl("2.3.7", threatmed$Y11.2) | grepl("2.3.7", threatmed$Y11.3) | grepl("2.3.7", threatmed$Y11.4) | grepl("2.3.7", threatmed$Y11.5))
 CCRedRepSucnum <- nrow(CCRedRepSuc)
 CCRedRepSucper <-round((CCRedRepSucnum/threatobsnum * 100), dig=2)
 
-CCOth <-subset(threatmed, grepl("2.3.8", threatmed$X11.1) | grepl("2.3.8", threatmed$X11.2) | grepl("2.3.8", threatmed$X11.3) | grepl("2.3.8", threatmed$X11.4) | grepl("2.3.8", threatmed$X11.5))
+CCOth <-subset(threatmed, grepl("2.3.8", threatmed$Y11.1) | grepl("2.3.8", threatmed$Y11.2) | grepl("2.3.8", threatmed$Y11.3) | grepl("2.3.8", threatmed$Y11.4) | grepl("2.3.8", threatmed$Y11.5))
 CCOthnum <- nrow(CCOth)
 CCOthper <-round((CCOthnum/threatobsnum * 100), dig=2)
 
@@ -830,55 +830,55 @@ CCtotal <- (CCEcoConnum + CCEcoDegnum + CCIndirEcoEffnum + CCPastUnnum + CCSpecD
 CCPer <- round((CCtotal/threatobsnum * 100), dig = 2)
 
 #Threat 12: Other options
-OthEcoCon <- subset(threatmed, grepl("1.1", threatmed$X12.1))
+OthEcoCon <- subset(threatmed, grepl("1.1", threatmed$Y12.1))
 OthEcoConnum <- nrow(OthEcoCon)
 OthEcoConper <-round((OthEcoConnum/threatobsnum * 100), dig=2)
 
-OthEcoDeg <-subset(threatmed, grepl("1.2", threatmed$X12.1))
+OthEcoDeg <-subset(threatmed, grepl("1.2", threatmed$Y12.1))
 OthEcoDegnum <- nrow(OthEcoDeg)
 OthEcoDegper <-round((OthEcoDegnum/threatobsnum * 100), dig=2)
 
-OthIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$X12.1))
+OthIndirEcoEff <-subset(threatmed, grepl("1.3", threatmed$Y12.1))
 OthIndirEcoEffnum <- nrow(OthIndirEcoEff)
 OthIndirEcoEffper <-round((OthIndirEcoEffnum/threatobsnum * 100), dig=2)
 
-OthSpecMort <-subset(threatmed, grepl("2.1", threatmed$X12.1))
+OthSpecMort <-subset(threatmed, grepl("2.1", threatmed$Y12.1))
 OthSpecMortnum <- nrow(OthSpecMort)
 OthSpecMortper <-round((OthSpecMortnum/threatobsnum * 100), dig=2)
 
-OthSpecDist <-subset(threatmed, grepl("2.2", threatmed$X12.1))
+OthSpecDist <-subset(threatmed, grepl("2.2", threatmed$Y12.1))
 OthSpecDistnum <- nrow(OthSpecDist)
 OthSpecDistper <-round((OthSpecDistnum/threatobsnum * 100), dig=2)
 
-OthHybrid <-subset(threatmed, grepl("2.3.1", threatmed$X12.1))
+OthHybrid <-subset(threatmed, grepl("2.3.1", threatmed$Y12.1))
 OthHybridnum <- nrow(OthHybrid)
 OthHybridper <-round((OthHybridnum/threatobsnum * 100), dig=2)
 
-OthComp <-subset(threatmed, grepl("2.3.2", threatmed$X12.1))
+OthComp <-subset(threatmed, grepl("2.3.2", threatmed$Y12.1))
 OthCompnum <- nrow(OthComp)
 OthCompper <-round((OthCompnum/threatobsnum * 100), dig=2)
 
-OthLossMut <-subset(threatmed, grepl("2.3.3", threatmed$X12.1))
+OthLossMut <-subset(threatmed, grepl("2.3.3", threatmed$Y12.1))
 OthLossMutnum <- nrow(OthLossMut)
 OthLossMutper <-round((OthLossMutnum/threatobsnum * 100), dig=2)
 
-OthLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$X12.1))
+OthLossPoll <-subset(threatmed, grepl("2.3.4", threatmed$Y12.1))
 OthLossPollnum <- nrow(OthLossPoll)
 OthLossPollper <-round((OthLossPollnum/threatobsnum * 100), dig=2)
 
-OthInbreed <-subset(threatmed, grepl("2.3.5", threatmed$X12.1))
+OthInbreed <-subset(threatmed, grepl("2.3.5", threatmed$Y12.1))
 OthInbreednum <- nrow(OthInbreed)
 OthInbreedper <-round((OthInbreednum/threatobsnum * 100), dig=2)
 
-OthSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$X12.1))
+OthSkewSex <-subset(threatmed, grepl("2.3.6", threatmed$Y12.1))
 OthSkewSexnum <- nrow(OthSkewSex)
 OthSkewSexper <-round((OthSkewSexnum/threatobsnum * 100), dig=2)
 
-OthRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$X12.1))
+OthRedRepSuc <-subset(threatmed, grepl("2.3.7", threatmed$Y12.1))
 OthRedRepSucnum <- nrow(OthRedRepSuc)
 OthRedRepSucper <-round((OthRedRepSucnum/threatobsnum * 100), dig=2)
 
-OthOth <-subset(threatmed, grepl("2.3.8", threatmed$X12.1))
+OthOth <-subset(threatmed, grepl("2.3.8", threatmed$Y12.1))
 OthOthnum <- nrow(OthOth)
 OthOthper <-round((OthOthnum/threatobsnum * 100), dig=2)
 
@@ -887,7 +887,7 @@ OthPer <- round((Othtotal/threatobsnum * 100), dig = 2)
 
 ## --------------------------------------------------------------------
 
-              # Combine stressors from threats
+# Combine stressors from threats
 
 ## --------------------------------------------------------------------
 
