@@ -16,7 +16,7 @@ library(ggplot2)
 library(shades)
 
 # Read data file
-use.data <- read.csv("./DATA/DatawPopTrend.csv")
+use.data <- read.csv("./DATA/Shortdata.csv")
 
 # Remove any duplicate species
 use_clean <- use.data[!duplicated(use.data),]
