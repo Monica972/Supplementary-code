@@ -6,22 +6,16 @@ setwd("~/Documents/Honours")
 getwd()
 
 #read in data
-use.data<- read.csv("./DATA/AnalysisData.csv")
-threatscore <- read.csv("./DATA/iucnThreatScore-2.csv")
+use.data<- read.csv("./DATA/Shortdata.csv")
 
 #remove any duplicates
 use_clean <- use.data[!duplicated(use.data),]
 use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
-threat_clean <- threatscore[!duplicated(threatscore),]
 
 #filter to medicinal use
-med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
-obsnum <- nrow(med)
+threatmed <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+threatobsnum <- nrow(med)
 
-#join by id column
-threatmed <- merge(use_clean,threat_clean,by="X")
-threatmed <- threatmed[which(threatmed$useTradeId..30 =="TRUE"),]
-threatobsnum <- nrow(threatmed)
 
 #Threat 1: Residential and commercial development
 
