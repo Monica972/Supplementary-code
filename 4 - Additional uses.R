@@ -3,7 +3,7 @@ setwd("~/Documents/Honours")
 getwd()
 
 # Read in data
-use.data<- read.csv("./DATA/AnalysisData.csv")
+use.data<- read.csv("./DATA/Shortdata.csv")
 
 #Remove any duplicated species
 use_clean <- use.data[!duplicated(use.data),]
