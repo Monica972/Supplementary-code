@@ -4,7 +4,7 @@ setwd("~/Documents/Honours")
 getwd()
 
 # Read data file
-use.data<- read.csv("./DATA/AnalysisData.csv")
+use.data<- read.csv("./DATA/Shortdata.csv")
 
 # Remove any species duplicates
 use_clean <- use.data[!duplicated(use.data),]
