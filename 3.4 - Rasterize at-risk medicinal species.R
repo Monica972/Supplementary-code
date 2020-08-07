@@ -1,5 +1,5 @@
 # Set working directory
-setwd("~/Documents/Honours/SpatialData/Ends")
+setwd("~/Documents/SpatialData/AtRisk")
 
 #Install packages
 install.packages("fasterize") #a lot faster than rasterize but only works with sf polygons
@@ -28,80 +28,79 @@ gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 ## ------------------------------------------------------------------------------
 
 #MAMMALS
-shp <- read_sf("EndmammalsAD.shp")
+shp <- read_sf("Riskmammals.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "EndmammalsADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "RiskmammalsRast", format = "GTiff", overwrite = TRUE)
 
 #REPTILES
-shp <- read_sf("EndreptilesAD.shp")
+shp <- read_sf("Riskreptiles.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "EndreptilesADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "RiskreptilesRast", format = "GTiff", overwrite = TRUE)
 
 #AMPHIBIANS
-shp <- read_sf("EndamphibsAD.shp")
+shp <- read_sf("Riskamphibs.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "EndamphibsADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "RiskamphibsRast", format = "GTiff", overwrite = TRUE)
 
 #LOBSTERS
-shp <- read_sf("EndlobsAD.shp")
+shp <- read_sf("Risklobs.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "EndlobsADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "RisklobsRast", format = "GTiff", overwrite = TRUE)
 
 #BIRDS
-shp <- read_sf("EndsbirdsAD.shp")
+shp <- read_sf("Risksbirds.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "EndbirdsADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "RiskbirdsRast", format = "GTiff", overwrite = TRUE)
 
 #FW PART 1
-shp <- read_sf("Endfwpt1AD.shp")
+shp <- read_sf("Riskfwpt1.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "Endfwpt1ADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "Riskfwpt1Rast", format = "GTiff", overwrite = TRUE)
 
 #FW PART 2
-shp <- read_sf("Endfwpt2AD.shp")
+shp <- read_sf("Riskfwpt2.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "Endfwpt2ADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "Riskfwpt2Rast", format = "GTiff", overwrite = TRUE)
 
 #FW PART 3
-shp <- read_sf("Endfwpt3AD.shp")
+shp <- read_sf("Riskfwpt3.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "Endfwpt3ADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "Riskfwpt3Rast", format = "GTiff", overwrite = TRUE)
 
 #FW PART 4
-shp <- read_sf("Endfwpt4AD.shp")
+shp <- read_sf("Riskfwpt4.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "Endfwpt4ADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "Riskfwpt4Rast", format = "GTiff", overwrite = TRUE)
 
 #FW PART 5
-shp <- read_sf("Endfwpt5AD.shp")
+shp <- read_sf("Riskfwpt5.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "Endfwpt5ADRast", format = "GTiff" , overwrite = TRUE)
+writeRaster(rr, "Riskfwpt5Rast", format = "GTiff" , overwrite = TRUE)
 
 #FW PART 6
-shp <- read_sf("Endfwpt6AD.shp")
+shp <- read_sf("Riskfwpt6.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "Endfwpt6ADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "Riskfwpt6Rast", format = "GTiff", overwrite = TRUE)
 
 #SEACUCS
-shp <- read_sf("EndseacucsAD.shp")
+shp <- read_sf("Riskseacucs.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "EndseacucsADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "RiskseacucsRast", format = "GTiff", overwrite = TRUE)
 
 #SHARKS RAYS CHIMAERAS
-shp <- read_sf("EndssharksAD.shp")
+shp <- read_sf("Riskssharks.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(rr, "EndsharksrayschimaADRast", format = "GTiff", overwrite = TRUE)
-
+writeRaster(rr, "RisksharksrayschimaRast", format = "GTiff", overwrite = TRUE)
