@@ -15,21 +15,21 @@ library(raster)
 
 ## ------------------------------------------------------------------------------
 
-## Repeat following code for each species group
+## Repeat following code for each species group 
+## Birds, Conus, Lobsters, Reptiles, Marinefish, Amphibians, FW_Groups, Mammals, Seacucumbers, Sharks_Rays_Chimaeras
 
 ## ------------------------------------------------------------------------------
 
 #read in range polygon shapefile, change filepath
-ranges <- read_sf("./Birds/birds.shp")
+ranges <- read_sf("./CONUS/CONUS.shp")
 
 #read in IUCN table
-threat <- read_csv("~/Documents/Honours/DATA/iucnThreatScore-2.csv")
-iucn <- read_csv("~/Documents/Honours/DATA/AnalysisData.csv")
+iucn <- read_csv("~/Documents/Short/Shortdata.csv")
 
 iucn <- merge(threat, iucn, by="X1")
 
 #rename binomial as "SciName" for the join
-ranges <- ranges %>% plyr::rename(c("SCINAME" = "SciName"))
+ranges <- ranges %>% plyr::rename(c("binomial" = "SciName")) #For birds, rename "SCINAME" = "SciName"
 
 #drop kingdon, phylum, class, order_, family, and genus because we get them from the iucn data
 ranges <- ranges %>% dplyr::select(-c(kingdom, phylum, class, order_, family, genus))
@@ -49,4 +49,4 @@ nrow(medicine)
 medicine.sp <- as(medicine, "Spatial")
 
 #Write file of medicinal subset
-shapefile(medicine.sp, "~/Documents/Honours/SpatialData/Subs/birdsAD.shp", overwrite = TRUE)
+shapefile(medicine.sp, "~/Documents/SpatialData/Subsets/birds.shp", overwrite = TRUE)
