@@ -1,6 +1,6 @@
 # Set working directory
 
-setwd("~/Documents/Honours")
+setwd("~/Documents/Short")
 getwd()
 
 # Install packages to be used
@@ -23,7 +23,7 @@ library(fasterize)
 gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 
 #read in IUCN table
-iucn <- read_csv("~/Documents/Honours/DATA/AnalysisData.csv")
+iucn <- read_csv("~/Documents/Short/Shortdata.csv")
 
 #alter colnames of iucn
 iucn <- iucn %>% plyr::rename(c("scientific_name" = "SciName", "kingdom_name" = "Kingdom", "phylum_name" = "Phylum",
@@ -35,7 +35,7 @@ iucn <- iucn %>% plyr::rename(c("scientific_name" = "SciName", "kingdom_name" = 
 
 ## ------------------------------------------------------------------------------
 #change working directory
-setwd("~/Documents/Honours/SpatialData")
+setwd("~/Documents/SpatialData")
 
 #read in range polygon shapefile, change filepath
 ranges <- read_sf("./MAMMALS/MAMMALS.shp")
@@ -98,7 +98,7 @@ ranges <- ranges %>% dplyr::select(-c(kingdom, phylum, class, order_, family, ge
 amphibians <- inner_join(ranges, iucn, by = c("SciName"))
 rr <- fasterize(amphibians, gr, fun = "sum", background = 0)
 plot(rr)
-writeRaster(r, "amphibsALLRast", format = "GTiff", overwrite = TRUE)
+writeRaster(rr, "amphibsALLRast", format = "GTiff", overwrite = TRUE)
 
 #LOBSTERS
 ranges <- read_sf("./LOBSTERS/LOBSTERS.shp")
