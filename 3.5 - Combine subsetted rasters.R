@@ -1,5 +1,5 @@
 #Set working directory
-setwd("~/Documents/Honours/SpatialData/Subs")
+setwd("~/Documents/SpatialData/Subsets")
 
 #load required packages
 library(tidyverse)
@@ -9,25 +9,25 @@ library(rgdal)
 library(raster)
 ## ---------------------------------------------------------------------
 
-               #Combine medicinal use species rasters
+#Combine medicinal use species rasters
 
 ## ---------------------------------------------------------------------
-mammals <- raster("mammalsADRast.tif")
-conus <- raster("conusADRast.tif")
-amphibs <-raster("amphibsADRast.tif")
-lobs <- raster("lobsADRast.tif")
-reptiles <- raster("reptilesADRast.tif")
-seacucs <- raster("seacucsADRast.tif")
-fwpt1 <- raster("fwpt1ADRast.tif")
-fwpt2 <- raster("fwpt2ADRast.tif")
-fwpt3 <- raster("fwpt3ADRast.tif")
-fwpt4 <- raster("fwpt4ADRast.tif")
-fwpt5 <- raster("fwpt5ADRast.tif")
-fwpt6 <- raster("fwpt6ADRast.tif")
-mfpt1 <- raster("mfpt1ADRast.tif")
-mfpt2 <- raster("mfpt2ADRast.tif")
-mfpt3 <- raster("mfpt3ADRast.tif")
-sharksrayschima <- raster("sharksrayschimaADRast.tif")
+mammals <- raster("mammalsRast.tif")
+conus <- raster("conusRast.tif")
+amphibs <-raster("amphibsRast.tif")
+lobs <- raster("lobsRast.tif")
+reptiles <- raster("reptilesRast.tif")
+seacucs <- raster("seacucsRast.tif")
+fwpt1 <- raster("fwpt1Rast.tif")
+fwpt2 <- raster("fwpt2Rast.tif")
+fwpt3 <- raster("fwpt3Rast.tif")
+fwpt4 <- raster("fwpt4Rast.tif")
+fwpt5 <- raster("fwpt5Rast.tif")
+fwpt6 <- raster("fwpt6Rast.tif")
+mfpt1 <- raster("mfpt1Rast.tif")
+mfpt2 <- raster("mfpt2Rast.tif")
+mfpt3 <- raster("mfpt3Rast.tif")
+sharksrayschima <- raster("sharksrayschimaRast.tif")
 
 combinelayers <- merge(mammals, conus)
 combinelayers2 <- merge(combinelayers, reptiles)
@@ -49,44 +49,47 @@ writeRaster(combinelayers14, "CombinedRastAD", format = "GTiff", overwrite = TRU
 
 ## ---------------------------------------------------------------------
 
-          #Combine at-risk species rasters
+#Combine at-risk species rasters
 
 ## ---------------------------------------------------------------------
 
 #Change working directory
-setwd("~/Documents/Honours/SpatialData/Ends")
+setwd("~/Documents/SpatialData/AtRisk")
 
-endmammals <- raster("EndmammalsADRast.tif")
-endamphibs <-raster("EndamphibsADRast.tif")
-endreptiles <- raster("EndreptilesADRast.tif")
-endseacucs <- raster("EndseacucsADRast.tif")
-endfwpt1 <- raster("Endfwpt1ADRast.tif")
-endfwpt2 <- raster("Endfwpt2ADRast.tif")
-endfwpt3 <- raster("Endfwpt3ADRast.tif")
-endfwpt4 <- raster("Endfwpt4ADRast.tif")
-endfwpt5 <- raster("Endfwpt5ADRast.tif")
-endfwpt6 <- raster("Endfwpt6ADRast.tif")
-endmfpt1 <- raster("Endmfpt1ADRast.tif")
-endmfpt2 <- raster("Endmfpt2ADRast.tif")
-endmfpt3 <- raster("Endmfpt3ADRast.tif")
-endsharksrayschima <- raster("EndsharksrayschimaADRast.tif")
+Riskmammals <- raster("RiskmammalsRast.tif")
+Riskamphibs <-raster("RiskamphibsRast.tif")
+Riskreptiles <- raster("RiskreptilesRast.tif")
+Riskseacucs <- raster("RiskseacucsRast.tif")
+Riskfwpt1 <- raster("Riskfwpt1Rast.tif")
+Riskfwpt2 <- raster("Riskfwpt2Rast.tif")
+Riskfwpt3 <- raster("Riskfwpt3Rast.tif")
+Riskfwpt4 <- raster("Riskfwpt4Rast.tif")
+Riskfwpt5 <- raster("Riskfwpt5Rast.tif")
+Riskfwpt6 <- raster("Riskfwpt6Rast.tif")
+Riskmfpt1 <- raster("Riskmfpt1Rast.tif")
+Riskmfpt2 <- raster("Riskmfpt2Rast.tif")
+Riskmfpt3 <- raster("Riskmfpt3Rast.tif")
+Risksharksrayschima <- raster("RisksharksrayschimaRast.tif")
 
-combinelayersend <- merge(endmammals, endamphibs)
-combinelayers2end <- merge(combinelayersend, endreptiles)
-combinelayers3end <- merge(combinelayers2end, endseacucs)
-combinelayers4end <- merge(combinelayers3end, endfwpt1)
-combinelayers5end <- merge(combinelayers4end, endfwpt3)
-combinelayers6end <- merge(combinelayers5end, endfwpt4)
-combinelayers7end <- merge(combinelayers6end, endfwpt5)
-combinelayers8end <- merge(combinelayers7end, endfwpt6)
-combinelayers9end <- merge(combinelayers8end, endsharksrayschima)
-plot(combinelayers9end)
+combinelayersRisk <- merge(Riskmammals, Riskamphibs)
+combinelayers2Risk <- merge(combinelayersRisk, Riskreptiles)
+combinelayers3Risk <- merge(combinelayers2Risk, Riskseacucs)
+combinelayers4Risk <- merge(combinelayers3Risk, Riskfwpt1)
+combinelayers5Risk <- merge(combinelayers4Risk, Riskfwpt3)
+combinelayers6Risk <- merge(combinelayers5Risk, Riskfwpt4)
+combinelayers7Risk <- merge(combinelayers6Risk, Riskfwpt5)
+combinelayers8Risk <- merge(combinelayers7Risk, Riskfwpt6)
+combinelayers9Risk <- merge(combinelayers8Risk, Risksharksrayschima)
+plot(combinelayers9Risk)
 
-writeRaster(combinelayers9end, "CombinedEndADRast", format = "GTiff", overwrite = TRUE)
+writeRaster(combinelayers9Risk, "CombinedRiskRast", format = "GTiff", overwrite = TRUE)
 
 #Check rasters
+setwd("~/Documents/SpatialData/Subsets")
 comboAD <- raster("CombinedRastAD.tif")
-endcomboAD <-raster("CombinedEndADRast.tif")
+
+setwd("~/Documents/SpatialData/AtRisk")
+RiskcomboAD <-raster("CombinedRiskRast.tif")
 
 plot(comboAD)
-plot(endcomboAD)
+plot(RiskcomboAD)
