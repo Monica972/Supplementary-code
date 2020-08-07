@@ -15,7 +15,7 @@ library(raster)
 library(fasterize)
 
 #Set working directory to where medicinal use subsets are
-setwd("~/Documents/Honours/SpatialData/Subs")
+setwd("~/Documents/SpatialData/Subsets")
 
 #create a global 1 degree raster
 gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
@@ -28,103 +28,103 @@ gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 ## ------------------------------------------------------------------------------
 
 #MAMMALS
-shp <- read_sf("mammalsAD.shp")
+shp <- read_sf("mammals.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-  writeRaster(rr, "mammalsADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "mammalsRast", format = "GTiff", overwrite = TRUE)
 
 #CONUS
-shp <- read_sf("conusAD.shp")
+shp <- read_sf("conus.shp")
 rr <- fasterize(shp, gr, fun = "sum", background = 0)
 plot(rr)
-  writeRaster(rr, "conusADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "conusRast", format = "GTiff", overwrite = TRUE)
   
 #REPTILES
-  shp <- read_sf("reptilesAD.shp")
+  shp <- read_sf("reptiles.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "reptilesADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "reptilesRast", format = "GTiff", overwrite = TRUE)
   
 #AMPHIBIANS
-  shp <- read_sf("amphibsAD.shp")
+  shp <- read_sf("amphibs.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "amphibsADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "amphibsRast", format = "GTiff", overwrite = TRUE)
   
 #LOBSTERS
-  shp <- read_sf("lobsAD.shp")
+  shp <- read_sf("lobs.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "lobsADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "lobsRast", format = "GTiff", overwrite = TRUE)
   
 #BIRDS
-  shp <- read_sf("birdsAD.shp")
+  shp <- read_sf("birds.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "birdsADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "birdsRast", format = "GTiff", overwrite = TRUE)
   
 #FW PART 1
-  shp <- read_sf("fwpt1AD.shp")
+  shp <- read_sf("fwpt1.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "fwpt1ADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "fwpt1Rast", format = "GTiff", overwrite = TRUE)
   
   #FW PART 2
-  shp <- read_sf("fwpt2AD.shp")
+  shp <- read_sf("fwpt2.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "fwpt2ADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "fwpt2Rast", format = "GTiff", overwrite = TRUE)
   
   #FW PART 3
-  shp <- read_sf("fwpt3AD.shp")
+  shp <- read_sf("fwpt3.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
   writeRaster(rr, "fwpt3ADRast", format = "GTiff", overwrite = TRUE)
   
   #FW PART 4
-  shp <- read_sf("fwpt4AD.shp")
+  shp <- read_sf("fwpt4.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "fwpt4ADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "fwpt4Rast", format = "GTiff", overwrite = TRUE)
   
   #FW PART 5
-  shp <- read_sf("fwpt5AD.shp")
+  shp <- read_sf("fwpt5.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "fwpt5ADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "fwpt5Rast", format = "GTiff", overwrite = TRUE)
   
   #FW PART 6
-  shp <- read_sf("fwpt6AD.shp")
+  shp <- read_sf("fwpt6.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "fwpt6ADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "fwpt6Rast", format = "GTiff", overwrite = TRUE)
   
   #SEACUCS
-  shp <- read_sf("seacucsAD.shp")
+  shp <- read_sf("seacucs.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "seacucsADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "seacucsRast", format = "GTiff", overwrite = TRUE)
   
   #MARINE FISH PART 1
-  shp <- read_sf("marinefishpt1AD.shp")
+  shp <- read_sf("marinefishpt1.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "mfpt1ADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "mfpt1Rast", format = "GTiff", overwrite = TRUE)
   
   #MARINE FISH PART 2
-  shp <- read_sf("marinefishpt2AD.shp")
+  shp <- read_sf("marinefishpt2.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "mfpt2ADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "mfpt2Rast", format = "GTiff", overwrite = TRUE)
   
    #MARINE FISH PART 3
-  shp <- read_sf("marinefishpt3AD.shp")
+  shp <- read_sf("marinefishpt3.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "mfpt3ADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "mfpt3Rast", format = "GTiff", overwrite = TRUE)
   
    #SHARKS RAYS CHIMAERAS
-  shp <- read_sf("sharksAD.shp")
+  shp <- read_sf("sharks.shp")
   rr <- fasterize(shp, gr, fun = "sum", background = 0)
   plot(rr)
-  writeRaster(rr, "sharksrayschimaADRast", format = "GTiff", overwrite = TRUE)
+  writeRaster(rr, "sharksrayschimaRast", format = "GTiff", overwrite = TRUE)
