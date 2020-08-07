@@ -1,4 +1,25 @@
-Shortdata
+#####################################################################################################################
+THIS DATA PACKAGE ACCOMPANIES:
+Short, Monica L., and Darimont, Chris T. 2020. Global synthesis reveals that ecosystem degradation poses the primary threat to the world’s medicinal animals.
+
+Please contact Monica Short (monicashort_22@hotmail.co) with questions about the dataset or if you find any errors in the file. Please let us know if you use the data and we would be happy to provide assistance. 
+
+This data package contains the original dataset as well as R code used to generate figures and analysis.
+
+#####################################################################################################################
+CONTENTS
+
+1. Short et al - README.txt---This file, including a description of variables.
+
+2. Shortdata.csv--A data file used in all of the figures and analyses that appear in the paper. 
+
+3. Short et al - Supplementary code.r — Includes code for generating the figures and analyses in the manuscript.
+
+#####################################################################################################################
+VARIABLE NAMES AND DESCRIPTIONS
+
+FILE: Shortdata.csv
+
 VARIABLES:
 scientific_name: Indicates species scientific name
 Source: Code for literature source of medicinal species
@@ -278,3 +299,7 @@ Y11.4: Threat from "Storms & flooding”. With associated stressors: "1.1” <- 
 Y11.5: Threat from "Other impacts”. With associated stressors: "1.1” <- "Ecosystem conversion", "1.2" <- "Ecosystem degradation", "1.3" <- "Indirect ecosystem effects", "2.1" <- "Species mortality", "2.2" <- "Species disturbance", "2.3.1" <- "Hybridisation", "2.3.2" <- "Competition", "2.3.3" <- "Loss of mutualism", "2.3.4" <- "Loss of pollinator", "2.3.5" <- "Inbreeding", "2.3.6" <- "Skewed sex ratios", "2.3.7" <- "Reduced reproductive success", "2.3.8" <- "Other"                       
 Y12: Threat from "Other options”. With associated stressors: "1.1” <- "Ecosystem conversion", "1.2" <- "Ecosystem degradation", "1.3" <- "Indirect ecosystem effects", "2.1" <- "Species mortality", "2.2" <- "Species disturbance", "2.3.1" <- "Hybridisation", "2.3.2" <- "Competition", "2.3.3" <- "Loss of mutualism", "2.3.4" <- "Loss of pollinator", "2.3.5" <- "Inbreeding", "2.3.6" <- "Skewed sex ratios", "2.3.7" <- "Reduced reproductive success", "2.3.8" <- "Other"                       
 Y12.1: Threat from "Other threat”. With associated stressors: "1.1” <- "Ecosystem conversion", "1.2" <- "Ecosystem degradation", "1.3" <- "Indirect ecosystem effects", "2.1" <- "Species mortality", "2.2" <- "Species disturbance", "2.3.1" <- "Hybridisation", "2.3.2" <- "Competition", "2.3.3" <- "Loss of mutualism", "2.3.4" <- "Loss of pollinator", "2.3.5" <- "Inbreeding", "2.3.6" <- "Skewed sex ratios", "2.3.7" <- "Reduced reproductive success", "2.3.8" <- "Other"
+
+#####################################################################################################################
+ACKNOWLEDGEMENTS
+This database was compiled by Monica Short using IUCN Red List data and published literature. For funsing, MS thanks the University of Victoria’s Jamie Cassels Undergraduate Research Award and National Science and Engineering Research Council Undergraduate Student Research Award. CTD acknowledges NSERC Discovery Grant.
