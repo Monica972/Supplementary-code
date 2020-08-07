@@ -3,6 +3,11 @@
 setwd("~/Documents/Honours")
 getwd()
 
+# Set working directory
+
+setwd("~/Documents/Short")
+getwd()
+
 # Install packages to be used
 
 install.packages("tidyverse")
@@ -20,7 +25,7 @@ library(RColorBrewer)
 library(shades)
 
 # Read data file
-use.data<- read.csv("./DATA/Shortdata.csv")
+use.data<- read.csv("./Shortdata.csv")
 
 # Remove any species duplicates
 use_clean <- use.data[!duplicated(use.data),]
@@ -38,9 +43,11 @@ medwo <- med[which(med$Circ.Resp == "FALSE" & med$Mental.behav == "FALSE" & med$
 medw <- med[which(med$Circ.Resp == "TRUE" | med$Mental.behav == "TRUE" | med$Cancer == "TRUE" | med$External.Cause == "TRUE" | med$Symptoms == "TRUE" | med$Reprod == "TRUE" | med$Visual.system == "TRUE" | med$Renal.Urin == "TRUE" | med$Nervous == "TRUE" | med$Musc.Skel == "TRUE" | med$Immune.Lymph == "TRUE" | med$Integum.Exoc == "TRUE" | med$Endocrine == "TRUE" | med$Digest.Excre == "TRUE" | med$Spiritual == "TRUE"),]
 wobs <- nrow(medw)
 
+nl <- med[which(med$redListCategoryTitle == "Not listed"),]
+lit <- med[which(med$MedSouceLit == "TRUE"),]
 ##------------------------------------------------------------------------------
 
-        ## Medicinal species by Red List Category - Spiritual and Non-spiritual
+## Medicinal species by Red List Category - Spiritual and Non-spiritual
 
 ##------------------------------------------------------------------------------
 
@@ -166,7 +173,7 @@ PhysicalUse <- c(CRPuseper, ENPuseper,EXPuseper, LCPuseper, DDPuseper, VUPuseper
 SpiritualUse <- c(CRSuseper, ENSuseper,EXSuseper, LCSuseper, DDSuseper, VUSuseper, NTSuseper, NLSuseper)
 data2 <- data.frame(RedListCat3, PhysicalUse, SpiritualUse)
 values <- c(PhysicalUse, SpiritualUse)
-type <- c(rep("Non-Spiritual Use; n = 406", 8), rep("Spiritual Use; n = 163", 8))
+type <- c(rep("Non-Spiritual Use; n = 1065", 8), rep("Spiritual Use; n = 266", 8))
 data2 <- data.frame(RedListCat3, values, type)
 data2$RedListCat3 <- factor(data2$RedListCat3, levels = c("NL", "DD", "LC", "NT", "VU", "EN", "CR", "EX"))
 
@@ -176,7 +183,7 @@ p2 <- p2 +geom_bar(stat = "identity", aes(fill = type), position = "dodge") +
   xlab("Red List Category") + ylab("Percent of Species") +
   ggtitle("A") +
   ylim(c(0, 65)) +
-  theme_bw(base_size = 20)+ 
+  theme_bw(base_size = 18)+ 
   theme(legend.title=element_blank(),
         legend.position = c(.95, .95), 
         legend.justification = c("right", "top"),
@@ -187,9 +194,9 @@ p2 <- p2 +geom_bar(stat = "identity", aes(fill = type), position = "dodge") +
         axis.line = element_line(colour = "black"),
         axis.text.x = element_text(colour = "black"),
         axis.text.y = element_text(colour = "black"),
-        axis.title.x = element_text(size = 32),
-        axis.title.y = element_text(size = 32),
-        title = element_text(size = 32))
+        axis.title.x = element_text(size = 22),
+        axis.title.y = element_text(size = 22),
+        title = element_text(size = 22))
 p2
 ##------------------------------------------------------------------------------
 
@@ -323,7 +330,7 @@ PhysicalUse <- c(CRMPuseper, ENMPuseper,EXMPuseper, LCMPuseper, DDMPuseper, VUMP
 SpiritualUse <- c(CRMSuseper, ENMSuseper,EXMSuseper, LCMSuseper, DDMSuseper, VUMSuseper, NTMSuseper, NLMSuseper)
 data2 <- data.frame(RedListCat3, PhysicalUse, SpiritualUse)
 values <- c(PhysicalUse, SpiritualUse)
-type <- c(rep("Non-Spiritual Use; n = 225", 8), rep("Spiritual Use; n = 75", 8))
+type <- c(rep("Non-Spiritual Use; n = 515", 8), rep("Spiritual Use; n = 101", 8))
 data2 <- data.frame(RedListCat3, values, type)
 data2$RedListCat3 <- factor(data2$RedListCat3, levels = c("NL", "DD", "LC", "NT", "VU", "EN", "CR", "EX"))
 
@@ -334,7 +341,7 @@ p3 <- p3 +geom_bar(stat = "identity", aes(fill = type), position = "dodge") +
   ylab("Percent of Species") +
   ggtitle("B") +
   ylim(c(0, 65)) +
-  theme_bw(base_size = 20)+ 
+  theme_bw(base_size = 18)+ 
   theme(legend.title=element_blank(), 
         legend.position = c(.95, .95), 
         legend.justification = c("right", "top"),
@@ -345,16 +352,16 @@ p3 <- p3 +geom_bar(stat = "identity", aes(fill = type), position = "dodge") +
         axis.line = element_line(colour = "black"),
         axis.text.x = element_text(colour = "black"),
         axis.text.y = element_text(colour = "black"),
-        axis.title.x = element_text(size = 32),
-        axis.title.y = element_text(size = 32),
-        title = element_text(size = 32))
+        axis.title.x = element_text(size = 22),
+        axis.title.y = element_text(size = 22),
+        title = element_text(size = 22))
 
 # Combine plots for Figure 4
 grid.arrange(p2, p3, ncol = 2, nrow = 1) 
 
 ##------------------------------------------------------------------------------
 
-                        #Fisher's Exact Test
+#Fisher's Exact Test
 
 ##------------------------------------------------------------------------------
 
@@ -367,30 +374,14 @@ fisher.test(matrix(c(CRSusenum, CRPusenum, (Spirusenum - CRSusenum), (Physusenum
 #spiritual vs non-spiritual 'Vulnerable'
 fisher.test(matrix(c(VUSusenum, VUPusenum, (Spirusenum - VUSusenum), (Physusenum - VUPusenum)), ncol = 2))
 
-#spiritual vs non-spiritual 'Near Threatened'
-fisher.test(matrix(c(NTSusenum, NTPusenum, (Spirusenum - NTSusenum), (Physusenum - NTPusenum)), ncol = 2))
-
-#spiritual vs non-spiritual 'Extinct'
-fisher.test(matrix(c(EXSusenum, EXPusenum, (Spirusenum - EXSusenum), (Physusenum - EXPusenum)), ncol = 2))
-
-#spiritual vs non-spiritual 'Least Concern'
-fisher.test(matrix(c(LCSusenum, LCPusenum, (Spirusenum - LCSusenum), (Physusenum - LCPusenum)), ncol = 2))
-
 #MED ONLY spiritual vs non-spiritual EN
 fisher.test(matrix(c(ENMSusenum, ENMPusenum, (MSpirusenum - ENMSusenum), (MPhysusenum - ENMPusenum)), ncol = 2))
 
 #MED ONLY spiritual vs non-spiritual CR
 fisher.test(matrix(c(CRMSusenum, CRMPusenum, (MSpirusenum - CRMSusenum), (MPhysusenum - CRMPusenum)), ncol = 2))
 
-#MED ONLY spiritual vs non-spiritual EX
-fisher.test(matrix(c(EXMSusenum, EXMPusenum, (MSpirusenum - EXMSusenum), (MPhysusenum - EXMPusenum)), ncol = 2))
-
 #MED ONLY spiritual vs non-spiritual VU
 fisher.test(matrix(c(VUMSusenum, VUMPusenum, (MSpirusenum - VUMSusenum), (MPhysusenum - VUMPusenum)), ncol = 2))
 
-#MED ONLY spiritual vs non-spiritual EN + CR
-fisher.test(matrix(c((ENMSusenum + CRMSusenum), (ENMPusenum + CRMPusenum), (MSpirusenum - (ENMSusenum + CRMSusenum)), (MPhysusenum - (ENMPusenum + CRMPusenum))), ncol = 2))
-
 #MED ONLY spiritual vs non-spiritual EN + CR + VU 'At-risk'
 fisher.test(matrix(c((ENMSusenum + CRMSusenum + VUMSusenum), (ENMPusenum + CRMPusenum + VUMPusenum), (MSpirusenum - (ENMSusenum + CRMSusenum + VUMSusenum)), (MPhysusenum - (ENMPusenum + CRMPusenum + VUMPusenum))), ncol = 2))
-
