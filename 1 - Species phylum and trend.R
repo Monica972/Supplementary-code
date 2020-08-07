@@ -1,6 +1,6 @@
 # Set working directory
 
-setwd("~/Documents/Honours")
+setwd("~/Documents/Short")
 getwd()
 
 # Install packages to be used
@@ -16,7 +16,7 @@ library(ggplot2)
 library(shades)
 
 # Read data file
-use.data <- read.csv("./DATA/Shortdata.csv")
+use.data <- read.csv("./Shortdata.csv")
 
 # Remove any duplicate species
 use_clean <- use.data[!duplicated(use.data),]
@@ -25,54 +25,6 @@ use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
 # Create data subset of medicinal use species 
 med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
 obsnum <- nrow(med)
-
-##--------------------------------------------------------------------------------
-
-## Medicinal species by population trend
-
-##--------------------------------------------------------------------------------
-
-#Unknown
-Unk <- med[which(med$populationTrendTitle == "Unknown"),]
-Unknum <- nrow(Unk)
-Unkper <- round((Unknum/obsnum * 100), dig=2)
-
-#Unspecified
-Usp <- med[which(med$populationTrendTitle == "Unspecified"),]
-Uspnum <- nrow(Usp)
-Uspper <- round((Uspnum/obsnum * 100), dig=2)
-
-#Decreasing
-Dec <- med[which(med$populationTrendTitle == "Decreasing"),]
-Decnum <- nrow(Dec)
-Decper <- round((Decnum/obsnum * 100), dig=2)
-
-#Increasing
-Inc <- med[which(med$populationTrendTitle == "Increasing"),]
-Incnum <- nrow(Inc)
-Incper <- round((Incnum/obsnum * 100), dig=2)
-
-#Stable
-Stab <- med[which(med$populationTrendTitle == "Stable"),]
-Stabnum <- nrow(Stab)
-Stabper <- round((Stabnum/obsnum * 100), dig=2)
-
-#Plot species population trends
-Trend <- c("Increasing", "Stable", "Decreasing", "Unknown", "Unspecified")
-values <- c(Incper, Stabper, Decper, Unkper, Uspper)
-
-data3 <- data.frame(Trend, values)
-require(tidyr)
-df.long <- gather(data3, variable, value, -Trend)
-
-ggplot(data = df.long, aes(x = reorder(Trend, -value), y = value, fill = variable)) +
-  geom_col(position = position_dodge()) +
-  scale_fill_manual(values=c("grey41")) +
-  xlab("Threat Type") + ylab("Percent of Species") +
-  ggtitle("Species by Population Trend") +
-  theme_bw(base_size = 15)+ 
-  theme(legend.position = "none") +
-  theme(axis.text.x = element_text(angle = 60, hjust = 1, vjust = 1))
 
 #Species with known trends
 Trend <- med[which(med$populationTrendTitle == "Decreasing" | med$populationTrendTitle == "Stable" | med$populationTrendTitle == "Increasing"),]
@@ -226,7 +178,7 @@ p3 <- ggplot(data, aes(fill=condition, y=value, x= reorder(specie1, -value))) +
   xlab("Phylum") + ylab("Percent of Species") +
   lightness(scale_fill_manual(values=c("#CA0020", "#B3E55C", "#92C5DE")), scalefac(0.9)) +
   ggtitle("A") +
-  theme_bw(base_size = 20)+
+  theme_bw(base_size = 18)+
   theme(legend.title= element_blank(), 
         legend.position = c(.95, .95), 
         legend.justification = c("right", "top"),
@@ -237,9 +189,9 @@ p3 <- ggplot(data, aes(fill=condition, y=value, x= reorder(specie1, -value))) +
         axis.line = element_line(colour = "black"),
         axis.text.x = element_text(colour = "black", angle = 40, hjust = 1),
         axis.text.y = element_text(colour = "black"),
-        axis.title.x = element_text(size = 32),
-        axis.title.y = element_text(size = 32),
-        title = element_text(size = 32))
+        axis.title.x = element_text(size = 22),
+        axis.title.y = element_text(size = 22),
+        title = element_text(size = 22))
 
 # Filled bar plot of population trend by phylum - Fig 1 B
 p4 <-
@@ -248,7 +200,7 @@ p4 <-
   xlab("Phylum") + ylab("Proportion of Species") +
   lightness(scale_fill_manual(values=c("#CA0020", "#B3E55C", "#92C5DE")), scalefac(0.9)) +
   ggtitle("B") +
-  theme_bw(base_size = 20)+
+  theme_bw(base_size = 18)+
   theme(legend.title=element_blank(), 
         legend.position = c(.95, .95), 
         legend.justification = c("right", "top"),
@@ -259,9 +211,21 @@ p4 <-
         axis.line = element_line(colour = "black"),
         axis.text.x = element_text(colour = "black", angle = 40, hjust = 1),
         axis.text.y = element_text(colour = "black"),
-        axis.title.x = element_text(size = 32),
-        axis.title.y = element_text(size = 32),
-        title = element_text(size = 32))
+        axis.title.x = element_text(size = 22),
+        axis.title.y = element_text(size = 22),
+        title = element_text(size = 22))
 
 # Combine plots for Figure 1
 grid.arrange(p3, p4, ncol = 2, nrow = 1) 
+
+##------------------------------------------------------------------------------
+
+#Fisher's Exact Tests
+
+##------------------------------------------------------------------------------
+
+#Decreasing trend vs stable
+fisher.test(matrix(c(Decnum, Stabnum, (obsnum - Decnum), (obsnum - Stabnum)), ncol = 2))
+
+#Dececresing trend vs increasing
+fisher.test(matrix(c(Decnum, Incnum, (obsnum - Decnum), (obsnum - Incnum)), ncol = 2))
