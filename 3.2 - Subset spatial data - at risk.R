@@ -29,4 +29,4 @@ nrow(atRisk)
 library(raster)
 atRisk.sp <- as(atRisk, "Spatial")
 
-shapefile(atRisk.sp, "~/Documents/SpatialData/AtRisk/riskbirds.shp", overwrite = TRUE)
+shapefile(atRisk.sp, "~/Documents/SpatialData/AtRisk/Riskbirds.shp", overwrite = TRUE)
