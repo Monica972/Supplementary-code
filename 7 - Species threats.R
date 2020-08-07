@@ -2,11 +2,11 @@
 library(tidyverse)
 
 #Set working directory
-setwd("~/Documents/Honours")
+setwd("~/Documents/Short")
 getwd()
 
 #read in data
-use.data<- read.csv("./DATA/Shortdata.csv")
+use.data<- read.csv("./Shortdata.csv", na.strings=c(""," ","NA"))
 
 #remove any duplicates
 use_clean <- use.data[!duplicated(use.data),]
@@ -14,9 +14,33 @@ use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
 
 #filter to medicinal use
 threatmed <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
-threatobsnum <- nrow(med)
+threatobsnum <- nrow(threatmed)
 
-
+#Species that have threat data 
+threatmed <- threatmed[which(!is.na(threatmed$X1) | !is.na(threatmed$X1.1) | !is.na(threatmed$X1.2) | !is.na(threatmed$X1.3) | 
+                              !is.na(threatmed$X2) | !is.na(threatmed$X2.1) | !is.na(threatmed$X2.1.2) | !is.na(threatmed$X2.1.3) | !is.na(threatmed$X2.1.4) | !is.na(threatmed$X2.2) | !is.na(threatmed$X2.2.1) | !is.na(threatmed$X2.2.2) | !is.na(threatmed$X2.2.3) |
+                              !is.na(threatmed$X2.3) | !is.na(threatmed$X2.3.1) | !is.na(threatmed$X2.3.2) | !is.na(threatmed$X2.3.3) | !is.na(threatmed$X2.3.4) |  
+                              !is.na(threatmed$X2.4) | !is.na(threatmed$X2.4.1) | !is.na(threatmed$X2.4.2) | !is.na(threatmed$X2.4.3) | 
+                              !is.na(threatmed$X3) | !is.na(threatmed$X3.1) | !is.na(threatmed$X3.2) | !is.na(threatmed$X3.3) | 
+                              !is.na(threatmed$X4) | !is.na(threatmed$X4.1) | !is.na(threatmed$X4.2) | !is.na(threatmed$X4.3) | !is.na(threatmed$X4.4) | 
+                              !is.na(threatmed$X5) | !is.na(threatmed$X5.1) | !is.na(threatmed$X5.1.1) | !is.na(threatmed$X5.1.2) | !is.na(threatmed$X5.1.3) | !is.na(threatmed$X5.1.4) | 
+                              !is.na(threatmed$X5.2) | !is.na(threatmed$X5.2.1) | !is.na(threatmed$X5.2.2) | !is.na(threatmed$X5.2.3) | !is.na(threatmed$X5.2.4) | 
+                              !is.na(threatmed$X5.3) | !is.na(threatmed$X5.3.1) | !is.na(threatmed$X5.3.2) | !is.na(threatmed$X5.3.3) | !is.na(threatmed$X5.3.4) | 
+                              !is.na(threatmed$X5.4) | !is.na(threatmed$X5.4.1) | !is.na(threatmed$X5.4.2) | !is.na(threatmed$X5.4.3) | !is.na(threatmed$X5.4.4) | !is.na(threatmed$X5.4.5) | !is.na(threatmed$X5.4.6) | 
+                              !is.na(threatmed$X6) | !is.na(threatmed$X6.1) | !is.na(threatmed$X6.2) | !is.na(threatmed$X6.3) | 
+                              !is.na(threatmed$X7) | !is.na(threatmed$X7.1) | !is.na(threatmed$X7.1.1) | !is.na(threatmed$X7.1.2) | !is.na(threatmed$X7.1.3) | 
+                              !is.na(threatmed$X7.2) | !is.na(threatmed$X7.2.1) | !is.na(threatmed$X7.2.2) | !is.na(threatmed$X7.2.3) | !is.na(threatmed$X7.2.4) | !is.na(threatmed$X7.2.5) | !is.na(threatmed$X7.2.6) | !is.na(threatmed$X7.2.7) | !is.na(threatmed$X7.2.8) | !is.na(threatmed$X7.2.9) | !is.na(threatmed$X7.2.10) | !is.na(threatmed$X7.2.11) | 
+                              !is.na(threatmed$X7.3) | !is.na(threatmed$X8) | !is.na(threatmed$X8.1) | !is.na(threatmed$X8.1.1) | !is.na(threatmed$X8.1.2) | 
+                              !is.na(threatmed$X8.2) | !is.na(threatmed$X8.2.1) | !is.na(threatmed$X8.2.2) | 
+                              !is.na(threatmed$X8.3) | !is.na(threatmed$X8.4) | !is.na(threatmed$X8.4.1) | !is.na(threatmed$X8.4.2) | 
+                              !is.na(threatmed$X8.5) | !is.na(threatmed$X8.5.1) | !is.na(threatmed$X8.5.2) | 
+                              !is.na(threatmed$X8.6) | !is.na(threatmed$X9) | !is.na(threatmed$X9.1) | !is.na(threatmed$X9.1.1) | !is.na(threatmed$X9.1.2) | !is.na(threatmed$X9.1.3) | 
+                              !is.na(threatmed$X9.2) | !is.na(threatmed$X9.2.1) | !is.na(threatmed$X9.2.2) | !is.na(threatmed$X9.2.3) | 
+                              !is.na(threatmed$X10) | !is.na(threatmed$X10.1) | !is.na(threatmed$X10.2) | !is.na(threatmed$X10.3) | 
+                              !is.na(threatmed$X11) | !is.na(threatmed$X11.1) |!is.na(threatmed$X11.2) | !is.na(threatmed$X11.3) |  !is.na(threatmed$X11.4) | !is.na(threatmed$X11.5) | 
+                              !is.na(threatmed$X12) | !is.na(threatmed$X12.1)),]
+threatobsnum <- nrow(threatmed)
+#threatmed <- threatmed[which(threatmed$useTradeId..19 =="FALSE" & threatmed$useTradeId..23 == "FALSE" & threatmed$useTradeId..23 == "FALSE" & threatmed$useTradeId..27 == "FALSE" & threatmed$useTradeId..20 =="FALSE" & threatmed$useTradeId..32 =="FALSE" & threatmed$useTradeId..24 =="FALSE" & threatmed$useTradeId..29 =="FALSE" & threatmed$useTradeId..33 =="FALSE" & threatmed$useTradeId..25 =="FALSE" & threatmed$useTradeId..28 =="FALSE" & threatmed$useTradeId..22 =="FALSE" & threatmed$useTradeId..21 =="FALSE" & threatmed$useTradeId..35 =="FALSE" & threatmed$useTradeId..36 =="FALSE" & threatmed$useTradeId..34 =="FALSE" & threatmed$useTradeId..31 =="FALSE"),]
 #Threat 1: Residential and commercial development
 
 ResLow <-threatmed[which(threatmed$X1.1 =="Low Impact: 3" | threatmed$X1.1 =="Low Impact: 4" | threatmed$X1.1 =="Low Impact: 5" | threatmed$X1.2 =="Low Impact: 3" | threatmed$X1.2 =="Low Impact: 4" | threatmed$X1.2 =="Low Impact: 5" | threatmed$X1.3 =="Low Impact: 3" | threatmed$X1.3 =="Low Impact: 4" | threatmed$X1.3 =="Low Impact: 5"),]
@@ -158,7 +182,6 @@ TransUnkper <-round((TransUnknum/threatobsnum * 100), dig=2)
 TransPast <-threatmed[which(threatmed$X4.1 =="Past Impact" | threatmed$X4.2 =="Past Impact"| threatmed$X4.3 =="Past Impact" | threatmed$X4.4 =="Past Impact"),]
 TransPastnum <- nrow(TransPast)
 TransPastper <-round((TransPastnum/threatobsnum * 100), dig=2)
-
 Translist <-threatmed[which(threatmed$X4.1 =="list()" | threatmed$X4.2 =="list()" | threatmed$X4.3 =="list()" | threatmed$X4.4 =="list()"),]
 Translistnum <- nrow(Translist)
 Translistper <-round((Translistnum/threatobsnum * 100), dig=2)
@@ -513,7 +536,7 @@ data <- data.frame(threat = c("RCD", "AG", "EPM", "TSC", "BRU", "HID", "NSM", "I
 data <- data %>%
   arrange(value1) %>%
   mutate(threat = factor(threat, threat))
-  
+
 ggplot(data, aes(x=threat, y=value1)) +
   geom_segment( aes(x=threat, xend=threat, y=0, yend=value1)) +
   geom_point( aes(x = threat, y = value1, color="orange"), size=5 ) +
@@ -528,16 +551,15 @@ ggplot(data, aes(x=threat, y=value1)) +
   theme_light(base_size = 20) +
   geom_text(aes(label=round(data$value1, digits = 1), hjust=-.5), cex = 6) +
   theme(
-      panel.grid.major = element_blank(),
-      panel.border = element_blank(),
-      axis.ticks.x = element_blank(),
-      axis.text.x = element_text(colour = "black"),
-      axis.text.y = element_text(colour = "black"), 
-      axis.title.x = element_text(size = 32),
-      axis.title.y = element_text(size = 32),
-      legend.position = c(0.85, 0.15),
-      plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")) +
+    panel.grid.major = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.text.x = element_text(colour = "black"),
+    axis.text.y = element_text(colour = "black"), 
+    axis.title.x = element_text(size = 32),
+    axis.title.y = element_text(size = 32),
+    legend.position = c(0.85, 0.15),
+    plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")) +
   xlab("Threat") +
   ylab("Percent Impacted") +
-  expand_limits(y = 25)
-
+  expand_limits(y = 50)
