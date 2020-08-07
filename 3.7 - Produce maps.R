@@ -1,5 +1,5 @@
 #Set working directory
-setwd("~/Documents/Honours/SpatialData")
+setwd("~/Documents/Spatial Data")
 
 #install packages
 install.packages("tidyverse", dependencies = TRUE)
@@ -35,10 +35,10 @@ plot(combine)
 crs(combine)
 
 #change working directory
-setwd("~/Documents/Honours/SpatialData/Subs")
+setwd("~/Documents/SpatialData/Subs")
 
 #load medicinal species raster
-med <- raster("CombinedRastAD.tif")
+med <- raster("CombinedRast.tif")
 
 #change projection to mollweide
 med = projectRaster(med, crs = "+proj=moll +lon_0=0 +x_0=0 +y_0=0", method = "ngb")
@@ -54,19 +54,19 @@ med_df <- as.data.frame(med, xy = TRUE)
 str(med_df)
 
 #change working directory
-setwd("~/Documents/Honours/SpatialData/Ends")
+setwd("~/Documents/SpatialData/AtRisk")
 
 #load at risk species raster
-end <- raster("CombinedEndADRast.tif")
+Risk <- raster("CombinedRiskRast.tif")
 
 #change projection to mollweide
-end = projectRaster(end, crs = "+proj=moll +lon_0=0 +x_0=0 +y_0=0", method = "ngb")
-summary(end)
-plot(end)
+Risk = projectRaster(Risk, crs = "+proj=moll +lon_0=0 +x_0=0 +y_0=0", method = "ngb")
+summary(Risk)
+plot(Risk)
 
 #create dataframe of medicinal species raster
-end_df <- as.data.frame(end, xy = TRUE)
-str(end_df)
+Risk_df <- as.data.frame(Risk, xy = TRUE)
+str(Risk_df)
 
 #calculate proportion of species ued for medicine
 propmed <- med / combine 
@@ -82,17 +82,17 @@ str(propmed_df)
 crs(propmed)
 
 #calculate proportion of medicinal species that are at risk
-propendmed <- end / med
-plot(propendmed)
+propRiskmed <- Risk / med
+plot(propRiskmed)
 
 #set projection to mollweide
-propendmed = projectRaster(propendmed, crs = "+proj=moll +lon_0=0 +x_0=0 +y_0=0", method = "ngb")
-summary(propendmed)
+propRiskmed = projectRaster(propRiskmed, crs = "+proj=moll +lon_0=0 +x_0=0 +y_0=0", method = "ngb")
+summary(propRiskmed)
 
 #create dataframe of medicinal species at risk raster
-propendmed_df <- as.data.frame(propendmed, xy = TRUE)
-str(propendmed_df)
-crs(propendmed)
+propRiskmed_df <- as.data.frame(propRiskmed, xy = TRUE)
+str(propRiskmed_df)
+crs(propRiskmed)
 
 #PLOT MAPS
 #medicinal species distribution in numbers
@@ -139,7 +139,7 @@ p1 <- ggplot(propmed_df) +
 p1
 
 #Proportion of med species that are at risk
-p2 <- ggplot(propendmed_df) +
+p2 <- ggplot(propRiskmed_df) +
   geom_tile(aes(x = x, y = y, fill = layer)) +
   scale_fill_distiller(palette = "RdYlBu", direction = -1, name = "Proportion of Species", limits = c(0, 1), na.value = "white") +
   coord_equal() +
