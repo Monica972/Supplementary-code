@@ -1,5 +1,5 @@
 #Set working directory
-setwd("~/Documents/Honours/SpatialData")
+setwd("~/Documents/SpatialData")
 
 #install required packages
 install.packages("tidyverse", dependencies = TRUE)
