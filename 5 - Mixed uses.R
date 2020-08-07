@@ -1,6 +1,6 @@
 # Set working directory
 
-setwd("~/Documents/Honours")
+setwd("~/Documents/Short")
 getwd()
 
 # Install packages to be used
@@ -18,7 +18,7 @@ library(RColorBrewer)
 library(shades)
 
 # Read data file
-use.data<- read.csv("./DATA/Shortdata.csv")
+use.data<- read.csv("./Shortdata.csv")
 
 # Remove any species duplicates
 use_clean <- use.data[!duplicated(use.data),]
@@ -38,7 +38,7 @@ wobs <- nrow(medw)
 
 ##------------------------------------------------------------------------------
 
-        ##Medicinal only species vs mixed species by red list category
+##Medicinal only species vs mixed species by red list category
 
 ##------------------------------------------------------------------------------
 
@@ -173,7 +173,7 @@ ggplot(data = df.long, aes(x = RedListCat, y = value, fill = variable)) +
   geom_col(position = position_dodge())
 
 values <- c(MedO, Mix)
-type <- c(rep("Medicinal only; n = 354", 8), rep("Mixed use; n = 716", 8))
+type <- c(rep("Medicinal only; n = 635", 8), rep("Mixed use; n = 1025", 8))
 data6 <- data.frame(RedListCat, values, type)
 data6$RedListCat <- factor(data6$RedListCat, levels = c("NL", "DD", "LC", "NT", "VU", "EN", "CR", "EX"))
 
@@ -181,7 +181,7 @@ ggplot(data = na.omit(data6), aes(RedListCat, values), na.rm = TRUE) +
   geom_bar(stat = "identity", aes(fill = type), position = "dodge") +
   scale_fill_manual(values=c("#CA0020", "#92C5DE")) +
   xlab("Red List Category") + ylab("Percent of Species") +
-  theme_bw(base_size = 20)+ 
+  theme_bw(base_size = 18)+ 
   theme(legend.title=element_blank(), 
         legend.position = c(.95, .95), 
         legend.justification = c("right", "top"),
@@ -192,30 +192,13 @@ ggplot(data = na.omit(data6), aes(RedListCat, values), na.rm = TRUE) +
         axis.line = element_line(colour = "black"),
         axis.text.x = element_text(colour = "black"),
         axis.text.y = element_text(colour = "black"),
-        axis.title.x = element_text(size = 32),
-        axis.title.y = element_text(size = 32))
+        axis.title.x = element_text(size = 22),
+        axis.title.y = element_text(size = 22))
 
 ##------------------------------------------------------------------------------
 
-                #Fisher's Exact Tests
+#Fisher's Exact Tests
 
 ##------------------------------------------------------------------------------
-
-#Med only vs Mixed CR
-fisher.test(matrix(c(MedCRnum, MixCRnum, (Medonlynum - MedCRnum), (Mixednum - MixCRnum)), ncol = 2))
-
-#Med only vs Mixed EX
-fisher.test(matrix(c(MedEXnum, MixEXnum, (Medonlynum - MedEXnum), (Mixednum - MixEXnum)), ncol = 2))
-
-#Med only vs Mixed EN
-fisher.test(matrix(c(MedENnum, MixENnum, (Medonlynum - MedENnum), (Mixednum - MixENnum)), ncol = 2))
-
-#Med only vs Mixed VU
-fisher.test(matrix(c(MedVUnum, MixVUnum, (Medonlynum - MedVUnum), (Mixednum - MixVUnum)), ncol = 2))
-
-#Med only vs Mixed NT
-fisher.test(matrix(c(MedNTnum, MixNTnum, (Medonlynum - MedNTnum), (Mixednum - MixNTnum)), ncol = 2))
-
 #Med only vs Mixed at risk (VU, CR, EN)
 fisher.test(matrix(c(atRiskMednum, atRiskMixnum, (Medonlynum - atRiskMednum), (Mixednum - atRiskMixnum)), ncol = 2))
-
