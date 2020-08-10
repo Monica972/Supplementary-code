@@ -26,6 +26,13 @@ use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
 med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
 obsnum <- nrow(med)
 
+#Medicinal species sources
+
+# Medicinal use species with use found from the literature and from the IUCN
+litonly <- med[which(c(med$MedSouceLit == "TRUE" & med$MedIUCN == "FALSE")),] #literature medicinal species
+iucn <- med[which(c(med$MedSouceLit == "TRUE" & med$MedIUCN == "TRUE")),] #literature medicinal species also listed as medicinal by IUCn
+unlist <- med[which(med$redListCategoryTitle == "Not listed"),]
+
 #Species with known trends
 Trend <- med[which(med$populationTrendTitle == "Decreasing" | med$populationTrendTitle == "Stable" | med$populationTrendTitle == "Increasing"),]
 Trendnum <- nrow(Trend)
