@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 6 - proportions of species used for spiritual and non spiritual purposes and differences in endangerment
+# Monica Short, August 2020
+
 # Set working directory
 
 setwd("~/Documents/Honours")
