@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 7 - proportions of medicinal species with each threat
+# Monica Short, August 2020
+
 #Load package
 library(tidyverse)
 
