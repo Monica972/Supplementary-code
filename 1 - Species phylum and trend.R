@@ -1,3 +1,7 @@
+# Supplementary code for Short et al. Part 1 - proprtions of species in each phylum and with each population trend
+# Monica Short, August 2020
+
+
 # Set working directory
 
 setwd("~/Documents/Short")
@@ -26,14 +30,14 @@ use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
 med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
 obsnum <- nrow(med)
 
-#Medicinal species sources
+## Medicinal species sources
 
 # Medicinal use species with use found from the literature and from the IUCN
 litonly <- med[which(c(med$MedSouceLit == "TRUE" & med$MedIUCN == "FALSE")),] #literature medicinal species
 iucn <- med[which(c(med$MedSouceLit == "TRUE" & med$MedIUCN == "TRUE")),] #literature medicinal species also listed as medicinal by IUCn
 unlist <- med[which(med$redListCategoryTitle == "Not listed"),]
 
-#Species with known trends
+# Medicinal species with known population trends
 Trend <- med[which(med$populationTrendTitle == "Decreasing" | med$populationTrendTitle == "Stable" | med$populationTrendTitle == "Increasing"),]
 Trendnum <- nrow(Trend)
 
