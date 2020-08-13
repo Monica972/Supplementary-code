@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 9 - proportions of medicinal species subject to each stressor
+# Monica Short, August 2020
+
 #Load packages
 library(gridExtra)
 library(ggplot2)
