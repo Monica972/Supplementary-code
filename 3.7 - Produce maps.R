@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 3.7 - produce maps for number of and proportion of medicinal species, and proportion of medicinal species at risk
+# Monica Short, August 2020
+
 #Set working directory
 setwd("~/Documents/Spatial Data")
 
