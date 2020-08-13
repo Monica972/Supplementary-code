@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 3.2 - subset at-risk medicinal species spatial data
+# Monica Short, August 2020
+
 #Install packages
 install.packages("fasterize") #a lot faster than rasterize but only works with sf polygons
 install.packages("raster")
@@ -22,8 +25,7 @@ gr <- raster(nrow = 360, ncol = 360, res = c(1,1))
 
 ## ------------------------------------------------------------------------------
 
-## Rasterize each medicinal animal group - sf files created from subsetting 
-#the spatial data to medicinal species (supplementary code 3.1)
+## Rasterize each medicinal animal group - sf files created from subsetting data to medicinal species (supplementary code 3.1)
 
 ## ------------------------------------------------------------------------------
 
