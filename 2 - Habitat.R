@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 2 - proprtions of species occupying each habitat
+# Monica Short, August 2020
+
 # Set working directory
 
 setwd("~/Documents/Short")
