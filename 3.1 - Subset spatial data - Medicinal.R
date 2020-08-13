@@ -1,4 +1,4 @@
-# Supplementary code for Short et al. Part 3.1 - rasterize medicinal species spatial data
+# Supplementary code for Short et al. Part 3.1 -subset medicinal species spatial data
 # Monica Short, August 2020
 
 #Set working directory
