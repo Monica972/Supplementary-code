@@ -1,16 +1,15 @@
+# Supplementary code for Short et al. Part 3.2 - rasterize at-risk medicinal species spatial data
+# Monica Short, August 2020
+
 # Set working directory
 setwd("~/Documents/SpatialData/Subsets")
-
-#install required packages
-install.packages("tidyverse", dependencies = TRUE)
-install.packages("sf", dependencies = TRUE)
-install.packages("rgdal", dependencies = TRUE)
 
 #load packages
 library(tidyverse)
 library(sf)
 library(sp)
 library(rgdal)
+library(raster)
 
 ## ------------------------------------------------------------------------------
 
@@ -26,7 +25,6 @@ ranges <- read_sf("birds.shp")
 atRisk <- ranges %>% dplyr::filter(`redlistCategoryTitle` == "Vulnerable" | `redlistCategoryTitle` == "Endangered" | `redlistCategoryTitle` == "Critically Endangered")
 nrow(atRisk)
 
-library(raster)
 atRisk.sp <- as(atRisk, "Spatial")
 
 shapefile(atRisk.sp, "~/Documents/SpatialData/AtRisk/Riskbirds.shp", overwrite = TRUE)
