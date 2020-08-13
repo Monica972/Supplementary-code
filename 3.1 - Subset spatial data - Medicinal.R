@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 3.1 - rasterize medicinal species spatial data
+# Monica Short, August 2020
+
 #Set working directory
 setwd("~/Documents/SpatialData")
 
@@ -5,6 +8,8 @@ setwd("~/Documents/SpatialData")
 install.packages("tidyverse", dependencies = TRUE)
 install.packages("sf", dependencies = TRUE)
 install.packages("rgdal", dependencies = TRUE)
+install.packages("raster")
+install.packages("sp")
 
 #load packages
 library(tidyverse)
