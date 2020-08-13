@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 3.5 - combine subsetted rasters
+# Monica Short, August 2020
+
 #Set working directory
 setwd("~/Documents/SpatialData/Subsets")
 
