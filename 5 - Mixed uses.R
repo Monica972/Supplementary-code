@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 5 - proportions of medicinal species with mixed use vs those used solely for medicine
+# Monica Short, August 2020
+
 # Set working directory
 
 setwd("~/Documents/Short")
