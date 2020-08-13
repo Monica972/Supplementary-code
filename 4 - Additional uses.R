@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 4 - proportion of medicinal species with additional uses
+# Monica Short, August 2020
+
 # Set working directory
 setwd("~/Documents/Honours")
 getwd()
