@@ -1,3 +1,6 @@
+# Supplementary code for Short et al. Part 3.6 - Rasterize the full species spatial data
+# Monica Short, August 2020
+
 # Set working directory
 
 setwd("~/Documents/Short")
