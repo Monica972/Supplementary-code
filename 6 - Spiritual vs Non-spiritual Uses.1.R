@@ -3,11 +3,6 @@
 
 # Set working directory
 
-setwd("~/Documents/Honours")
-getwd()
-
-# Set working directory
-
 setwd("~/Documents/Short")
 getwd()
 
