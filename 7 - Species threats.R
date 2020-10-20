@@ -43,6 +43,7 @@ threatmed <- threatmed[which(!is.na(threatmed$X1) | !is.na(threatmed$X1.1) | !is
                               !is.na(threatmed$X11) | !is.na(threatmed$X11.1) |!is.na(threatmed$X11.2) | !is.na(threatmed$X11.3) |  !is.na(threatmed$X11.4) | !is.na(threatmed$X11.5) | 
                               !is.na(threatmed$X12) | !is.na(threatmed$X12.1)),]
 threatobsnum <- nrow(threatmed)
+#re run with the following line included for threats for medicinal only species
 #threatmed <- threatmed[which(threatmed$useTradeId..19 =="FALSE" & threatmed$useTradeId..23 == "FALSE" & threatmed$useTradeId..23 == "FALSE" & threatmed$useTradeId..27 == "FALSE" & threatmed$useTradeId..20 =="FALSE" & threatmed$useTradeId..32 =="FALSE" & threatmed$useTradeId..24 =="FALSE" & threatmed$useTradeId..29 =="FALSE" & threatmed$useTradeId..33 =="FALSE" & threatmed$useTradeId..25 =="FALSE" & threatmed$useTradeId..28 =="FALSE" & threatmed$useTradeId..22 =="FALSE" & threatmed$useTradeId..21 =="FALSE" & threatmed$useTradeId..35 =="FALSE" & threatmed$useTradeId..36 =="FALSE" & threatmed$useTradeId..34 =="FALSE" & threatmed$useTradeId..31 =="FALSE"),]
 #Threat 1: Residential and commercial development
 
