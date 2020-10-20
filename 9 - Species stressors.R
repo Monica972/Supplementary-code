@@ -42,6 +42,9 @@ threatmed <- threatmed[which(!is.na(threatmed$Y1) | !is.na(threatmed$Y1.1) | !is
                                !is.na(threatmed$Y10) | !is.na(threatmed$Y10.1) | !is.na(threatmed$Y10.2) | !is.na(threatmed$Y10.3) | 
                                !is.na(threatmed$Y11) | !is.na(threatmed$Y11.1) | !is.na(threatmed$Y11.2) | !is.na(threatmed$Y11.3) | !is.na(threatmed$Y11.4) | !is.na(threatmed$Y11.5) | 
                                !is.na(threatmed$Y12) | !is.na(threatmed$Y12.1)),]
+#rerun with following line included for stressors of species with medicinal use only
+#threatmed <- threatmed[which(threatmed$useTradeId..19 =="FALSE" & threatmed$useTradeId..23 == "FALSE" & threatmed$useTradeId..23 == "FALSE" & threatmed$useTradeId..27 == "FALSE" & threatmed$useTradeId..20 =="FALSE" & threatmed$useTradeId..32 =="FALSE" & threatmed$useTradeId..24 =="FALSE" & threatmed$useTradeId..29 =="FALSE" & threatmed$useTradeId..33 =="FALSE" & threatmed$useTradeId..25 =="FALSE" & threatmed$useTradeId..28 =="FALSE" & threatmed$useTradeId..22 =="FALSE" & threatmed$useTradeId..21 =="FALSE" & threatmed$useTradeId..35 =="FALSE" & threatmed$useTradeId..36 =="FALSE" & threatmed$useTradeId..34 =="FALSE" & threatmed$useTradeId..31 =="FALSE"),]
+
 threatobsnum <- nrow(threatmed)
 
 ## -----------------------------------------------------------------------
