@@ -15,7 +15,22 @@ CONTENTS
 
 2. Shortdata.csv--A data file used in all of the figures and analyses that appear in the paper. 
 
-3. Short et al - Supplementary code.r — Includes code for generating the figures and analyses in the manuscript.
+3. Supplementary code: 
+   1 - Species phylum and trend.R -- code to assess medicinal species phyla and population trends
+   2 - Habitat.R -- code to assess medicinal species habitat
+   3.1 - Subset spatial data - Medicinal.R -- subsets spatial data to medicinal use species
+   3.2 - Subset spatial data - at risk.R -- subsets spatial data to species at risk
+   3.3 - Rasterize medicinal species.R -- convert medicinal species polygons to raster
+   3.4 - Rasterize at-risk medicinal species.R -- convert at risk medicinal species polygons to raster
+   3.5 - Combine subsetted rasters.R -- combine the subsetted rasters for at risk and medicinal species
+   3.6 - Rasterize full species groups.R -- convert all species spatial data to raster
+   3.7 - Produce maps.R -- combine the layers to creat the maps
+   4 - Additional uses.R -- code to assess medicinal species' additional uses
+   5 - Mixed uses.R -- code to assess medicinal species with mixed use in comparison to medicinal only
+   6 - Spiritual vs Non-spiritual Uses.R -- code to assess differences between spiritual and non-spiritual medicinal species
+   7 - Species threats.R -- code to assess threats to medicinal species
+   8 - Human exploitation threat.R -- code to assess medicinal species with human exploitation threat
+   9 - Species stressors.R -- code to assess stressors to medicinal species 
 
 #####################################################################################################################
 
