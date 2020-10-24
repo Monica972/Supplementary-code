@@ -26,7 +26,7 @@ library(raster)
 
 
 #read in IUCN table
-iucn <- read_csv("~/Documents/Short/Shortdata.csv")
+iucn <- read.csv("~/Documents/Short/Shortdata.csv")
 
 iucn <- merge(threat, iucn, by="X1")
 
