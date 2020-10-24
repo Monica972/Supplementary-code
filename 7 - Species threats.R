@@ -11,10 +11,6 @@ getwd()
 #read in data
 use.data<- read.csv("./Shortdata.csv", na.strings=c(""," ","NA"))
 
-#remove any duplicates
-use_clean <- use.data[!duplicated(use.data),]
-use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
-
 #filter to medicinal use
 threatmed <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
 threatobsnum <- nrow(threatmed)
