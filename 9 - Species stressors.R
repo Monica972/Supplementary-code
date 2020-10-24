@@ -13,10 +13,6 @@ getwd()
 #Read in data
 use.data<- read.csv("./Shortdata.csv", na.strings=c(""," ","NA"))
 
-#remove any duplicates
-use_clean <- use.data[!duplicated(use.data),]
-use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
-
 #filter medicinal use
 threatmed <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
 threatmed <- threatmed[which(!is.na(threatmed$Y1) | !is.na(threatmed$Y1.1) | !is.na(threatmed$Y1.2) | !is.na(threatmed$Y1.3) | 
