@@ -8,10 +8,6 @@ getwd()
 # Read in data
 use.data<- read.csv("./DATA/Shortdata.csv")
 
-#Remove any duplicated species
-use_clean <- use.data[!duplicated(use.data),]
-use_clean <- use_clean[!duplicated(use_clean$scientific_name),]
-
 # Filter to medicinal use species
 med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
 obsnum <- nrow(med)
