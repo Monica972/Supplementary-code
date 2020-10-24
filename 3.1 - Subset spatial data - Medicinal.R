@@ -28,8 +28,6 @@ library(raster)
 #read in IUCN table
 iucn <- read.csv("~/Documents/Short/Shortdata.csv")
 
-iucn <- merge(threat, iucn, by="X1")
-
 #alter colnames of iucn
 iucn <- iucn %>% plyr::rename(c("scientific_name" = "SciName", "kingdom_name" = "Kingdom", "phylum_name" = "Phylum",
                                 "class_name" = "Class", "order_name" = "Order", "family_name" = "Family", "genus_name" = "Genus"))
