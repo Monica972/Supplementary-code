@@ -2,9 +2,7 @@
 
 THIS DATA PACKAGE ACCOMPANIES:
 
-Short, Monica L., and Darimont, Chris T. 2020. Global synthesis reveals that ecosystem degradation poses the primary threat to the world’s medicinal animals.
 
-Please contact Monica Short (monicashort_22@hotmail.com) with questions about the dataset or if you find any errors in the file. Please let us know if you use the data and we would be happy to provide assistance. 
 
 This data package contains the original dataset as well as R code used to generate figures and analysis.
 
