@@ -24,7 +24,7 @@ library(shades)
 use.data<- read.csv("./Shortdata.csv")
 
 # Create data subset of medicinal use species 
-med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+med <- use.data[which(use.data$useTradeId..30 =="TRUE"),]
 med <- med[!duplicated(med$scientific_name),]
 obsnum <- nrow(med)
 
@@ -179,7 +179,7 @@ data6$RedListCat <- factor(data6$RedListCat, levels = c("NL", "DD", "LC", "NT", 
 ggplot(data = na.omit(data6), aes(RedListCat, values), na.rm = TRUE) + 
   geom_bar(stat = "identity", aes(fill = type), position = "dodge") +
   scale_fill_manual(values=c("#CA0020", "#92C5DE")) +
-  xlab("Red List Category") + ylab("Percent of Species") +
+  xlab("Red List Category") + ylab("Percentage of Species") +
   theme_bw(base_size = 18)+ 
   theme(legend.title=element_blank(), 
         legend.position = c(.95, .95), 
