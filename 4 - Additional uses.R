@@ -9,7 +9,7 @@ getwd()
 use.data<- read.csv("./DATA/Shortdata.csv")
 
 # Filter to medicinal use species
-med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+med <- use.data[which(use.data$useTradeId..30 =="TRUE"),]
 obsnum <- nrow(med)
 
 # Medicinal species with other uses
