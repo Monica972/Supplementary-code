@@ -23,7 +23,7 @@ library(shades)
 use.data <- read.csv("./Shortdata.csv")
 
 # Create data subset of medicinal use species 
-med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+med <- use.data[which(use.data$useTradeId..30 =="TRUE"),]
 obsnum <- nrow(med)
 
 ## Medicinal species sources
@@ -182,7 +182,7 @@ per <- c(ArthNum, ChorNum, EchNum, MollNum)
 # Stacked plot of population trend by phylum - Fig 1 A
 p3 <- ggplot(data, aes(fill=condition, y=value, x= reorder(specie1, -value))) + 
   geom_bar(position="stack", stat="identity") +
-  xlab("Phylum") + ylab("Percent of Species") +
+  xlab("Phylum") + ylab("Percentage of Species") +
   lightness(scale_fill_manual(values=c("#CA0020", "#B3E55C", "#92C5DE")), scalefac(0.9)) +
   ggtitle("A") +
   theme_bw(base_size = 18)+
