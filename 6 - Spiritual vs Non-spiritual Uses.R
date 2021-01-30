@@ -26,7 +26,7 @@ library(shades)
 use.data<- read.csv("./Shortdata.csv")
 
 # Create data subset of medicinal use species 
-med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+med <- use.data[which(use.data$useTradeId..30 =="TRUE"),]
 med <- med[!duplicated(med$scientific_name),]
 obsnum <- nrow(med)
 
@@ -167,14 +167,14 @@ PhysicalUse <- c(CRPuseper, ENPuseper,EXPuseper, LCPuseper, DDPuseper, VUPuseper
 SpiritualUse <- c(CRSuseper, ENSuseper,EXSuseper, LCSuseper, DDSuseper, VUSuseper, NTSuseper, NLSuseper)
 data2 <- data.frame(RedListCat3, PhysicalUse, SpiritualUse)
 values <- c(PhysicalUse, SpiritualUse)
-type <- c(rep("Non-Spiritual Use; n = 1065", 8), rep("Spiritual Use; n = 266", 8))
+type <- c(rep("Nonspiritual Use;\n n = 1065", 8), rep("Spiritual Use;\n n = 266", 8))
 data2 <- data.frame(RedListCat3, values, type)
 data2$RedListCat3 <- factor(data2$RedListCat3, levels = c("NL", "DD", "LC", "NT", "VU", "EN", "CR", "EX"))
 
 p2 <- ggplot(data =na.omit(data2), aes(RedListCat3, values), na.rm = TRUE )
 p2 <- p2 +geom_bar(stat = "identity", aes(fill = type), position = "dodge") +
   scale_fill_manual(values=c("#CA0020", "#92C5DE")) +
-  xlab("Red List Category") + ylab("Percent of Species") +
+  xlab("Red List Category") + ylab("Percentage of Species") +
   ggtitle("A") +
   ylim(c(0, 65)) +
   theme_bw(base_size = 18)+ 
@@ -324,7 +324,7 @@ PhysicalUse <- c(CRMPuseper, ENMPuseper,EXMPuseper, LCMPuseper, DDMPuseper, VUMP
 SpiritualUse <- c(CRMSuseper, ENMSuseper,EXMSuseper, LCMSuseper, DDMSuseper, VUMSuseper, NTMSuseper, NLMSuseper)
 data2 <- data.frame(RedListCat3, PhysicalUse, SpiritualUse)
 values <- c(PhysicalUse, SpiritualUse)
-type <- c(rep("Non-Spiritual Use; n = 515", 8), rep("Spiritual Use; n = 101", 8))
+type <- c(rep("Nonspiritual Use;\n n = 515", 8), rep("Spiritual Use;\n n = 101", 8))
 data2 <- data.frame(RedListCat3, values, type)
 data2$RedListCat3 <- factor(data2$RedListCat3, levels = c("NL", "DD", "LC", "NT", "VU", "EN", "CR", "EX"))
 
@@ -332,7 +332,7 @@ p3 <- ggplot(data =na.omit(data2), aes(RedListCat3, values), na.rm = TRUE )
 p3 <- p3 +geom_bar(stat = "identity", aes(fill = type), position = "dodge") +
   scale_fill_manual(values=c("#CA0020", "#92C5DE")) + # purple and orange ->scale_fill_manual(values=c("#FFC05F", "#8073AC"))
   xlab("Red List Category") + 
-  ylab("Percent of Species") +
+  ylab("Percentage of Species") +
   ggtitle("B") +
   ylim(c(0, 65)) +
   theme_bw(base_size = 18)+ 
