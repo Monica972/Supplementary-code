@@ -10,7 +10,7 @@ getwd()
 use.data<- read.csv("./Shortdata.csv")
 
 # Create data subset of medicinal use species 
-med <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+med <- use.data[which(use.data$useTradeId..30 =="TRUE"),]
 med <- med[!duplicated(med$scientific_name),]
 obsnum <- nrow(med)
 
