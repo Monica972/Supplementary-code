@@ -1,7 +1,8 @@
 #####################################################################################################################
 
 THIS DATA PACKAGE ACCOMPANIES:
-
+Global synthesis reveals that ecosystem degradation poses the primary threat to the world's medicinal animals
+Short, M., and Darimont, C.
 
 
 This data package contains the original dataset as well as R code used to generate figures and analysis.
