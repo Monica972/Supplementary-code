@@ -14,7 +14,7 @@ getwd()
 use.data<- read.csv("./Shortdata.csv", na.strings=c(""," ","NA"))
 
 #filter medicinal use
-threatmed <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+threatmed <- use.data[which(use.data$useTradeId..30 =="TRUE"),]
 threatmed <- threatmed[which(!is.na(threatmed$Y1) | !is.na(threatmed$Y1.1) | !is.na(threatmed$Y1.2) | !is.na(threatmed$Y1.3) | 
                                !is.na(threatmed$Y2) | !is.na(threatmed$Y2.1) | !is.na(threatmed$Y2.1.1) | !is.na(threatmed$Y2.1.2) | !is.na(threatmed$Y2.1.3) | !is.na(threatmed$Y2.1.4) | 
                                !is.na(threatmed$Y2.2) | !is.na(threatmed$Y2.2.1) | !is.na(threatmed$Y2.2.2) | !is.na(threatmed$Y2.2.3) | 
@@ -462,7 +462,7 @@ Othper <-round((Othnum/threatobsnum * 100), dig=2)
 
 # Create data:
 
-stressor = c("Ecosystem Conversion", "Ecosystem Degradation", "Indirect Ecosystem Effects", "Species Mortality", "Species Disturbance", "Hybridisation", "Competition", "Reduced Reproductive Success", "Other")
+stressor = c("Ecosystem Conversion", "Ecosystem Degradation", "Indirect Ecosystem Effects", "Species Mortality", "Species Disturbance", "Hybridization", "Competition", "Reduced Reproductive Success", "Other")
 value = c(EcoConper, EcoDegper, IndirEcoEffper, SpecMortper, SpecDistper, Hybridper, Compper, RedRepSucper, Othper)
 stressdata <- data.frame(stressor, value)
   
@@ -488,7 +488,7 @@ ggplot(data, aes(x=stressor, y=value)) +
     legend.position = c(0.85, 0.15),
     plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")) +
   xlab("Stressor") +
-  ylab("Percent Impacted") +
+  ylab("Percentage Impacted") +
   expand_limits(y = 85)
 
 ##------------------------------------------------------------------------------
