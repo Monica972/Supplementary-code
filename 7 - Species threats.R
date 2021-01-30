@@ -12,7 +12,7 @@ getwd()
 use.data<- read.csv("./Shortdata.csv", na.strings=c(""," ","NA"))
 
 #filter to medicinal use
-threatmed <- use_clean[which(use_clean$useTradeId..30 =="TRUE"),]
+threatmed <- use.data[which(use.data$useTradeId..30 =="TRUE"),]
 threatobsnum <- nrow(threatmed)
 
 #Species that have threat data 
@@ -561,5 +561,5 @@ ggplot(data, aes(x=threat, y=value1)) +
     legend.position = c(0.85, 0.15),
     plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")) +
   xlab("Threat") +
-  ylab("Percent Impacted") +
+  ylab("Percentage Impacted") +
   expand_limits(y = 50)
